@@ -1,0 +1,21 @@
+branch-defaults:
+  test-protection:
+    environment: perumar-backend-env
+environment-defaults:
+  perumar-backend-env:
+    branch: null
+    repository: null
+global:
+  application_name: perumar-backend
+  default_ec2_keyname: null
+  default_platform: Corretto 21 running on 64bit Amazon Linux 2023
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: git
+  workspace_type: Application
+deploy:
+  artifact: target/perumar-backend-0.0.1-SNAPSHOT.jar
