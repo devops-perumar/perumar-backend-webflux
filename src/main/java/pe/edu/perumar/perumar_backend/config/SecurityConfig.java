@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.oauth2.jwt.ReactiveJwtDecoder;
 import org.springframework.security.oauth2.jwt.ReactiveJwtDecoders;
@@ -19,9 +20,10 @@ import org.springframework.security.oauth2.server.resource.authentication.Reacti
 
 import java.util.List;
 
-@Profile("!test")
 @Configuration
+@EnableWebFluxSecurity
 @EnableReactiveMethodSecurity
+@Profile("!test")
 public class SecurityConfig {
 
   // === Ajusta si cambias de región o pool ===
@@ -81,6 +83,11 @@ public class SecurityConfig {
         .pathMatchers(HttpMethod.PATCH,  "/api/v1/materias/**").hasAnyRole("ADMIN","DIRECTOR")
         .pathMatchers(HttpMethod.DELETE, "/api/v1/materias/**").hasAnyRole("ADMIN","DIRECTOR")
         .pathMatchers(HttpMethod.GET,    "/api/v1/materias/**").hasAnyRole("ADMIN","DIRECTOR","COORDINADOR")
+        .pathMatchers(HttpMethod.POST,  "/api/v1/ciclos/**").hasAnyRole("ADMIN","DIRECTOR","COORDINADOR")
+        .pathMatchers(HttpMethod.PUT,   "/api/v1/ciclos/**").hasAnyRole("ADMIN","DIRECTOR","COORDINADOR")
+        .pathMatchers(HttpMethod.PATCH, "/api/v1/ciclos/**").hasAnyRole("ADMIN","DIRECTOR")
+        .pathMatchers(HttpMethod.GET,   "/api/v1/ciclos/**").hasAnyRole("ADMIN","DIRECTOR","COORDINADOR")
+
 
         // Futuras rutas (Carreras/Ciclos) aquí…
 

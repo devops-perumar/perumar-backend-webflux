@@ -11,7 +11,6 @@ import pe.edu.perumar.perumar_backend.dto.MateriaEstadoRequest;
 import pe.edu.perumar.perumar_backend.dto.MateriaRequest;
 import pe.edu.perumar.perumar_backend.dto.MateriaResponse;
 import pe.edu.perumar.perumar_backend.dto.MateriaUpdateRequest;
-import pe.edu.perumar.perumar_backend.model.Materia;
 import pe.edu.perumar.perumar_backend.service.MateriaService;
 import pe.edu.perumar.perumar_backend.service.MateriaService.DuplicateKeyException;
 import pe.edu.perumar.perumar_backend.service.mapper.MateriaMapper;

@@ -8,12 +8,15 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedAsyncClient;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbAsyncTable;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
+
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
 import java.util.Objects;
 
 @Repository
+@Profile("!test")
 public class MateriaRepositoryImpl implements MateriaRepository {
   private final DynamoDbAsyncTable<Materia> table;
 

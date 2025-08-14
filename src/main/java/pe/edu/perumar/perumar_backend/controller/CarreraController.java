@@ -8,7 +8,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import pe.edu.perumar.perumar_backend.dto.*;
-import pe.edu.perumar.perumar_backend.model.Carrera;
 import pe.edu.perumar.perumar_backend.service.CarreraService;
 import pe.edu.perumar.perumar_backend.service.CarreraService.DuplicateKeyException;
 import pe.edu.perumar.perumar_backend.service.mapper.CarreraMapper;
