@@ -1,5 +1,6 @@
 package pe.edu.perumar.perumar_backend.repository.impl;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 import pe.edu.perumar.perumar_backend.model.Ciclo;
 import pe.edu.perumar.perumar_backend.repository.CicloRepository;
@@ -8,6 +9,7 @@ import reactor.core.publisher.Mono;
 import java.time.LocalDate;
 
 @Repository
+@Profile("!test")
 public class CicloRepositoryImpl implements CicloRepository {
 
   @Override

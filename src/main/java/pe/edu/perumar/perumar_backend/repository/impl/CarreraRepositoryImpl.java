@@ -3,6 +3,7 @@ package pe.edu.perumar.perumar_backend.repository.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import pe.edu.perumar.perumar_backend.model.Carrera;
@@ -13,6 +14,7 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
 import software.amazon.awssdk.services.dynamodb.model.*;
 
 @Repository
+@Profile("!test")
 public class CarreraRepositoryImpl implements CarreraRepository {
 
     private final DynamoDbAsyncClient dynamo;

@@ -13,6 +13,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
+import pe.edu.perumar.perumar_backend.BaseIT;
 import pe.edu.perumar.perumar_backend.model.Materia;
 import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
 import reactor.core.publisher.Flux;
@@ -24,7 +25,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient
-class MateriaControllerIT {
+public class MateriaControllerIT extends BaseIT {
 
   @Autowired WebTestClient webTestClient;
   @MockBean MateriaRepository repo;

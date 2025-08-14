@@ -16,6 +16,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
+import pe.edu.perumar.perumar_backend.BaseIT;
 import pe.edu.perumar.perumar_backend.model.Ciclo;
 import pe.edu.perumar.perumar_backend.repository.CicloRepository;
 import reactor.core.publisher.Flux;
@@ -26,7 +27,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient
-class CicloControllerIT {
+public class CicloControllerIT extends BaseIT {
 
   @Autowired WebTestClient webTestClient;
   @MockBean CicloRepository repo;

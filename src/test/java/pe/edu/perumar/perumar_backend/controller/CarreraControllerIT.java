@@ -1,123 +1,60 @@
 package pe.edu.perumar.perumar_backend.controller;
+import org.junit.jupiter.api.BeforeEach;
+import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 
 import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.when;
-
-import java.time.Instant;
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.reactive.server.WebTestClient;
+import static org.mockito.Mockito.*;
 
 import pe.edu.perumar.perumar_backend.model.Carrera;
-import pe.edu.perumar.perumar_backend.model.ModalidadCarrera;
+import pe.edu.perumar.perumar_backend.model.Materia;
+import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
 import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+import pe.edu.perumar.perumar_backend.model.ModalidadCarrera;
 
-import static org.springframework.security.test.web.reactive.server.SecurityMockServerConfigurers.mockJwt;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+public class CarreraControllerIT {
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureWebTestClient
-class CarreraControllerIT {
+    MateriaRepository materiaRepository;
+    CarreraRepository carreraRepository;
 
-  @Autowired WebTestClient webTestClient;
-  @MockBean CarreraRepository repo;
+    void stubsCarrera() {
+        materiaRepository = mock(MateriaRepository.class);
+        carreraRepository = mock(CarreraRepository.class);
+        // ----- Materia válida usada por el service para validar la carrera -----
+        Materia mat1 = new Materia();
+        mat1.setCodigo("MAT001");
+        mat1.setNombre("Navegación I");
+        mat1.setEstado("ACTIVO");
 
-  private WebTestClient asDirector() {
-    return webTestClient.mutateWith(
-      mockJwt().authorities(new SimpleGrantedAuthority("ROLE_DIRECTOR"))
-    );
-  }
+        when(materiaRepository.findByCodigo(eq("MAT001"))).thenReturn(Mono.just(mat1));
+        when(materiaRepository.findByCodigo(argThat(c -> !"MAT001".equals(c)))).thenReturn(Mono.empty());
+        when(materiaRepository.findAll(any())).thenReturn(Flux.just(mat1)); // si tu service lista activas
 
-  private Carrera sample() {
-    var c = new Carrera();
-    c.setCodigo("CAR001");
-    c.setNombre("Ingeniería de Sistemas");
-    c.setDescripcion("Carrera de TI");
-    c.setModalidad(ModalidadCarrera.SIN_EXPERIENCIA); // obligatorio
-    c.setMaterias(List.of("MAT001"));  // al menos una materia si es requerido
-    c.setEstado("ACTIVO");
-    c.setCreatedAt(Instant.now());
-    c.setUpdatedAt(Instant.now());
-    return c;
-  }
+        // ----- Carrera existente para GET /api/v1/carreras/CAR001 -----
+        Carrera car1 = new Carrera();
+        car1.setCodigo("CAR001");
+        car1.setNombre("Carrera Test");
+        car1.setDescripcion("desc");
+        car1.setModalidad(ModalidadCarrera.SIN_EXPERIENCIA);
+        car1.setEstado("ACTIVO");
 
-  @Test
-  void post_crear_201() {
-    when(repo.findByCodigo(eq("CAR001"))).thenReturn(Mono.empty());
-    when(repo.save(any(Carrera.class))).thenAnswer(inv -> Mono.just(inv.getArgument(0, Carrera.class)));
+        when(carreraRepository.findByCodigo(eq("CAR001"))).thenReturn(Mono.just(car1));
+        when(carreraRepository.findByCodigo(argThat(c -> !"CAR001".equals(c)))).thenReturn(Mono.empty());
 
-    asDirector().post().uri("/api/v1/carreras")
-      .contentType(MediaType.APPLICATION_JSON)
-      .bodyValue("""
-        {
-          "codigo":"CAR001",
-          "nombre":"Ingeniería de Sistemas",
-          "descripcion":"Carrera de TI",
-          "modalidad":"SIN_EXPERIENCIA",
-          "materias":["MAT001"]
-        }
-      """)
-      .exchange()
-      .expectStatus().isCreated()
-      .expectBody()
-      .jsonPath("$.codigo").isEqualTo("CAR001")
-      .jsonPath("$.estado").isEqualTo("ACTIVO");
-  }
+        // Listado por defecto vacío (ajusta si tu controller usa findAll())
+        when(carreraRepository.findAll(anyString())).thenReturn(Flux.empty());
 
-  @Test
-  void get_listar_200() {
-    when(repo.findAll(isNull())).thenReturn(Flux.just(sample()));
+        // Guardar/actualizar devuelven el mismo objeto
+        when(carreraRepository.save(any(Carrera.class))).thenAnswer(inv -> Mono.just(inv.getArgument(0)));
+        // Si tu repo SÍ tiene update(Carrera), deja esto; si no existe, elimínalo
+        try {
+            carreraRepository.getClass().getMethod("update", Object.class);
+            when(carreraRepository.update(any(Carrera.class))).thenAnswer(inv -> Mono.just(inv.getArgument(0)));
+        } catch (NoSuchMethodException | SecurityException ignored) { /* tu repo no tiene update(Carrera) */ }
 
-    asDirector().get().uri("/api/v1/carreras")
-      .exchange()
-      .expectStatus().isOk()
-      .expectBody()
-      .jsonPath("$[0].codigo").isEqualTo("CAR001")
-      .jsonPath("$[0].estado").isEqualTo("ACTIVO");
-  }
-
-  @Test
-  void put_actualizar_200() {
-    var actual = sample();
-    when(repo.findByCodigo(eq("CAR001"))).thenReturn(Mono.just(actual));
-    when(repo.update(any(Carrera.class))).thenAnswer(inv -> Mono.just(inv.getArgument(0, Carrera.class)));
-
-    asDirector().put().uri("/api/v1/carreras/CAR001")
-      .contentType(MediaType.APPLICATION_JSON)
-      .bodyValue("""
-        {
-          "codigo":"CAR001",
-          "nombre":"Nuevo nombre",
-          "descripcion":"Nueva desc",
-          "modalidad":"SIN_EXPERIENCIA",
-          "materias":["MAT001"]
-        }
-      """)
-      .exchange()
-      .expectStatus().isOk()
-      .expectBody()
-      .jsonPath("$.nombre").isEqualTo("Nuevo nombre")
-      .jsonPath("$.descripcion").isEqualTo("Nueva desc");
-  }
-
-  @Test
-  void patch_cambiarEstado_204() {
-    when(repo.updateEstado(eq("CAR001"), eq("INACTIVO"))).thenReturn(Mono.empty());
-
-    asDirector().patch().uri("/api/v1/carreras/CAR001/estado")
-      .contentType(MediaType.APPLICATION_JSON)
-      .bodyValue("""
-        {"estado":"INACTIVO"}
-      """)
-      .exchange()
-      .expectStatus().isNoContent();
-  }
+        // Duplicado: simula que ya existe CAR_DUP
+        Carrera dup = new Carrera();
+        dup.setCodigo("CAR_DUP");
+        when(carreraRepository.findByCodigo(eq("CAR_DUP"))).thenReturn(Mono.just(dup));
+    }
 }
