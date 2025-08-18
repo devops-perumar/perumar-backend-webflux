@@ -56,7 +56,7 @@ public class TestProfileConfig {
     return () -> {
       // ===== MATERIAS =====
       when(materiaRepository.findByCodigo(anyString())).thenReturn(Mono.empty());
-      when(materiaRepository.findAll(any())).thenReturn(Flux.empty());
+      when(materiaRepository.findByEstado("ACTIVO")).thenReturn(Flux.empty());
       when(materiaRepository.existsByCodigo(anyString())).thenReturn(Mono.just(false));
       when(materiaRepository.save(any()))
           .thenAnswer(inv -> Mono.justOrEmpty(inv.getArgument(0)));

@@ -63,7 +63,7 @@ public class MateriaControllerIT extends BaseIT {
     m.setCreatedAt(Instant.now());
     m.setUpdatedAt(Instant.now());
 
-    when(repo.findAll(isNull())).thenReturn(Flux.just(m));
+    when(repo.findByEstado("ACTIVO")).thenReturn(Flux.just(m));
 
     asDirector().get().uri("/api/v1/materias")
       .exchange()

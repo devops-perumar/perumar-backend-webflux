@@ -39,7 +39,7 @@ public class MateriaController {
   @GetMapping
   @PreAuthorize("hasAnyRole('ADMIN','DIRECTOR','COORDINADOR')")
   public Flux<MateriaResponse> listar(@RequestParam(value = "estado", required = false) String estado) {
-    return service.listar(estado).map(MateriaMapper::toResponse);
+    return service.listar(estado);
   }
 
   @GetMapping("/{codigo}")

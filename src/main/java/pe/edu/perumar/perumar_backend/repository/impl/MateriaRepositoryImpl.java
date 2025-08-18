@@ -38,7 +38,7 @@ public class MateriaRepositoryImpl implements MateriaRepository {
   }
 
   @Override
-  public Flux<Materia> findAll(String estado) {
+  public Flux<Materia> findByEstado(String estado) {
     if (estado == null || estado.isBlank()) {
       return Flux.from(table.scan().items());
     }

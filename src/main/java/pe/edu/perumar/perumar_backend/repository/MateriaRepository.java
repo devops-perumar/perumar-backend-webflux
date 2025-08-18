@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 public interface MateriaRepository {
   Mono<Materia> save(Materia m);
   Mono<Materia> findByCodigo(String codigo);
-  Flux<Materia> findAll(String estado /* nullable para all */);
+  Flux<Materia> findByEstado(String estado);
   Mono<Boolean> existsByCodigo(String codigo);
   Mono<Materia> update(Materia m);
   Mono<Void> updateEstado(String codigo, String nuevoEstado);

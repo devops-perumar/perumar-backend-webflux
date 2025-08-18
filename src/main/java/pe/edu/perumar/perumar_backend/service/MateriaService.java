@@ -7,9 +7,11 @@ import org.springframework.util.StringUtils;
 
 import pe.edu.perumar.perumar_backend.dto.MateriaEstadoRequest;
 import pe.edu.perumar.perumar_backend.dto.MateriaRequest;
+import pe.edu.perumar.perumar_backend.dto.MateriaResponse;
 import pe.edu.perumar.perumar_backend.dto.MateriaUpdateRequest;
 import pe.edu.perumar.perumar_backend.model.Materia;
 import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
+import pe.edu.perumar.perumar_backend.service.mapper.MateriaMapper;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -50,9 +52,11 @@ public class MateriaService {
     return repo.findByCodigo(codigo);
   }
 
-  public Flux<Materia> listar(String estado) {
-    return repo.findAll(estado);
-  }
+public Flux<MateriaResponse> listar(String estado) {
+    String estadoFinal = StringUtils.hasText(estado) ? estado : "ACTIVO";
+    return repo.findByEstado(estadoFinal)
+               .map(MateriaMapper::toResponse);
+}
 
   public Mono<Materia> actualizar(String codigo, MateriaUpdateRequest req) {
     return repo.findByCodigo(codigo)

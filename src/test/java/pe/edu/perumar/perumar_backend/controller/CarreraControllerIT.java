@@ -27,7 +27,7 @@ public class CarreraControllerIT {
 
         when(materiaRepository.findByCodigo(eq("MAT001"))).thenReturn(Mono.just(mat1));
         when(materiaRepository.findByCodigo(argThat(c -> !"MAT001".equals(c)))).thenReturn(Mono.empty());
-        when(materiaRepository.findAll(any())).thenReturn(Flux.just(mat1)); // si tu service lista activas
+        when(materiaRepository.findByEstado("ACTIVO")).thenReturn(Flux.just(mat1));
 
         // ----- Carrera existente para GET /api/v1/carreras/CAR001 -----
         Carrera car1 = new Carrera();
