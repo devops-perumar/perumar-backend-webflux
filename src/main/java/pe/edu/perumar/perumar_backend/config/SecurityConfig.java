@@ -11,6 +11,9 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.server.resource.authentication.ReactiveJwtAuthenticationConverterAdapter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.web.server.SecurityWebFilterChain;
+
+import org.springframework.http.HttpMethod;
+
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,8 +27,10 @@ public class SecurityConfig {
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
         return http
             .csrf(ServerHttpSecurity.CsrfSpec::disable)
+            .cors().and()   // habilitar CORS
             .authorizeExchange(exchanges -> exchanges
                 .pathMatchers("/api/v1/public/**").permitAll()
+                .pathMatchers(HttpMethod.OPTIONS, "/**").permitAll() // 👈 permitir preflight
                 .anyExchange().authenticated()
             )
             .oauth2ResourceServer(oauth2 -> oauth2

@@ -1,0 +1,941 @@
+Listado de rutas de carpetas para el volumen Datos
+El n£mero de serie del volumen es 4C38-2F07
+D:.
+|   .gitattributes
+|   .gitignore
+|   CONTRIBUTING.md
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   pom.xml
+|   README.md
+|   tree-back.txt
+|   
++---.ebextensions
+|       01_nginx_healthcheck.config
+|       02_env.config
+|       
++---.elasticbeanstalk
+|   |   config.yml
+|   |   
+|   \---app_versions
+|           app-b663-250808_164317850861.zip
+|           
++---.git
+|   |   COMMIT_EDITMSG
+|   |   config
+|   |   description
+|   |   FETCH_HEAD
+|   |   HEAD
+|   |   index
+|   |   ORIG_HEAD
+|   |   
+|   +---hooks
+|   |       applypatch-msg.sample
+|   |       commit-msg.sample
+|   |       fsmonitor-watchman.sample
+|   |       post-update.sample
+|   |       pre-applypatch.sample
+|   |       pre-commit.sample
+|   |       pre-merge-commit.sample
+|   |       pre-push.sample
+|   |       pre-rebase.sample
+|   |       pre-receive.sample
+|   |       prepare-commit-msg.sample
+|   |       push-to-checkout.sample
+|   |       sendemail-validate.sample
+|   |       update.sample
+|   |       
+|   +---info
+|   |       exclude
+|   |       
+|   +---logs
+|   |   |   HEAD
+|   |   |   
+|   |   \---refs
+|   |       +---heads
+|   |       |       main
+|   |       |       test-protection
+|   |       |       
+|   |       \---remotes
+|   |           \---origin
+|   |                   main
+|   |                   test-protection
+|   |                   
+|   +---objects
+|   |   +---01
+|   |   |       5374f82c155326e7e7e4fe31995c1d99ae6bce
+|   |   |       58ca64375736803a6a26c7ccca1c8c67bac556
+|   |   |       
+|   |   +---02
+|   |   |       6e1c0d7f82254f0b215b00d593fb170b7b86ed
+|   |   |       
+|   |   +---03
+|   |   |       5ed32f7913c9c9f5381324f71621f0c582b38b
+|   |   |       7ea2d0c8d26813dd086fb3964bfa7078b16d98
+|   |   |       efd989934f8ad4e67376107fced20552eb0630
+|   |   |       
+|   |   +---04
+|   |   |       219c3d0cd002db04ad48d94aab6d39caf55cae
+|   |   |       
+|   |   +---05
+|   |   |       e8d4e3c82d580261ac0618988af26cdf9aef79
+|   |   |       
+|   |   +---06
+|   |   |       0ed563d14ce2f5c873a0a92914bd17d79c27a0
+|   |   |       400cba78f54a05669fa40ed0b6b119407c82e1
+|   |   |       
+|   |   +---07
+|   |   |       aa57be9d25d01fae00f302f7b605fcf303b616
+|   |   |       
+|   |   +---08
+|   |   |       89a716f65336789ee57d28c46e43c3a5e64b07
+|   |   |       
+|   |   +---09
+|   |   |       2bf7da00f8a4cac7397d6729fdb38a7297b13f
+|   |   |       
+|   |   +---0a
+|   |   |       2ef8519bb451fb4acd6466674cb7b4e79df5e9
+|   |   |       7d6bd0b7cadea59de6cbfdfb9d3fd541d5c3fd
+|   |   |       
+|   |   +---0b
+|   |   |       02ee94d540b165e199ae578d066dcb4247c0df
+|   |   |       71c7e9fa20bd68ab614c2349e9671d97e1ba5f
+|   |   |       bd514de6a539545d95b8c201d842089c65a450
+|   |   |       
+|   |   +---0e
+|   |   |       131b1faddfee7cfc13c5b4403966cf53169e9c
+|   |   |       1411b89a750e903b1d2d62de7974d630680efa
+|   |   |       ce2d2dda7d65203060e04bbb0668992a3b9e4a
+|   |   |       
+|   |   +---0f
+|   |   |       66c529bbd6107c0b86712c2ee356d8163c1968
+|   |   |       6c6ae7d2219ef72f10e683655d6eec64ef488e
+|   |   |       
+|   |   +---10
+|   |   |       7162157c5cedec4ecbf5756fa4564227f50540
+|   |   |       a2c62c709d6253e2568dbd7354c362bd4e6b70
+|   |   |       c97ce5f9431948d9d17a7add803f12dbe89460
+|   |   |       
+|   |   +---11
+|   |   |       fa66d9e6d94af8898d7c95d1751642d48a7f3c
+|   |   |       
+|   |   +---12
+|   |   |       54611b4a7d7c1e8206bdc5110e524b870aa938
+|   |   |       fbe1e9078d54aa175943f8e2dce88de6719388
+|   |   |       
+|   |   +---18
+|   |   |       8c13e41e3a26c6710f821c597d5dfee1d0647a
+|   |   |       
+|   |   +---19
+|   |   |       529ddf8c6eaa08c5c75ff80652d21ce4b72f8c
+|   |   |       62fd6518c6531c055fa15e15ac0d17bb5766b3
+|   |   |       a7e78f5983b616320ed12b29cac3d8586c8992
+|   |   |       
+|   |   +---1b
+|   |   |       46663ee1a7bfc3970855809bcdea31b476b727
+|   |   |       
+|   |   +---1c
+|   |   |       6370950fceb4ba42aa420f9d1e1196650c8e42
+|   |   |       
+|   |   +---1d
+|   |   |       9dd862358e5145b060d6318dd12850e7658d03
+|   |   |       defecd3fb957f6a983797b5702208168a5459d
+|   |   |       
+|   |   +---1e
+|   |   |       72f05e8d423c37aa78a788f1afcb905a4d89cb
+|   |   |       
+|   |   +---20
+|   |   |       a862033daf4a1ad0d0a1aa33b9352b84482708
+|   |   |       
+|   |   +---21
+|   |   |       01b3de6dfbd7627e428d5c9e4082cc6aceb7d1
+|   |   |       034ef9deeba20e2fd628b77d3d3b878e83a55e
+|   |   |       
+|   |   +---22
+|   |   |       c5e6efcec3f8cf9cf8b7d6b3ebe84ceb1c22fe
+|   |   |       
+|   |   +---23
+|   |   |       3cc64b5ba4c35410265407a66ba8b39ce345ca
+|   |   |       
+|   |   +---24
+|   |   |       2326e0314ac3f83c2a82d5c7f3d9fff559fd59
+|   |   |       9bdf3822221aa612d1da2605316cabd7b07e50
+|   |   |       c6e32025478d790de24de6c3e302f09f414b87
+|   |   |       
+|   |   +---25
+|   |   |       fde456c0ca0362074edad6f1f73041a1173802
+|   |   |       
+|   |   +---26
+|   |   |       fd2d2824086645758ef517c79eba0e735d62e3
+|   |   |       
+|   |   +---27
+|   |   |       bf67329203a1017d3e4276f076bc6ca16dbb10
+|   |   |       
+|   |   +---29
+|   |   |       210db26d399afa4659c100c361a14ce0cd121d
+|   |   |       4d37c0ad2720fdd16ec4ff710a27b4f6bc6d07
+|   |   |       5edfffc57cc12d581dfab89cc030ba66c06fb3
+|   |   |       
+|   |   +---2a
+|   |   |       62ef7ac70b5af870f091314964babcbad27d82
+|   |   |       
+|   |   +---2b
+|   |   |       1737e5da8683dfe15e2d28ca2c0fe0a43924c2
+|   |   |       
+|   |   +---2c
+|   |   |       bd511c691e9c7ee08f2e002b5a9e0548fce07d
+|   |   |       
+|   |   +---2d
+|   |   |       954f24454fd4ff3ab0c3fd2e2ac308787cee78
+|   |   |       
+|   |   +---2e
+|   |   |       25339a6b59edaf325261856c089f893a6baf6d
+|   |   |       
+|   |   +---2f
+|   |   |       bcb4d0bdd776d8bdc0c24a9e447e74b2ae8173
+|   |   |       
+|   |   +---32
+|   |   |       0e6794b9e0751de76c8aa39c2fea1e2c91a5f8
+|   |   |       ef5cb22ffa2810181b5f00507d09d0100c9e85
+|   |   |       
+|   |   +---33
+|   |   |       06ecd045bf2dc8e5eaa51bb0490157993a653c
+|   |   |       
+|   |   +---34
+|   |   |       e3a303c5d6dd6f840d2b972d94fdf2c79a2134
+|   |   |       
+|   |   +---35
+|   |   |       129bc25fbed93cd14b341723db1c176f73a047
+|   |   |       cc14357df49bcea34050fd453bc5dbd7c727e0
+|   |   |       
+|   |   +---36
+|   |   |       233b8ff80c9aa57059803f7f1da5e2b61481b5
+|   |   |       586742a8226fe2b129d68450d4f56c31fa231e
+|   |   |       
+|   |   +---37
+|   |   |       e87dd98d5d373a55203157e29d70bce9419ece
+|   |   |       
+|   |   +---38
+|   |   |       6aff45bc31ba6522e9e35a129d7c60bef92a9e
+|   |   |       ed70e8530af208e8b6bcb02f78ca897cbe8918
+|   |   |       
+|   |   +---39
+|   |   |       8429757f51a6eda312af23a695d5157ff5e0ee
+|   |   |       
+|   |   +---3a
+|   |   |       c343b6ee8cba42ca12549993182f2c14969217
+|   |   |       
+|   |   +---3b
+|   |   |       41682ac579fafb665abb4dfcdaa6aaaa712184
+|   |   |       5701673d74ae0e1251698c81bf11843f451a5a
+|   |   |       
+|   |   +---3c
+|   |   |       880339b4a932189c31375fadc39b8dbb88744a
+|   |   |       
+|   |   +---3f
+|   |   |       2f680fc988b1027c8bcfb58f5875f307c9b797
+|   |   |       
+|   |   +---41
+|   |   |       bd1efc4747a138d929ebf1252edc0b23411e1c
+|   |   |       
+|   |   +---42
+|   |   |       3bdef1095bd5c407a48cf4b6293f8d92c5cbd9
+|   |   |       50fb47cbd52a621b0bd83495dcf17073b5e5d9
+|   |   |       c8e7375bc21131feb7d6d6fb5ee101c07cc152
+|   |   |       f6286be10e5bf5a73ac02d1463b105a173f92e
+|   |   |       
+|   |   +---46
+|   |   |       a6ce55b966c0b259e96f37535162f1d671e3da
+|   |   |       
+|   |   +---49
+|   |   |       10118a71e445e94c767e108172c00e920c195f
+|   |   |       
+|   |   +---4a
+|   |   |       13f5b5617abe19b34233b5581097d9913ea2fc
+|   |   |       26e4c92c1024d7e82dbba02a08f69a1ebdd5cb
+|   |   |       29ecaf9365d80901eb97175e28b787dffccaf2
+|   |   |       da1721f4c25d7f92266a94c5fc34b4123cee29
+|   |   |       
+|   |   +---4b
+|   |   |       5e091ff25abb7c8c759a22ed32b16b6febd3d9
+|   |   |       
+|   |   +---4d
+|   |   |       842ffa69f4da8a16c5cfcd62b38528586c582d
+|   |   |       9065a96b2c821eb858f1e02efe5965fe316b85
+|   |   |       
+|   |   +---4f
+|   |   |       0dd403a7ca4471c9304b37967f85d00a7181a1
+|   |   |       bdeb6fcdc230e269aaee9fd53472b32b73f7d7
+|   |   |       
+|   |   +---51
+|   |   |       183f573a399ff98bf1788a934e8adb1e8284f5
+|   |   |       ab90ec3dc7f2ef9ddbe0a92a44f0f8c70bc750
+|   |   |       
+|   |   +---52
+|   |   |       f5bbf51bdba9fee61781aa51491d90f2358920
+|   |   |       
+|   |   +---54
+|   |   |       1858cc31a4863821a0f65f09707aa79d293fa2
+|   |   |       5a9718fcd94bb6206cc51489d3fe6c3478a653
+|   |   |       5b7e2535f5aa2571fe4cb7277491b8742ee73d
+|   |   |       
+|   |   +---55
+|   |   |       7c214f2ad06980213388deae3c9686ff136837
+|   |   |       
+|   |   +---57
+|   |   |       2e26bde04533d2da1e2bda15a22576d909c74c
+|   |   |       
+|   |   +---59
+|   |   |       e3ff8787357030fc46e593482a746c173ee5f3
+|   |   |       
+|   |   +---5a
+|   |   |       24dd109e952d0c611d356d6d4def6d7b7f0100
+|   |   |       
+|   |   +---5b
+|   |   |       4385ab414e823cbbca50d4264859f468d7fff0
+|   |   |       
+|   |   +---5c
+|   |   |       c6c4debfeb4ee43cf12f08c64f1f7090a80271
+|   |   |       
+|   |   +---5e
+|   |   |       20950bcae095763953ad774c662a02c497b2fb
+|   |   |       ccf07fc779d548140bfbcf1aac35931339da64
+|   |   |       
+|   |   +---5f
+|   |   |       d8f16f6c8a0256f4e5dba07bf4d6d91cc63608
+|   |   |       
+|   |   +---60
+|   |   |       1f360c39112c09e456953416d7889bc7e3dad5
+|   |   |       
+|   |   +---62
+|   |   |       0570c4c0929332abb1949ce2a4e2ac44d2e1ba
+|   |   |       b5b96d734a901615e225870f4032c071d64931
+|   |   |       
+|   |   +---63
+|   |   |       57edab1b3f70081924b7d144e7d745e492361b
+|   |   |       
+|   |   +---64
+|   |   |       53ca76b8977a7806d05cc55cc97b8167caca37
+|   |   |       8d584d4864bffe78ffd6866f6f6d121b53ffed
+|   |   |       9e94df0281d894264d8b8fa45a5aac4412d418
+|   |   |       
+|   |   +---65
+|   |   |       8b0e2574a9a885649cc2fb659e7013fdfc35b0
+|   |   |       c2031f514df9246ade80da3a291c8b7692f602
+|   |   |       
+|   |   +---66
+|   |   |       7aaef0c891a18c6177b09b53418bf59c6ab91f
+|   |   |       9156ea2e568b4473caa544e63a7a6d802e0e6c
+|   |   |       
+|   |   +---67
+|   |   |       29ab06c21fb838561e381925eb4a729ec3b51d
+|   |   |       
+|   |   +---69
+|   |   |       bc8d215b50103ab0a4503f11c2b49b46aed100
+|   |   |       
+|   |   +---6a
+|   |   |       1dd43324e95acb9529c71db20b60fee842a9df
+|   |   |       230d07b496a7d586f7b05a7d72f4495b72a433
+|   |   |       
+|   |   +---6b
+|   |   |       ddcc94a9c39d3566047b0e139ec30a1631da78
+|   |   |       e4e91b7c0da52ebed44b4aee8d514db12d0333
+|   |   |       
+|   |   +---6c
+|   |   |       cbc1e61eabb2f53458f2a19efac057a67158e3
+|   |   |       
+|   |   +---6e
+|   |   |       afae085b11d1c68ea275ef91e0d1b67347b178
+|   |   |       
+|   |   +---6f
+|   |   |       667b5b33af40632882892dbce4ca94fd151e7b
+|   |   |       930cae1d9e01b7e7578d3da418c0f022d6c6ea
+|   |   |       
+|   |   +---70
+|   |   |       5c042fc4c8d80ef300a3780a35af884b086455
+|   |   |       
+|   |   +---73
+|   |   |       962e7be0c06fe0515a68d7763c0d884f0879f5
+|   |   |       
+|   |   +---75
+|   |   |       455d1c54ba7eea9c257c7e09200fc2ca34eb15
+|   |   |       
+|   |   +---76
+|   |   |       109de46668c2be89475f429a344eb3a622a679
+|   |   |       d6b32787cffa6603f3e78b753120a4f6537aa9
+|   |   |       
+|   |   +---77
+|   |   |       a91db753d8fca337d9b5478e62bdfd024f18d8
+|   |   |       d475ba030299396866abb0971156964de7b8c7
+|   |   |       
+|   |   +---78
+|   |   |       0b6ae1a3bf0ad52f627d6988d870b51bd140aa
+|   |   |       bdcc43f93bb5e41047b514d640e923e68eb7d8
+|   |   |       
+|   |   +---79
+|   |   |       1df9c9f6ec203655f523020769e935fbd466d2
+|   |   |       
+|   |   +---7b
+|   |   |       64bec6c21aa588609cd3190f6d58c77baf3e65
+|   |   |       6c8a19fe8d27f7f2889deb36867980687cd281
+|   |   |       9e915f88c811d1cc1428616177728de516e987
+|   |   |       e9aea66de9a6e4db9efa3f2a4913da4226a55f
+|   |   |       
+|   |   +---7e
+|   |   |       6f7c8ca0e8275e35fe2e9f991c2da9bf1cc93a
+|   |   |       fb51022b5754c83a6e8b381e4d0bf1dbe6f120
+|   |   |       
+|   |   +---7f
+|   |   |       188e3537539c7cd55e8d514e7476309d691774
+|   |   |       9f125c381b3965abe120999af689de30986ce9
+|   |   |       9f23ea4ba35f4b7cc4b8505f4ebb5c5d2b0de3
+|   |   |       
+|   |   +---80
+|   |   |       345ee41eb11f6a3b4f8857954026ae43c3d9a8
+|   |   |       
+|   |   +---83
+|   |   |       af25db42d9ca889d7db6b57589d95462e6d79e
+|   |   |       
+|   |   +---84
+|   |   |       7040c9c36dce063bb4221e18b7c9fe6f10e041
+|   |   |       
+|   |   +---86
+|   |   |       842464beb7777741f10e960f9ffc45e16f213d
+|   |   |       a291786daafa231da4f4973e7676c87b5d5936
+|   |   |       
+|   |   +---88
+|   |   |       393047a9f92d9ab76123d63e22d728d428ec7f
+|   |   |       faab7e1c2177dfa7b10c0a297a47f422a5b696
+|   |   |       
+|   |   +---89
+|   |   |       09fcfbae6302f7abe182ed949ccd939fce2834
+|   |   |       e279a205b00f1b1cdabcd96579da10dfa5729d
+|   |   |       
+|   |   +---8a
+|   |   |       c429e356f1e0124b20dae275fcac9ea38eeb9f
+|   |   |       
+|   |   +---8b
+|   |   |       09f2482bee34a488ceba3e82dcc90cb119d1b7
+|   |   |       e0c7f827eced849c7f0c5ceed6336f0f2ffa78
+|   |   |       
+|   |   +---8c
+|   |   |       80494a4649985525a1000690a5b737226c98e0
+|   |   |       
+|   |   +---8d
+|   |   |       c12df765b9e2a3754590eca305e28e8f5355c5
+|   |   |       
+|   |   +---8e
+|   |   |       0cc1c52138da58830a7107889aea2216b9a385
+|   |   |       
+|   |   +---8f
+|   |   |       066efd850846cde5c06686b8b64b4f27363b71
+|   |   |       
+|   |   +---90
+|   |   |       b07d6d8433156dc0367d3cc971ad12f74d9fa3
+|   |   |       e3c68a637658c74a20811fa0082c042d8143e3
+|   |   |       
+|   |   +---91
+|   |   |       79cdf611e1cfdfa672ea73b18ad86f0950ce3c
+|   |   |       89437104e3a257ea9caca302cda536ef80281d
+|   |   |       
+|   |   +---92
+|   |   |       c3ea83ef31654ce171da0484d9e01eb0f20abf
+|   |   |       
+|   |   +---96
+|   |   |       022742271c29b6d6d5a0f8fdbf75427bb48dfd
+|   |   |       032a8fd8c5441e8846601d0ea532a43c606201
+|   |   |       
+|   |   +---97
+|   |   |       0b77d132e4bfdaac99ea198bef287a52c45ee4
+|   |   |       
+|   |   +---98
+|   |   |       064f4c492eb2ce33b6b7edd115a76c773d0018
+|   |   |       f379a625388405679692177af22aa84b538bbd
+|   |   |       
+|   |   +---9a
+|   |   |       63ac071b38312f1ea76b30490645469fb7cd75
+|   |   |       dca88ab33e95d1f5adc11492c940f223287072
+|   |   |       
+|   |   +---9b
+|   |   |       5e603fe219763b946ca470fd184244f78ecbf9
+|   |   |       9d0ca98670d73b300577a2703a68963fb94464
+|   |   |       
+|   |   +---9c
+|   |   |       f4c8abbed406a42fd4c71645cc0f6ada3a4577
+|   |   |       
+|   |   +---9f
+|   |   |       5f54ced3c814cecd02131ab1f5858f6e4800ec
+|   |   |       898bcce381687c0921c90eed8ed9660c5c12a6
+|   |   |       
+|   |   +---a0
+|   |   |       97cc497cc00924e10aabe1a30f352fb4c00cc4
+|   |   |       
+|   |   +---a1
+|   |   |       8ef68a194b2c28edbf3de1201dfc1b72e23bb5
+|   |   |       955a55b23d8ac5e55d3efcd4d2d07ab126c51f
+|   |   |       99ad3d0f7252665b9395577c0f36c4e1d33105
+|   |   |       
+|   |   +---a3
+|   |   |       3583c5619475784474a416e18cb154dda6f8b0
+|   |   |       
+|   |   +---a5
+|   |   |       617ba0e278e58d4450e60ef1dad56ee9ca578b
+|   |   |       
+|   |   +---a7
+|   |   |       31c01642f996d74d9340195aef5454f2ed7059
+|   |   |       af8277a03bea5885eec2d72feaf2c959a05a76
+|   |   |       
+|   |   +---a8
+|   |   |       e9c25af33cf856af27167b9e253de3e8625a28
+|   |   |       
+|   |   +---aa
+|   |   |       6213767f1513ade1f91b40c7117af83f77a490
+|   |   |       70406bae0e63e1eb44b6bf76d7ea579933dc48
+|   |   |       
+|   |   +---ac
+|   |   |       42ff7385ce0a9d5a7bd9597bac8f56cc9a0b51
+|   |   |       
+|   |   +---af
+|   |   |       a9f37ba46cddac55589bc52f5f237253910450
+|   |   |       
+|   |   +---b1
+|   |   |       ab1cb66f916b39a529de93d1a35f390beb8d5f
+|   |   |       
+|   |   +---b2
+|   |   |       1d917c6427cafc6916299391a9ece0772746c3
+|   |   |       59fadffdd1b56e382a412677b2950365f2a602
+|   |   |       
+|   |   +---b3
+|   |   |       017595332c1aadb2138b29ec89c72b48b8b8ce
+|   |   |       c7dffa9f4299aaff0937875aef704038794943
+|   |   |       
+|   |   +---b6
+|   |   |       639525affc560c0342c8a26d14c664c1fa1442
+|   |   |       f46469213fc739a184580707910bb144db8f30
+|   |   |       
+|   |   +---b7
+|   |   |       d3b9af71364e68abf2f5945a2c11fa00e166ab
+|   |   |       
+|   |   +---b9
+|   |   |       fd228dc75a55d0be22fd2bf8b3a28e40a300ab
+|   |   |       
+|   |   +---ba
+|   |   |       e34acba082e8b22d7dc495d1b7ddaa14ddffa4
+|   |   |       
+|   |   +---bb
+|   |   |       081ed64a51298a260775c05b2c22cec5eaecad
+|   |   |       4b567d372a5eaba7a4abbc98ec0ff04cf0f1f8
+|   |   |       
+|   |   +---bc
+|   |   |       bfdc638714a4e2da27d97af04051dd6150a8ba
+|   |   |       
+|   |   +---be
+|   |   |       6f1e91319b3318a4fb5f56108ec4810a0c4471
+|   |   |       92c7d8d8262cf247d20bd1d6c00c45613e95b6
+|   |   |       
+|   |   +---bf
+|   |   |       3e8370c56d5e98a914afad841791ba04f6d0b7
+|   |   |       b7be905f86820009594f10287ea0001615c0cd
+|   |   |       cc97e2d1c2d6a8ac65d57da49f6774afe51357
+|   |   |       d9cf4bca5238528fdea8df3e0bb790c707448e
+|   |   |       
+|   |   +---c0
+|   |   |       e0f8b16d9157b56cb3ed535d8dc7e1f5f1175f
+|   |   |       
+|   |   +---c3
+|   |   |       0d9690fb98c0c7ab110507ab06333de57a61b1
+|   |   |       
+|   |   +---c4
+|   |   |       aebdd96836c71889254752df87a942f4d17bad
+|   |   |       e8cac47a62de997a3c36860f75f21389c4d11b
+|   |   |       
+|   |   +---c5
+|   |   |       80b88cecd45b5a3b08386efb15788a49fcab64
+|   |   |       d041eeddaea8db385ca1a62595ca5edf7eb263
+|   |   |       e949e78738bef72dfc8977bee9f7f557024a43
+|   |   |       
+|   |   +---c8
+|   |   |       2e6f56c632e818e6d0ef7f6b0641606c6398b9
+|   |   |       ffbcbbfdc51e0e2cf40db52cc5679de7ed7a33
+|   |   |       
+|   |   +---c9
+|   |   |       21912ee34c6a1dee6d212bf0c26a9c25949a8d
+|   |   |       8949d28d0ed1916a18ab7e1ba7cfbfb112f2af
+|   |   |       dcea9936204d90a0e320c03739bd8c8f5f3906
+|   |   |       ef6443ca6bafb6331c1525238632a1844074b0
+|   |   |       
+|   |   +---ca
+|   |   |       4d2853d64764163089094d4df62a2be5950829
+|   |   |       
+|   |   +---cd
+|   |   |       9b18cdffe271b2f21eaaaadaa354875257d188
+|   |   |       ff0dda13068a50ee67b622c2aad7c9b730c711
+|   |   |       
+|   |   +---ce
+|   |   |       216ccdfff098d7148e518a69c3a8308bf5575c
+|   |   |       e3868e3a6a97a03e59c66e0c292f2b551f04d8
+|   |   |       
+|   |   +---cf
+|   |   |       377d5d9004a49ca239380b15818116f2e249df
+|   |   |       
+|   |   +---d1
+|   |   |       203c03e67e644f1a0b0da7f6d922b21deb860c
+|   |   |       
+|   |   +---d3
+|   |   |       64d01307365c25a26b1c9c8b7ddecc0ded75a5
+|   |   |       
+|   |   +---d4
+|   |   |       683670ffd92ab2626cfac1c3612b6c021bdc24
+|   |   |       
+|   |   +---d5
+|   |   |       5b8392baf6fbd80c70149419d8bd3dfc0b1e61
+|   |   |       af565a74bb08c7ad69064016f1ae9138b260d0
+|   |   |       ec4e03114e5ef9713edd48636dccefc6891f21
+|   |   |       
+|   |   +---d6
+|   |   |       1e9b22766f90981971e5979643240576ee8423
+|   |   |       29d0d6a59632f6d813c67cef95dfdd19f2fbea
+|   |   |       
+|   |   +---d7
+|   |   |       572961310ae3e0715a9dc6a369265cdd0819cd
+|   |   |       c3010dbcc3b4eb708e719e8b97f5995dfefda3
+|   |   |       
+|   |   +---d8
+|   |   |       08689594b0d388bdbc992f8a87cd65a91b419b
+|   |   |       63c34728c3be1b98b35993619da2b27225d3d0
+|   |   |       6e2a4cf9bcd389d86d3659daf03972b043fc28
+|   |   |       
+|   |   +---da
+|   |   |       cf3a0c95888143c6412b31121c018e1efd6e1c
+|   |   |       
+|   |   +---db
+|   |   |       6b0b60069e9c8140304a1184c2e75b1a01569b
+|   |   |       
+|   |   +---dc
+|   |   |       7559e54b345ea355518f44f9a093a166051f3d
+|   |   |       fd23f6b718683e4a376002485dfaa7dc5b7ce1
+|   |   |       
+|   |   +---dd
+|   |   |       9deb0fb6c2218c198f99fa529b67603bb483bf
+|   |   |       
+|   |   +---de
+|   |   |       8696c9da5a63ac164bb99d45db5f6a7d00f45f
+|   |   |       
+|   |   +---df
+|   |   |       a42bc8a23b1c7584eaec5c446e1bc21fc09ba8
+|   |   |       afed3f4a42ebf5c8410b659734ade2a0ac6f04
+|   |   |       
+|   |   +---e0
+|   |   |       19104a481a57aba4b07efdcfcbc5fb8f351413
+|   |   |       
+|   |   +---e1
+|   |   |       3befc7e0d9ac3508691a2f226b5c07aabd8fa9
+|   |   |       
+|   |   +---e3
+|   |   |       1b33308bc1cbded5d1d610c7443e204997067b
+|   |   |       
+|   |   +---e4
+|   |   |       1d9551d93db54dfbe5b78d849bec772f5c510a
+|   |   |       9223634e72f75a10683d973bba5776f62cbe8f
+|   |   |       
+|   |   +---e5
+|   |   |       2f146983b9b18ef3e80dbf9d31c5f520fe442f
+|   |   |       808e13d70746df55b101c5e93bce8e54d96729
+|   |   |       
+|   |   +---e7
+|   |   |       9ea9c6bdfcada3e0f0cd1d4240392f7fbc2c26
+|   |   |       
+|   |   +---e8
+|   |   |       18f1763fd708e0e15d56e9111ad51a0d2e3a5d
+|   |   |       3a3d19efbae6c2ce077b9aa3106846dc8783bb
+|   |   |       
+|   |   +---e9
+|   |   |       650995d7dca713b6590cfd6a8d245835dbadf7
+|   |   |       940517f30735ff462777b66161ebed1ac7c389
+|   |   |       
+|   |   +---ea
+|   |   |       bd94606fb5d2c009522860f6be72a089a6a520
+|   |   |       
+|   |   +---ed
+|   |   |       1847bfb0faff060588315145975255d08f7d16
+|   |   |       520d851f95e28c345d7b7c6ab464e3a2db82ce
+|   |   |       
+|   |   +---ef
+|   |   |       44d9757372367fe0bdb7013bb182fdaa854d7d
+|   |   |       4a7a80837b3990ebc6d3ee0d8250d11dcdab32
+|   |   |       
+|   |   +---f0
+|   |   |       0c6ba8ed0c7f3119b553b41ccea9a10f4f04b2
+|   |   |       96d6f7b678cf2357f46cc6676240854d6822ad
+|   |   |       
+|   |   +---f1
+|   |   |       5a162f07050b1b37b95738ac8c140ff2256071
+|   |   |       f338d0ac6194a64c9a65b3dbd2a07018696d00
+|   |   |       
+|   |   +---f2
+|   |   |       35692f76508d68e8abd80d532272a4d9c9f59e
+|   |   |       691a8a0fcdecb3a4067539d2186ac00f3db6d4
+|   |   |       
+|   |   +---f5
+|   |   |       36d6de47b5484c22d7144cd81b243357dfc1e7
+|   |   |       a41e8cbeaba1274eccad32007e9968ffbefb9f
+|   |   |       
+|   |   +---f6
+|   |   |       107e65bb391857f4a78864c54c233831ab570a
+|   |   |       
+|   |   +---f7
+|   |   |       4f1268acf08c0c0df7f621daf3bc24afa9b19b
+|   |   |       
+|   |   +---f8
+|   |   |       7af3710c147c659e24a5cf1a7742b20c6977bd
+|   |   |       
+|   |   +---fa
+|   |   |       95c08fafa9ed35c2f4254c7d552a83e65e7a74
+|   |   |       ef3179d09d0e936bc9704e5fbc930f1bc549d3
+|   |   |       
+|   |   +---fb
+|   |   |       5f9c8329be652ff673a4e9ab90837ce8ab54b5
+|   |   |       
+|   |   +---fc
+|   |   |       a900234436c295fb4259ba92b5a3429b7f1f92
+|   |   |       
+|   |   +---fd
+|   |   |       85df564d0a600239770cd5b1afd47bd27fa501
+|   |   |       
+|   |   +---fe
+|   |   |       b4c4d14084f35b0787c1d4dafff95eab8d1184
+|   |   |       fba25419e533ecd62b2af6fb3777820f5e961b
+|   |   |       
+|   |   +---ff
+|   |   |       17ee938f6ead6edc6178f83d1453168899403a
+|   |   |       
+|   |   +---info
+|   |   \---pack
+|   \---refs
+|       +---heads
+|       |       main
+|       |       test-protection
+|       |       
+|       +---remotes
+|       |   \---origin
+|       |           main
+|       |           test-protection
+|       |           
+|       \---tags
+|               v0.1.0
+|               
++---.github
+|   \---workflows
+|           ci-back.yml
+|           
++---.mvn
+|   \---wrapper
+|           maven-wrapper.properties
+|           
++---.vscode
+|       settings.json
+|       
++---src
+|   +---main
+|   |   +---java
+|   |   |   \---pe
+|   |   |       \---edu
+|   |   |           \---perumar
+|   |   |               \---perumar_backend
+|   |   |                   |   PerumarBackendApplication.java
+|   |   |                   |   
+|   |   |                   +---config
+|   |   |                   |       AwsConfig.java
+|   |   |                   |       CorsGlobalConfig.java
+|   |   |                   |       DynamoDBConfig.java
+|   |   |                   |       S3Config.java
+|   |   |                   |       SecurityConfig.java
+|   |   |                   |       
+|   |   |                   +---controller
+|   |   |                   |       CarreraController.java
+|   |   |                   |       CicloController.java
+|   |   |                   |       MateriaController.java
+|   |   |                   |       
+|   |   |                   +---dto
+|   |   |                   |       CarreraEstadoRequest.java
+|   |   |                   |       CarreraRequest.java
+|   |   |                   |       CarreraResponse.java
+|   |   |                   |       CarreraUpdateRequest.java
+|   |   |                   |       CicloRequest.java
+|   |   |                   |       CicloResponse.java
+|   |   |                   |       MateriaEstadoRequest.java
+|   |   |                   |       MateriaRequest.java
+|   |   |                   |       MateriaResponse.java
+|   |   |                   |       MateriaUpdateRequest.java
+|   |   |                   |       
+|   |   |                   +---model
+|   |   |                   |       Carrera.java
+|   |   |                   |       Ciclo.java
+|   |   |                   |       Materia.java
+|   |   |                   |       ModalidadCarrera.java
+|   |   |                   |       
+|   |   |                   +---repository
+|   |   |                   |   |   CarreraRepository.java
+|   |   |                   |   |   CicloRepository.java
+|   |   |                   |   |   MateriaRepository.java
+|   |   |                   |   |   
+|   |   |                   |   \---impl
+|   |   |                   |           CarreraRepositoryImpl.java
+|   |   |                   |           CicloRepositoryImpl.java
+|   |   |                   |           MateriaRepositoryImpl.java
+|   |   |                   |           
+|   |   |                   \---service
+|   |   |                       |   CarreraService.java
+|   |   |                       |   CicloService.java
+|   |   |                       |   MateriaService.java
+|   |   |                       |   S3SignedUrlService.java
+|   |   |                       |   
+|   |   |                       \---mapper
+|   |   |                               CarreraMapper.java
+|   |   |                               MateriaMapper.java
+|   |   |                               
+|   |   \---resources
+|   |           application.properties
+|   |           
+|   \---test
+|       +---java
+|       |   \---pe
+|       |       \---edu
+|       |           \---perumar
+|       |               \---perumar_backend
+|       |                   |   BaseIT.java
+|       |                   |   PerumarBackendApplicationTests.java
+|       |                   |   TestConfig.java
+|       |                   |   TestSecurityConfig.java
+|       |                   |   
+|       |                   +---config
+|       |                   |       TestProfileConfig.java
+|       |                   |       TestSecurityConfig.java
+|       |                   |       
+|       |                   +---controller
+|       |                   |       CarreraControllerIT.java
+|       |                   |       CicloControllerIT.java
+|       |                   |       MateriaControllerIT.java
+|       |                   |       
+|       |                   \---service
+|       |                           CarreraServiceTest.java
+|       |                           CicloServiceTest.java
+|       |                           MateriaServiceTest.java
+|       |                           
+|       \---resources
+|               application-test.properties
+|               
+\---target
+    |   perumar-backend-0.0.1-SNAPSHOT.jar
+    |   perumar-backend-0.0.1-SNAPSHOT.jar.original
+    |   
+    +---classes
+    |   |   application.properties
+    |   |   
+    |   \---pe
+    |       \---edu
+    |           \---perumar
+    |               \---perumar_backend
+    |                   |   PerumarBackendApplication.class
+    |                   |   
+    |                   +---config
+    |                   |       AwsConfig.class
+    |                   |       CorsGlobalConfig.class
+    |                   |       DynamoDBConfig.class
+    |                   |       S3Config.class
+    |                   |       SecurityConfig$1.class
+    |                   |       SecurityConfig.class
+    |                   |       
+    |                   +---controller
+    |                   |       CarreraController.class
+    |                   |       CicloController.class
+    |                   |       MateriaController.class
+    |                   |       
+    |                   +---dto
+    |                   |       CarreraEstadoRequest.class
+    |                   |       CarreraRequest.class
+    |                   |       CarreraResponse.class
+    |                   |       CarreraUpdateRequest.class
+    |                   |       CicloRequest.class
+    |                   |       CicloResponse.class
+    |                   |       MateriaEstadoRequest.class
+    |                   |       MateriaRequest.class
+    |                   |       MateriaResponse.class
+    |                   |       MateriaUpdateRequest.class
+    |                   |       
+    |                   +---model
+    |                   |       Carrera.class
+    |                   |       Ciclo.class
+    |                   |       Materia.class
+    |                   |       ModalidadCarrera.class
+    |                   |       
+    |                   +---repository
+    |                   |   |   CarreraRepository.class
+    |                   |   |   CicloRepository.class
+    |                   |   |   MateriaRepository.class
+    |                   |   |   
+    |                   |   \---impl
+    |                   |           CarreraRepositoryImpl.class
+    |                   |           CicloRepositoryImpl.class
+    |                   |           MateriaRepositoryImpl.class
+    |                   |           
+    |                   \---service
+    |                       |   CarreraService$DuplicateKeyException.class
+    |                       |   CarreraService.class
+    |                       |   CicloService.class
+    |                       |   MateriaService$DuplicateKeyException.class
+    |                       |   MateriaService.class
+    |                       |   S3SignedUrlService.class
+    |                       |   
+    |                       \---mapper
+    |                               CarreraMapper.class
+    |                               MateriaMapper.class
+    |                               
+    +---generated-sources
+    |   \---annotations
+    +---generated-test-sources
+    |   \---test-annotations
+    +---maven-archiver
+    |       pom.properties
+    |       
+    +---maven-status
+    |   \---maven-compiler-plugin
+    |       +---compile
+    |       |   \---default-compile
+    |       |           createdFiles.lst
+    |       |           inputFiles.lst
+    |       |           
+    |       \---testCompile
+    |           \---default-testCompile
+    |                   createdFiles.lst
+    |                   inputFiles.lst
+    |                   
+    \---test-classes
+        |   application-test.properties
+        |   
+        \---pe
+            \---edu
+                \---perumar
+                    \---perumar_backend
+                        |   BaseIT.class
+                        |   PerumarBackendApplicationTests$RepoStubs.class
+                        |   PerumarBackendApplicationTests.class
+                        |   TestConfig$1.class
+                        |   TestConfig.class
+                        |   TestSecurityConfig.class
+                        |   
+                        +---config
+                        |       TestProfileConfig.class
+                        |       TestSecurityConfig.class
+                        |       
+                        +---controller
+                        |       CarreraControllerIT.class
+                        |       CicloControllerIT.class
+                        |       MateriaControllerIT.class
+                        |       
+                        \---service
+                                CarreraServiceTest.class
+                                CicloServiceTest.class
+                                MateriaServiceTest.class
+                                
