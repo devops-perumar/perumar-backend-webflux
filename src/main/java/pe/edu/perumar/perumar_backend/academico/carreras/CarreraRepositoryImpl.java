@@ -6,7 +6,6 @@ import java.util.Map;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
-import pe.edu.perumar.perumar_backend.academico.carreras.CarreraRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
