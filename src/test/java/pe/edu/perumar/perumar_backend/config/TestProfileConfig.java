@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
-import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.repository.CicloRepository;
+import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.CarreraRepository;
+import pe.edu.perumar.perumar_backend.academico.ciclos.CicloRepository;
 
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;

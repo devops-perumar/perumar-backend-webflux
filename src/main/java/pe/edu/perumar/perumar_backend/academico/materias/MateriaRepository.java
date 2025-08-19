@@ -1,6 +1,5 @@
-package pe.edu.perumar.perumar_backend.repository;
+package pe.edu.perumar.perumar_backend.academico.materias;
 
-import pe.edu.perumar.perumar_backend.model.Materia;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

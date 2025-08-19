@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.controller;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -7,10 +7,11 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import pe.edu.perumar.perumar_backend.dto.*;
-import pe.edu.perumar.perumar_backend.service.CarreraService;
-import pe.edu.perumar.perumar_backend.service.CarreraService.DuplicateKeyException;
-import pe.edu.perumar.perumar_backend.service.mapper.CarreraMapper;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraEstadoRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraResponse;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraUpdateRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.CarreraService.DuplicateKeyException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

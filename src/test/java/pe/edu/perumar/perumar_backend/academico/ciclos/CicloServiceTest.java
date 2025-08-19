@@ -1,13 +1,12 @@
-package pe.edu.perumar.perumar_backend.service;
+package pe.edu.perumar.perumar_backend.academico.ciclos;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pe.edu.perumar.perumar_backend.dto.CicloRequest;
-import pe.edu.perumar.perumar_backend.model.Ciclo;
-import pe.edu.perumar.perumar_backend.repository.CicloRepository;
+
+import pe.edu.perumar.perumar_backend.academico.ciclos.dto.CicloRequest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;

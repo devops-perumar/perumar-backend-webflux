@@ -1,12 +1,12 @@
-package pe.edu.perumar.perumar_backend.service;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import pe.edu.perumar.perumar_backend.dto.*;
-import pe.edu.perumar.perumar_backend.model.Carrera;
-import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
-import pe.edu.perumar.perumar_backend.service.mapper.CarreraMapper;
+
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraEstadoRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraUpdateRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

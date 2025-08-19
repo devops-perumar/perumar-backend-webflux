@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.dto;
+package pe.edu.perumar.perumar_backend.academico.materias.dto;
 
 import java.time.Instant;
 

@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.controller;
+package pe.edu.perumar.perumar_backend.academico.materias;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -7,13 +7,11 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import pe.edu.perumar.perumar_backend.dto.MateriaEstadoRequest;
-import pe.edu.perumar.perumar_backend.dto.MateriaRequest;
-import pe.edu.perumar.perumar_backend.dto.MateriaResponse;
-import pe.edu.perumar.perumar_backend.dto.MateriaUpdateRequest;
-import pe.edu.perumar.perumar_backend.service.MateriaService;
-import pe.edu.perumar.perumar_backend.service.MateriaService.DuplicateKeyException;
-import pe.edu.perumar.perumar_backend.service.mapper.MateriaMapper;
+import pe.edu.perumar.perumar_backend.academico.materias.MateriaService.DuplicateKeyException;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaEstadoRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaResponse;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaUpdateRequest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

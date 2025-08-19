@@ -1,7 +1,5 @@
-package pe.edu.perumar.perumar_backend.repository.impl;
+package pe.edu.perumar.perumar_backend.academico.materias;
 
-import pe.edu.perumar.perumar_backend.model.Materia;
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedAsyncClient;

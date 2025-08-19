@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.service;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -13,14 +13,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import pe.edu.perumar.perumar_backend.dto.CarreraEstadoRequest;
-import pe.edu.perumar.perumar_backend.dto.CarreraRequest;
-import pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest;
-import pe.edu.perumar.perumar_backend.model.Carrera;
-import pe.edu.perumar.perumar_backend.model.Materia;
-import pe.edu.perumar.perumar_backend.model.ModalidadCarrera;
-import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraEstadoRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraUpdateRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.Materia;
+import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 

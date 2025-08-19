@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.dto;
+package pe.edu.perumar.perumar_backend.academico.ciclos.dto;
 
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;

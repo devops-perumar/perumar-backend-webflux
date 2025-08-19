@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.dto;
+package pe.edu.perumar.perumar_backend.academico.ciclos.dto;
 
 import java.time.Instant;
 import java.time.LocalDate;

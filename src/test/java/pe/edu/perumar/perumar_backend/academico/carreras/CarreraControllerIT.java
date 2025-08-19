@@ -1,15 +1,12 @@
-package pe.edu.perumar.perumar_backend.controller;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
-import pe.edu.perumar.perumar_backend.model.Carrera;
-import pe.edu.perumar.perumar_backend.model.Materia;
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
-import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.model.ModalidadCarrera;
+import pe.edu.perumar.perumar_backend.academico.materias.Materia;
+import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
 
 public class CarreraControllerIT {
 

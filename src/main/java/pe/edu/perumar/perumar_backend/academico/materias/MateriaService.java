@@ -1,17 +1,14 @@
-package pe.edu.perumar.perumar_backend.service;
+package pe.edu.perumar.perumar_backend.academico.materias;
 
 import java.time.Instant;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import pe.edu.perumar.perumar_backend.dto.MateriaEstadoRequest;
-import pe.edu.perumar.perumar_backend.dto.MateriaRequest;
-import pe.edu.perumar.perumar_backend.dto.MateriaResponse;
-import pe.edu.perumar.perumar_backend.dto.MateriaUpdateRequest;
-import pe.edu.perumar.perumar_backend.model.Materia;
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
-import pe.edu.perumar.perumar_backend.service.mapper.MateriaMapper;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaEstadoRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaResponse;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaUpdateRequest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

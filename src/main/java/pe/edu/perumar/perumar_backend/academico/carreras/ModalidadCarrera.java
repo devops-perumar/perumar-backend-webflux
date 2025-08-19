@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.model;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
 public enum ModalidadCarrera {
     CON_EXPERIENCIA,

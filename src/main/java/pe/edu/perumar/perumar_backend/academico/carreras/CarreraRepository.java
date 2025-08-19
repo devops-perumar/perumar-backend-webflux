@@ -1,6 +1,5 @@
-package pe.edu.perumar.perumar_backend.repository;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
-import pe.edu.perumar.perumar_backend.model.Carrera;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

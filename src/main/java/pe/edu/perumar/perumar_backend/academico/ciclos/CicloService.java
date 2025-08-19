@@ -1,11 +1,10 @@
-package pe.edu.perumar.perumar_backend.service;
+package pe.edu.perumar.perumar_backend.academico.ciclos;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import pe.edu.perumar.perumar_backend.dto.CicloRequest;
-import pe.edu.perumar.perumar_backend.dto.CicloResponse;
-import pe.edu.perumar.perumar_backend.model.Ciclo;
-import pe.edu.perumar.perumar_backend.repository.CicloRepository;
+
+import pe.edu.perumar.perumar_backend.academico.ciclos.dto.CicloRequest;
+import pe.edu.perumar.perumar_backend.academico.ciclos.dto.CicloResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

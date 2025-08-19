@@ -5,11 +5,13 @@ D:.
 |   .gitignore
 |   CONTRIBUTING.md
 |   HELP.md
+|   log-back.log
 |   mvnw
 |   mvnw.cmd
 |   pom.xml
 |   README.md
 |   tree-back.txt
+|   update-packages.ps1
 |   
 +---.ebextensions
 |       01_nginx_healthcheck.config
@@ -106,6 +108,7 @@ D:.
 |   |   +---0e
 |   |   |       131b1faddfee7cfc13c5b4403966cf53169e9c
 |   |   |       1411b89a750e903b1d2d62de7974d630680efa
+|   |   |       c58d515fd1629630aef2530ee11eca30b888e7
 |   |   |       ce2d2dda7d65203060e04bbb0668992a3b9e4a
 |   |   |       
 |   |   +---0f
@@ -146,6 +149,7 @@ D:.
 |   |   |       72f05e8d423c37aa78a788f1afcb905a4d89cb
 |   |   |       
 |   |   +---20
+|   |   |       7257a8c68874d86ecb4dec7ec03008ff3eacc6
 |   |   |       a862033daf4a1ad0d0a1aa33b9352b84482708
 |   |   |       
 |   |   +---21
@@ -170,10 +174,12 @@ D:.
 |   |   |       fd2d2824086645758ef517c79eba0e735d62e3
 |   |   |       
 |   |   +---27
+|   |   |       b6abdc90f7f13f77655ff71d2b128f3429e525
 |   |   |       bf67329203a1017d3e4276f076bc6ca16dbb10
 |   |   |       
 |   |   +---29
 |   |   |       210db26d399afa4659c100c361a14ce0cd121d
+|   |   |       406a7d53f24314aef46bd63ae7b525765c0cd9
 |   |   |       4d37c0ad2720fdd16ec4ff710a27b4f6bc6d07
 |   |   |       5edfffc57cc12d581dfab89cc030ba66c06fb3
 |   |   |       
@@ -184,6 +190,7 @@ D:.
 |   |   |       1737e5da8683dfe15e2d28ca2c0fe0a43924c2
 |   |   |       
 |   |   +---2c
+|   |   |       47608a1609b0870fbba487d3cd2f360ce15daa
 |   |   |       bd511c691e9c7ee08f2e002b5a9e0548fce07d
 |   |   |       
 |   |   +---2d
@@ -201,6 +208,7 @@ D:.
 |   |   |       
 |   |   +---33
 |   |   |       06ecd045bf2dc8e5eaa51bb0490157993a653c
+|   |   |       cb667b6901cd91d5bc4a433f27b2f802e6ff0e
 |   |   |       
 |   |   +---34
 |   |   |       e3a303c5d6dd6f840d2b972d94fdf2c79a2134
@@ -217,6 +225,7 @@ D:.
 |   |   |       e87dd98d5d373a55203157e29d70bce9419ece
 |   |   |       
 |   |   +---38
+|   |   |       1914924478a2378a2b29b14333395635efbe89
 |   |   |       6aff45bc31ba6522e9e35a129d7c60bef92a9e
 |   |   |       ed70e8530af208e8b6bcb02f78ca897cbe8918
 |   |   |       
@@ -243,7 +252,11 @@ D:.
 |   |   |       3bdef1095bd5c407a48cf4b6293f8d92c5cbd9
 |   |   |       50fb47cbd52a621b0bd83495dcf17073b5e5d9
 |   |   |       c8e7375bc21131feb7d6d6fb5ee101c07cc152
+|   |   |       d0bc449f42593be4a8e1896962932260af619d
 |   |   |       f6286be10e5bf5a73ac02d1463b105a173f92e
+|   |   |       
+|   |   +---43
+|   |   |       1921437876c2f799b2622fb30f089dd39bba4f
 |   |   |       
 |   |   +---46
 |   |   |       a6ce55b966c0b259e96f37535162f1d671e3da
@@ -255,12 +268,14 @@ D:.
 |   |   |       13f5b5617abe19b34233b5581097d9913ea2fc
 |   |   |       26e4c92c1024d7e82dbba02a08f69a1ebdd5cb
 |   |   |       29ecaf9365d80901eb97175e28b787dffccaf2
+|   |   |       af4c8f9ded2a87e3c452143379802d80a721b1
 |   |   |       da1721f4c25d7f92266a94c5fc34b4123cee29
 |   |   |       
 |   |   +---4b
 |   |   |       5e091ff25abb7c8c759a22ed32b16b6febd3d9
 |   |   |       
 |   |   +---4d
+|   |   |       1293d38594d99789e1e9ce7c8ac03ace430198
 |   |   |       842ffa69f4da8a16c5cfcd62b38528586c582d
 |   |   |       9065a96b2c821eb858f1e02efe5965fe316b85
 |   |   |       
@@ -339,6 +354,7 @@ D:.
 |   |   |       230d07b496a7d586f7b05a7d72f4495b72a433
 |   |   |       
 |   |   +---6b
+|   |   |       af9e2644c63ad6cec3397664390c66b15811a0
 |   |   |       ddcc94a9c39d3566047b0e139ec30a1631da78
 |   |   |       e4e91b7c0da52ebed44b4aee8d514db12d0333
 |   |   |       
@@ -357,9 +373,11 @@ D:.
 |   |   |       
 |   |   +---73
 |   |   |       962e7be0c06fe0515a68d7763c0d884f0879f5
+|   |   |       ea5fb9cf1094c3535e27727259fea4002681c7
 |   |   |       
 |   |   +---75
 |   |   |       455d1c54ba7eea9c257c7e09200fc2ca34eb15
+|   |   |       c4ddf3a5b4d0dccd14da82da1d26bd3abab760
 |   |   |       
 |   |   +---76
 |   |   |       109de46668c2be89475f429a344eb3a622a679
@@ -384,6 +402,7 @@ D:.
 |   |   |       
 |   |   +---7e
 |   |   |       6f7c8ca0e8275e35fe2e9f991c2da9bf1cc93a
+|   |   |       8130c1e1dea9036a8891dabd8e971fd87abceb
 |   |   |       fb51022b5754c83a6e8b381e4d0bf1dbe6f120
 |   |   |       
 |   |   +---7f
@@ -413,6 +432,7 @@ D:.
 |   |   |       e279a205b00f1b1cdabcd96579da10dfa5729d
 |   |   |       
 |   |   +---8a
+|   |   |       b7e09f19e3d33f3a51049dfe70f5eea4d8ddd8
 |   |   |       c429e356f1e0124b20dae275fcac9ea38eeb9f
 |   |   |       
 |   |   +---8b
@@ -436,6 +456,7 @@ D:.
 |   |   |       e3c68a637658c74a20811fa0082c042d8143e3
 |   |   |       
 |   |   +---91
+|   |   |       4cff5af3ae133f9869be5d29db755383e4475f
 |   |   |       79cdf611e1cfdfa672ea73b18ad86f0950ce3c
 |   |   |       89437104e3a257ea9caca302cda536ef80281d
 |   |   |       
@@ -456,6 +477,7 @@ D:.
 |   |   +---9a
 |   |   |       63ac071b38312f1ea76b30490645469fb7cd75
 |   |   |       dca88ab33e95d1f5adc11492c940f223287072
+|   |   |       ea73eeb31f82e9e76f9fb0c7034e36ce5e53e3
 |   |   |       
 |   |   +---9b
 |   |   |       5e603fe219763b946ca470fd184244f78ecbf9
@@ -496,6 +518,9 @@ D:.
 |   |   +---ac
 |   |   |       42ff7385ce0a9d5a7bd9597bac8f56cc9a0b51
 |   |   |       
+|   |   +---ae
+|   |   |       07840805274fe3ea4936999ddad25542fe2959
+|   |   |       
 |   |   +---af
 |   |   |       a9f37ba46cddac55589bc52f5f237253910450
 |   |   |       
@@ -505,6 +530,7 @@ D:.
 |   |   +---b2
 |   |   |       1d917c6427cafc6916299391a9ece0772746c3
 |   |   |       59fadffdd1b56e382a412677b2950365f2a602
+|   |   |       a4ffb1bdcfd4bc56c109b91b5812d9cbfa82e7
 |   |   |       
 |   |   +---b3
 |   |   |       017595332c1aadb2138b29ec89c72b48b8b8ce
@@ -543,6 +569,9 @@ D:.
 |   |   +---c0
 |   |   |       e0f8b16d9157b56cb3ed535d8dc7e1f5f1175f
 |   |   |       
+|   |   +---c1
+|   |   |       7ca72f5af4c7742be9efb949a6312a39330c29
+|   |   |       
 |   |   +---c3
 |   |   |       0d9690fb98c0c7ab110507ab06333de57a61b1
 |   |   |       
@@ -556,6 +585,7 @@ D:.
 |   |   |       e949e78738bef72dfc8977bee9f7f557024a43
 |   |   |       
 |   |   +---c8
+|   |   |       2860916b3934126c518e164e89d66e91132f06
 |   |   |       2e6f56c632e818e6d0ef7f6b0641606c6398b9
 |   |   |       ffbcbbfdc51e0e2cf40db52cc5679de7ed7a33
 |   |   |       
@@ -569,6 +599,7 @@ D:.
 |   |   |       4d2853d64764163089094d4df62a2be5950829
 |   |   |       
 |   |   +---cd
+|   |   |       2962c38dffb5acdd6b4051757c2ba9ffe6749b
 |   |   |       9b18cdffe271b2f21eaaaadaa354875257d188
 |   |   |       ff0dda13068a50ee67b622c2aad7c9b730c711
 |   |   |       
@@ -608,6 +639,7 @@ D:.
 |   |   |       
 |   |   +---da
 |   |   |       cf3a0c95888143c6412b31121c018e1efd6e1c
+|   |   |       d9e5a774c9ddd8ae24620579a6f1065a048180
 |   |   |       
 |   |   +---db
 |   |   |       6b0b60069e9c8140304a1184c2e75b1a01569b
@@ -617,6 +649,7 @@ D:.
 |   |   |       fd23f6b718683e4a376002485dfaa7dc5b7ce1
 |   |   |       
 |   |   +---dd
+|   |   |       6859be655174eb5b555c3e6414ffc0ac3c2d28
 |   |   |       9deb0fb6c2218c198f99fa529b67603bb483bf
 |   |   |       
 |   |   +---de
@@ -656,6 +689,7 @@ D:.
 |   |   |       
 |   |   +---ea
 |   |   |       bd94606fb5d2c009522860f6be72a089a6a520
+|   |   |       c7d6b308da9d9dbfea2c1db2ef71be62fb274b
 |   |   |       
 |   |   +---ed
 |   |   |       1847bfb0faff060588315145975255d08f7d16
@@ -689,16 +723,19 @@ D:.
 |   |   |       
 |   |   +---f8
 |   |   |       7af3710c147c659e24a5cf1a7742b20c6977bd
+|   |   |       ff087da60064a05a47d1e6db953324b55c5711
 |   |   |       
 |   |   +---fa
 |   |   |       95c08fafa9ed35c2f4254c7d552a83e65e7a74
 |   |   |       ef3179d09d0e936bc9704e5fbc930f1bc549d3
+|   |   |       f08c636d2235bf528d2a6d85fdd1cb9618f807
 |   |   |       
 |   |   +---fb
 |   |   |       5f9c8329be652ff673a4e9ab90837ce8ab54b5
 |   |   |       
 |   |   +---fc
 |   |   |       a900234436c295fb4259ba92b5a3429b7f1f92
+|   |   |       c4f8f609d10d70aef3cc177f4d1eba191fe5c5
 |   |   |       
 |   |   +---fd
 |   |   |       85df564d0a600239770cd5b1afd47bd27fa501
@@ -745,6 +782,31 @@ D:.
 |   |   |               \---perumar_backend
 |   |   |                   |   PerumarBackendApplication.java
 |   |   |                   |   
+|   |   |                   +---academico
+|   |   |                   |   +---carreras
+|   |   |                   |   |       Carrera.java
+|   |   |                   |   |       CarreraController.java
+|   |   |                   |   |       CarreraMapper.java
+|   |   |                   |   |       CarreraRepository.java
+|   |   |                   |   |       CarreraRepositoryImpl.java
+|   |   |                   |   |       CarreraService.java
+|   |   |                   |   |       ModalidadCarrera.java
+|   |   |                   |   |       
+|   |   |                   |   +---ciclos
+|   |   |                   |   |       Ciclo.java
+|   |   |                   |   |       CicloController.java
+|   |   |                   |   |       CicloRepository.java
+|   |   |                   |   |       CicloRepositoryImpl.java
+|   |   |                   |   |       CicloService.java
+|   |   |                   |   |       
+|   |   |                   |   \---materias
+|   |   |                   |           Materia.java
+|   |   |                   |           MateriaController.java
+|   |   |                   |           MateriaMapper.java
+|   |   |                   |           MateriaRepository.java
+|   |   |                   |           MateriaRepositoryImpl.java
+|   |   |                   |           MateriaService.java
+|   |   |                   |           
 |   |   |                   +---config
 |   |   |                   |       AwsConfig.java
 |   |   |                   |       CorsGlobalConfig.java
@@ -753,10 +815,6 @@ D:.
 |   |   |                   |       SecurityConfig.java
 |   |   |                   |       
 |   |   |                   +---controller
-|   |   |                   |       CarreraController.java
-|   |   |                   |       CicloController.java
-|   |   |                   |       MateriaController.java
-|   |   |                   |       
 |   |   |                   +---dto
 |   |   |                   |       CarreraEstadoRequest.java
 |   |   |                   |       CarreraRequest.java
@@ -770,31 +828,12 @@ D:.
 |   |   |                   |       MateriaUpdateRequest.java
 |   |   |                   |       
 |   |   |                   +---model
-|   |   |                   |       Carrera.java
-|   |   |                   |       Ciclo.java
-|   |   |                   |       Materia.java
-|   |   |                   |       ModalidadCarrera.java
-|   |   |                   |       
 |   |   |                   +---repository
-|   |   |                   |   |   CarreraRepository.java
-|   |   |                   |   |   CicloRepository.java
-|   |   |                   |   |   MateriaRepository.java
-|   |   |                   |   |   
 |   |   |                   |   \---impl
-|   |   |                   |           CarreraRepositoryImpl.java
-|   |   |                   |           CicloRepositoryImpl.java
-|   |   |                   |           MateriaRepositoryImpl.java
-|   |   |                   |           
 |   |   |                   \---service
-|   |   |                       |   CarreraService.java
-|   |   |                       |   CicloService.java
-|   |   |                       |   MateriaService.java
 |   |   |                       |   S3SignedUrlService.java
 |   |   |                       |   
 |   |   |                       \---mapper
-|   |   |                               CarreraMapper.java
-|   |   |                               MateriaMapper.java
-|   |   |                               
 |   |   \---resources
 |   |           application.properties
 |   |           
@@ -809,27 +848,29 @@ D:.
 |       |                   |   TestConfig.java
 |       |                   |   TestSecurityConfig.java
 |       |                   |   
+|       |                   +---academico
+|       |                   |   +---carreras
+|       |                   |   |       CarreraControllerIT.java
+|       |                   |   |       CarreraServiceTest.java
+|       |                   |   |       
+|       |                   |   +---ciclos
+|       |                   |   |       CicloControllerIT.java
+|       |                   |   |       CicloServiceTest.java
+|       |                   |   |       
+|       |                   |   \---materias
+|       |                   |           MateriaControllerIT.java
+|       |                   |           MateriaServiceTest.java
+|       |                   |           
 |       |                   +---config
 |       |                   |       TestProfileConfig.java
 |       |                   |       TestSecurityConfig.java
 |       |                   |       
 |       |                   +---controller
-|       |                   |       CarreraControllerIT.java
-|       |                   |       CicloControllerIT.java
-|       |                   |       MateriaControllerIT.java
-|       |                   |       
 |       |                   \---service
-|       |                           CarreraServiceTest.java
-|       |                           CicloServiceTest.java
-|       |                           MateriaServiceTest.java
-|       |                           
 |       \---resources
 |               application-test.properties
 |               
 \---target
-    |   perumar-backend-0.0.1-SNAPSHOT.jar
-    |   perumar-backend-0.0.1-SNAPSHOT.jar.original
-    |   
     +---classes
     |   |   application.properties
     |   |   
@@ -837,105 +878,21 @@ D:.
     |       \---edu
     |           \---perumar
     |               \---perumar_backend
-    |                   |   PerumarBackendApplication.class
-    |                   |   
-    |                   +---config
-    |                   |       AwsConfig.class
-    |                   |       CorsGlobalConfig.class
-    |                   |       DynamoDBConfig.class
-    |                   |       S3Config.class
-    |                   |       SecurityConfig$1.class
-    |                   |       SecurityConfig.class
-    |                   |       
-    |                   +---controller
-    |                   |       CarreraController.class
-    |                   |       CicloController.class
-    |                   |       MateriaController.class
-    |                   |       
-    |                   +---dto
-    |                   |       CarreraEstadoRequest.class
-    |                   |       CarreraRequest.class
-    |                   |       CarreraResponse.class
-    |                   |       CarreraUpdateRequest.class
-    |                   |       CicloRequest.class
-    |                   |       CicloResponse.class
-    |                   |       MateriaEstadoRequest.class
-    |                   |       MateriaRequest.class
-    |                   |       MateriaResponse.class
-    |                   |       MateriaUpdateRequest.class
-    |                   |       
-    |                   +---model
-    |                   |       Carrera.class
-    |                   |       Ciclo.class
-    |                   |       Materia.class
-    |                   |       ModalidadCarrera.class
-    |                   |       
-    |                   +---repository
-    |                   |   |   CarreraRepository.class
-    |                   |   |   CicloRepository.class
-    |                   |   |   MateriaRepository.class
-    |                   |   |   
-    |                   |   \---impl
-    |                   |           CarreraRepositoryImpl.class
-    |                   |           CicloRepositoryImpl.class
-    |                   |           MateriaRepositoryImpl.class
-    |                   |           
-    |                   \---service
-    |                       |   CarreraService$DuplicateKeyException.class
-    |                       |   CarreraService.class
-    |                       |   CicloService.class
-    |                       |   MateriaService$DuplicateKeyException.class
-    |                       |   MateriaService.class
-    |                       |   S3SignedUrlService.class
-    |                       |   
-    |                       \---mapper
-    |                               CarreraMapper.class
-    |                               MateriaMapper.class
+    |                   \---academico
+    |                       \---materias
+    |                               MateriaController.class
     |                               
     +---generated-sources
     |   \---annotations
     +---generated-test-sources
     |   \---test-annotations
-    +---maven-archiver
-    |       pom.properties
-    |       
     +---maven-status
     |   \---maven-compiler-plugin
-    |       +---compile
-    |       |   \---default-compile
-    |       |           createdFiles.lst
-    |       |           inputFiles.lst
-    |       |           
-    |       \---testCompile
-    |           \---default-testCompile
+    |       \---compile
+    |           \---default-compile
     |                   createdFiles.lst
     |                   inputFiles.lst
     |                   
     \---test-classes
-        |   application-test.properties
-        |   
-        \---pe
-            \---edu
-                \---perumar
-                    \---perumar_backend
-                        |   BaseIT.class
-                        |   PerumarBackendApplicationTests$RepoStubs.class
-                        |   PerumarBackendApplicationTests.class
-                        |   TestConfig$1.class
-                        |   TestConfig.class
-                        |   TestSecurityConfig.class
-                        |   
-                        +---config
-                        |       TestProfileConfig.class
-                        |       TestSecurityConfig.class
-                        |       
-                        +---controller
-                        |       CarreraControllerIT.class
-                        |       CicloControllerIT.class
-                        |       MateriaControllerIT.class
-                        |       
-                        \---service
-                                CarreraServiceTest.class
-                                CicloServiceTest.class
-                                MateriaServiceTest.class
-                                
+            application-test.properties
+            

@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.model;
+package pe.edu.perumar.perumar_backend.academico.materias;
 
 import java.time.Instant;
 import jakarta.validation.constraints.NotBlank;

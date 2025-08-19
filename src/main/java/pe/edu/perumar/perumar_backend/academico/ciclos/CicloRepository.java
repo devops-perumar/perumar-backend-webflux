@@ -1,6 +1,5 @@
-package pe.edu.perumar.perumar_backend.repository;
+package pe.edu.perumar.perumar_backend.academico.ciclos;
 
-import pe.edu.perumar.perumar_backend.model.Ciclo;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import java.time.LocalDate;

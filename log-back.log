@@ -1,0 +1,166 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< pe.edu.perumar:perumar-backend >-------------------
+[INFO] Building perumar-backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ perumar-backend ---
+[INFO] Deleting D:\PAPA\aplicaciones\PERUMAR\perumar-webflux\perumar-backend\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ perumar-backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ perumar-backend ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 35 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[11,46] cannot find symbol
+  symbol:   class CarreraService
+  location: package pe.edu.perumar.perumar_backend.service
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[12,61] package pe.edu.perumar.perumar_backend.service.CarreraService does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[13,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[6,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[7,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[8,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[9,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[4,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[4,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[18,13] cannot find symbol
+  symbol:   class ModalidadCarrera
+  location: class pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[29,12] cannot find symbol
+  symbol:   class ModalidadCarrera
+  location: class pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[30,30] cannot find symbol
+  symbol:   class ModalidadCarrera
+  location: class pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[22,13] cannot find symbol
+  symbol:   class ModalidadCarrera
+  location: class pe.edu.perumar.perumar_backend.dto.CarreraRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[36,12] cannot find symbol
+  symbol:   class ModalidadCarrera
+  location: class pe.edu.perumar.perumar_backend.dto.CarreraRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[37,30] cannot find symbol
+  symbol:   class ModalidadCarrera
+  location: class pe.edu.perumar.perumar_backend.dto.CarreraRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraRepository.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[17,19] cannot find symbol
+  symbol:   class MateriaRepository
+  location: class pe.edu.perumar.perumar_backend.academico.carreras.CarreraService
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[19,51] cannot find symbol
+  symbol:   class MateriaRepository
+  location: class pe.edu.perumar.perumar_backend.academico.carreras.CarreraService
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraMapper.java:[8,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraRepositoryImpl.java:[9,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraRepositoryImpl.java:[10,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloController.java:[9,46] cannot find symbol
+  symbol:   class CicloService
+  location: package pe.edu.perumar.perumar_backend.service
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloService.java:[7,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloService.java:[8,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloRepository.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloRepositoryImpl.java:[5,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloRepositoryImpl.java:[6,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[14,46] cannot find symbol
+  symbol:   class MateriaService
+  location: package pe.edu.perumar.perumar_backend.service
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[15,61] package pe.edu.perumar.perumar_backend.service.MateriaService does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[16,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaService.java:[12,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaService.java:[13,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaService.java:[14,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaRepository.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaMapper.java:[5,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaRepositoryImpl.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaRepositoryImpl.java:[4,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[68,23] cannot find symbol
+  symbol:   class DuplicateKeyException
+  location: class pe.edu.perumar.perumar_backend.academico.carreras.CarreraController
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[71,21] cannot find symbol
+  symbol:   class DuplicateKeyException
+  location: class pe.edu.perumar.perumar_backend.academico.materias.MateriaController
+[INFO] 39 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.976 s
+[INFO] Finished at: 2025-08-18T20:21:47-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile (default-compile) on project perumar-backend: Compilation failure: Compilation failure: 
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[11,46] cannot find symbol
+[ERROR]   symbol:   class CarreraService
+[ERROR]   location: package pe.edu.perumar.perumar_backend.service
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[12,61] package pe.edu.perumar.perumar_backend.service.CarreraService does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[13,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[6,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[7,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[8,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[9,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[4,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[4,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[18,13] cannot find symbol
+[ERROR]   symbol:   class ModalidadCarrera
+[ERROR]   location: class pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[29,12] cannot find symbol
+[ERROR]   symbol:   class ModalidadCarrera
+[ERROR]   location: class pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraUpdateRequest.java:[30,30] cannot find symbol
+[ERROR]   symbol:   class ModalidadCarrera
+[ERROR]   location: class pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[22,13] cannot find symbol
+[ERROR]   symbol:   class ModalidadCarrera
+[ERROR]   location: class pe.edu.perumar.perumar_backend.dto.CarreraRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[36,12] cannot find symbol
+[ERROR]   symbol:   class ModalidadCarrera
+[ERROR]   location: class pe.edu.perumar.perumar_backend.dto.CarreraRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/dto/CarreraRequest.java:[37,30] cannot find symbol
+[ERROR]   symbol:   class ModalidadCarrera
+[ERROR]   location: class pe.edu.perumar.perumar_backend.dto.CarreraRequest
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraRepository.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[17,19] cannot find symbol
+[ERROR]   symbol:   class MateriaRepository
+[ERROR]   location: class pe.edu.perumar.perumar_backend.academico.carreras.CarreraService
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraService.java:[19,51] cannot find symbol
+[ERROR]   symbol:   class MateriaRepository
+[ERROR]   location: class pe.edu.perumar.perumar_backend.academico.carreras.CarreraService
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraMapper.java:[8,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraRepositoryImpl.java:[9,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraRepositoryImpl.java:[10,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloController.java:[9,46] cannot find symbol
+[ERROR]   symbol:   class CicloService
+[ERROR]   location: package pe.edu.perumar.perumar_backend.service
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloService.java:[7,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloService.java:[8,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloRepository.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloRepositoryImpl.java:[5,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/ciclos/CicloRepositoryImpl.java:[6,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[14,46] cannot find symbol
+[ERROR]   symbol:   class MateriaService
+[ERROR]   location: package pe.edu.perumar.perumar_backend.service
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[15,61] package pe.edu.perumar.perumar_backend.service.MateriaService does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[16,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaService.java:[12,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaService.java:[13,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaService.java:[14,53] package pe.edu.perumar.perumar_backend.service.mapper does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaRepository.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaMapper.java:[5,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaRepositoryImpl.java:[3,44] package pe.edu.perumar.perumar_backend.model does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaRepositoryImpl.java:[4,49] package pe.edu.perumar.perumar_backend.repository does not exist
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/carreras/CarreraController.java:[68,23] cannot find symbol
+[ERROR]   symbol:   class DuplicateKeyException
+[ERROR]   location: class pe.edu.perumar.perumar_backend.academico.carreras.CarreraController
+[ERROR] /D:/PAPA/aplicaciones/PERUMAR/perumar-webflux/perumar-backend/src/main/java/pe/edu/perumar/perumar_backend/academico/materias/MateriaController.java:[71,21] cannot find symbol
+[ERROR]   symbol:   class DuplicateKeyException
+[ERROR]   location: class pe.edu.perumar.perumar_backend.academico.materias.MateriaController
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

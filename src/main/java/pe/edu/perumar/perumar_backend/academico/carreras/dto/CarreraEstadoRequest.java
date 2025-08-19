@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.dto;
+package pe.edu.perumar.perumar_backend.academico.carreras.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

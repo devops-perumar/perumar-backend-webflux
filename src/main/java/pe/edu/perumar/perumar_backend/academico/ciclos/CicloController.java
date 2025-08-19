@@ -1,12 +1,12 @@
-package pe.edu.perumar.perumar_backend.controller;
+package pe.edu.perumar.perumar_backend.academico.ciclos;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.perumar.perumar_backend.dto.CicloRequest;
-import pe.edu.perumar.perumar_backend.dto.CicloResponse;
-import pe.edu.perumar.perumar_backend.service.CicloService;
+
+import pe.edu.perumar.perumar_backend.academico.ciclos.dto.CicloRequest;
+import pe.edu.perumar.perumar_backend.academico.ciclos.dto.CicloResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

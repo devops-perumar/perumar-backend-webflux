@@ -8,9 +8,9 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
-import pe.edu.perumar.perumar_backend.repository.MateriaRepository;
-import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.repository.CicloRepository;
+import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.CarreraRepository;
+import pe.edu.perumar.perumar_backend.academico.ciclos.CicloRepository;
 
 @SpringBootTest
 @ActiveProfiles("test")

@@ -1,11 +1,10 @@
-package pe.edu.perumar.perumar_backend.service.mapper;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
 import java.time.Instant;
 
-import pe.edu.perumar.perumar_backend.dto.CarreraRequest;
-import pe.edu.perumar.perumar_backend.dto.CarreraResponse;
-import pe.edu.perumar.perumar_backend.dto.CarreraUpdateRequest;
-import pe.edu.perumar.perumar_backend.model.Carrera;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraRequest;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraResponse;
+import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraUpdateRequest;
 
 public class CarreraMapper {
 

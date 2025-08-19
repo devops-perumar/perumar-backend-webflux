@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.repository.impl;
+package pe.edu.perumar.perumar_backend.academico.carreras;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,8 +6,7 @@ import java.util.Map;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
-import pe.edu.perumar.perumar_backend.model.Carrera;
-import pe.edu.perumar.perumar_backend.repository.CarreraRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.CarreraRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
@@ -90,7 +89,7 @@ public class CarreraRepositoryImpl implements CarreraRepository {
         c.setNombre(item.get("nombre").s());
         c.setDescripcion(item.getOrDefault("descripcion", AttributeValue.builder().s("").build()).s());
         c.setModalidad(item.get("modalidad") != null ? 
-            pe.edu.perumar.perumar_backend.model.ModalidadCarrera.valueOf(item.get("modalidad").s()) : null);
+            pe.edu.perumar.perumar_backend.academico.carreras.ModalidadCarrera.valueOf(item.get("modalidad").s()) : null);
         c.setMaterias(item.get("materias") != null ? 
             item.get("materias").ss() : java.util.Collections.emptyList());
         c.setEstado(item.get("estado").s());

@@ -1,8 +1,11 @@
-package pe.edu.perumar.perumar_backend.service.mapper;
+package pe.edu.perumar.perumar_backend.academico.materias;
 
 import java.time.Instant;
-import pe.edu.perumar.perumar_backend.dto.*;
-import pe.edu.perumar.perumar_backend.model.Materia;
+
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaEstadoRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaResponse;
+import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaUpdateRequest;
 
 public class MateriaMapper {
 

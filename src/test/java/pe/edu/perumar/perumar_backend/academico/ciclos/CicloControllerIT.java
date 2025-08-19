@@ -1,4 +1,4 @@
-package pe.edu.perumar.perumar_backend.controller;
+package pe.edu.perumar.perumar_backend.academico.ciclos;
 
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
@@ -17,8 +17,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import pe.edu.perumar.perumar_backend.BaseIT;
-import pe.edu.perumar.perumar_backend.model.Ciclo;
-import pe.edu.perumar.perumar_backend.repository.CicloRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

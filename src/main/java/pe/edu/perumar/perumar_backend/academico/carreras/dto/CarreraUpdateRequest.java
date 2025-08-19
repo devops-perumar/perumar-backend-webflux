@@ -1,7 +1,7 @@
-package pe.edu.perumar.perumar_backend.dto;
+package pe.edu.perumar.perumar_backend.academico.carreras.dto;
 
 import jakarta.validation.constraints.*;
-import pe.edu.perumar.perumar_backend.model.ModalidadCarrera;
+import pe.edu.perumar.perumar_backend.academico.carreras.ModalidadCarrera;
 
 import java.util.List;
 
