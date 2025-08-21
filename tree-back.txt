@@ -75,12 +75,15 @@ D:.
 |   |   +---03
 |   |   |       5ed32f7913c9c9f5381324f71621f0c582b38b
 |   |   |       7ea2d0c8d26813dd086fb3964bfa7078b16d98
+|   |   |       93980c6bb1169247676c92183ec253529507b1
 |   |   |       efd989934f8ad4e67376107fced20552eb0630
 |   |   |       
 |   |   +---04
+|   |   |       1569f0dd6af7330d01bc3e139cb46e56e336c8
 |   |   |       219c3d0cd002db04ad48d94aab6d39caf55cae
 |   |   |       
 |   |   +---05
+|   |   |       847f6f7f94c5ad4fc63588dcae3a3574f2f8c4
 |   |   |       e8d4e3c82d580261ac0618988af26cdf9aef79
 |   |   |       
 |   |   +---06
@@ -92,13 +95,16 @@ D:.
 |   |   |       
 |   |   +---08
 |   |   |       89a716f65336789ee57d28c46e43c3a5e64b07
+|   |   |       f5294881f358c8dcd6c6b2cdd79dce5b85ca41
 |   |   |       
 |   |   +---09
 |   |   |       2bf7da00f8a4cac7397d6729fdb38a7297b13f
+|   |   |       5612d77ee53078a666186a161fa1bea16fe2b7
 |   |   |       
 |   |   +---0a
 |   |   |       2ef8519bb451fb4acd6466674cb7b4e79df5e9
 |   |   |       7d6bd0b7cadea59de6cbfdfb9d3fd541d5c3fd
+|   |   |       8e61236da1fbe854d4ff111d1133e11a3c5737
 |   |   |       
 |   |   +---0b
 |   |   |       02ee94d540b165e199ae578d066dcb4247c0df
@@ -124,10 +130,15 @@ D:.
 |   |   |       fa66d9e6d94af8898d7c95d1751642d48a7f3c
 |   |   |       
 |   |   +---12
+|   |   |       361ed2db8bc7429d7685c577b7fbb387c6d862
 |   |   |       54611b4a7d7c1e8206bdc5110e524b870aa938
 |   |   |       fbe1e9078d54aa175943f8e2dce88de6719388
 |   |   |       
+|   |   +---15
+|   |   |       a541eed94cb895156cce089a5f7856143d085f
+|   |   |       
 |   |   +---18
+|   |   |       8009f57fe768f255cad24b59d0222c84305736
 |   |   |       8c13e41e3a26c6710f821c597d5dfee1d0647a
 |   |   |       
 |   |   +---19
@@ -135,13 +146,19 @@ D:.
 |   |   |       62fd6518c6531c055fa15e15ac0d17bb5766b3
 |   |   |       a7e78f5983b616320ed12b29cac3d8586c8992
 |   |   |       
+|   |   +---1a
+|   |   |       510360ee0efb76c333d1f4e5bd54cfba7f9efe
+|   |   |       
 |   |   +---1b
 |   |   |       46663ee1a7bfc3970855809bcdea31b476b727
+|   |   |       58cbcbc241bcffc83a645105a203d340968c4f
+|   |   |       96a4883bc15f6d5d55ade977ac4a41ca6e549d
 |   |   |       
 |   |   +---1c
 |   |   |       6370950fceb4ba42aa420f9d1e1196650c8e42
 |   |   |       
 |   |   +---1d
+|   |   |       1c6195234e16c2f6c2854795f7eddf0662fd1e
 |   |   |       9dd862358e5145b060d6318dd12850e7658d03
 |   |   |       defecd3fb957f6a983797b5702208168a5459d
 |   |   |       
@@ -155,12 +172,15 @@ D:.
 |   |   +---21
 |   |   |       01b3de6dfbd7627e428d5c9e4082cc6aceb7d1
 |   |   |       034ef9deeba20e2fd628b77d3d3b878e83a55e
+|   |   |       30faf1f7cdd13084c6a8d4e9b64f24c78039b3
+|   |   |       5aa1af8b8b7a164dc6885e8c94a8e081a735cc
 |   |   |       
 |   |   +---22
 |   |   |       c5e6efcec3f8cf9cf8b7d6b3ebe84ceb1c22fe
 |   |   |       
 |   |   +---23
 |   |   |       3cc64b5ba4c35410265407a66ba8b39ce345ca
+|   |   |       587532319dc6ccc625c23f2814487f50f4b038
 |   |   |       
 |   |   +---24
 |   |   |       2326e0314ac3f83c2a82d5c7f3d9fff559fd59
@@ -171,9 +191,12 @@ D:.
 |   |   |       fde456c0ca0362074edad6f1f73041a1173802
 |   |   |       
 |   |   +---26
+|   |   |       31c1bfd5cea138ceeea360cd1bf269546c1947
+|   |   |       ed9828f1878fc1aac931fcb19f5aea025c81d0
 |   |   |       fd2d2824086645758ef517c79eba0e735d62e3
 |   |   |       
 |   |   +---27
+|   |   |       1cd97818b2ec72da302e531a5186c79b0a1f34
 |   |   |       b6abdc90f7f13f77655ff71d2b128f3429e525
 |   |   |       bf67329203a1017d3e4276f076bc6ca16dbb10
 |   |   |       
@@ -187,6 +210,7 @@ D:.
 |   |   |       62ef7ac70b5af870f091314964babcbad27d82
 |   |   |       
 |   |   +---2b
+|   |   |       16a39a8868e1caec522b7b80db63b17e092748
 |   |   |       1737e5da8683dfe15e2d28ca2c0fe0a43924c2
 |   |   |       
 |   |   +---2c
@@ -200,6 +224,7 @@ D:.
 |   |   |       25339a6b59edaf325261856c089f893a6baf6d
 |   |   |       
 |   |   +---2f
+|   |   |       364a2cd16ece75f33a4db577fcc9fa49ae6788
 |   |   |       bcb4d0bdd776d8bdc0c24a9e447e74b2ae8173
 |   |   |       
 |   |   +---32
@@ -222,6 +247,7 @@ D:.
 |   |   |       586742a8226fe2b129d68450d4f56c31fa231e
 |   |   |       
 |   |   +---37
+|   |   |       01ace5571a113a1fea192928afb20b7b734654
 |   |   |       e87dd98d5d373a55203157e29d70bce9419ece
 |   |   |       
 |   |   +---38
@@ -233,6 +259,8 @@ D:.
 |   |   |       8429757f51a6eda312af23a695d5157ff5e0ee
 |   |   |       
 |   |   +---3a
+|   |   |       87a2c5e13a1771d46312da61280ee1bfadce0b
+|   |   |       b7004e5b4f0a2f52db1bad8380a5466b1365b8
 |   |   |       c343b6ee8cba42ca12549993182f2c14969217
 |   |   |       
 |   |   +---3b
@@ -242,8 +270,16 @@ D:.
 |   |   +---3c
 |   |   |       880339b4a932189c31375fadc39b8dbb88744a
 |   |   |       
+|   |   +---3e
+|   |   |       6e805708d69c6289053a91f5717275e065982e
+|   |   |       
 |   |   +---3f
 |   |   |       2f680fc988b1027c8bcfb58f5875f307c9b797
+|   |   |       867e3bfe07973f43a6b42bf49174a923c838c0
+|   |   |       
+|   |   +---40
+|   |   |       601fcd0d6839b87ca102a5aa87b28e57e1822d
+|   |   |       b11815ac37f8638cbd483f28ed4764a602a175
 |   |   |       
 |   |   +---41
 |   |   |       bd1efc4747a138d929ebf1252edc0b23411e1c
@@ -257,6 +293,7 @@ D:.
 |   |   |       
 |   |   +---43
 |   |   |       1921437876c2f799b2622fb30f089dd39bba4f
+|   |   |       aeb5467476a44b97999b328cf25a17c9fb856d
 |   |   |       
 |   |   +---46
 |   |   |       a6ce55b966c0b259e96f37535162f1d671e3da
@@ -283,6 +320,9 @@ D:.
 |   |   |       0dd403a7ca4471c9304b37967f85d00a7181a1
 |   |   |       bdeb6fcdc230e269aaee9fd53472b32b73f7d7
 |   |   |       
+|   |   +---50
+|   |   |       6a5ef23ee62e3fbd095881e195da464849726f
+|   |   |       
 |   |   +---51
 |   |   |       183f573a399ff98bf1788a934e8adb1e8284f5
 |   |   |       ab90ec3dc7f2ef9ddbe0a92a44f0f8c70bc750
@@ -292,6 +332,7 @@ D:.
 |   |   |       
 |   |   +---54
 |   |   |       1858cc31a4863821a0f65f09707aa79d293fa2
+|   |   |       2ecd78a2c586f338944afcde20c8893e74d0ae
 |   |   |       5a9718fcd94bb6206cc51489d3fe6c3478a653
 |   |   |       5b7e2535f5aa2571fe4cb7277491b8742ee73d
 |   |   |       
@@ -301,6 +342,9 @@ D:.
 |   |   +---57
 |   |   |       2e26bde04533d2da1e2bda15a22576d909c74c
 |   |   |       
+|   |   +---58
+|   |   |       52dc38ee804947818c73e1f9b7e5acf5374f50
+|   |   |       
 |   |   +---59
 |   |   |       e3ff8787357030fc46e593482a746c173ee5f3
 |   |   |       
@@ -309,9 +353,13 @@ D:.
 |   |   |       
 |   |   +---5b
 |   |   |       4385ab414e823cbbca50d4264859f468d7fff0
+|   |   |       b56c8f0a864c89e87ee2278b6c57388a9fb5b4
 |   |   |       
 |   |   +---5c
 |   |   |       c6c4debfeb4ee43cf12f08c64f1f7090a80271
+|   |   |       
+|   |   +---5d
+|   |   |       8414b7f2323ce4bbb1227d42abf997d2984021
 |   |   |       
 |   |   +---5e
 |   |   |       20950bcae095763953ad774c662a02c497b2fb
@@ -336,6 +384,7 @@ D:.
 |   |   |       9e94df0281d894264d8b8fa45a5aac4412d418
 |   |   |       
 |   |   +---65
+|   |   |       4ece3963c6fa1abe8e68ea31d81a2830416f1d
 |   |   |       8b0e2574a9a885649cc2fb659e7013fdfc35b0
 |   |   |       c2031f514df9246ade80da3a291c8b7692f602
 |   |   |       
@@ -345,6 +394,9 @@ D:.
 |   |   |       
 |   |   +---67
 |   |   |       29ab06c21fb838561e381925eb4a729ec3b51d
+|   |   |       
+|   |   +---68
+|   |   |       ba3845222c765eeecc7f3638b8b80875033c5c
 |   |   |       
 |   |   +---69
 |   |   |       bc8d215b50103ab0a4503f11c2b49b46aed100
@@ -359,6 +411,7 @@ D:.
 |   |   |       e4e91b7c0da52ebed44b4aee8d514db12d0333
 |   |   |       
 |   |   +---6c
+|   |   |       c01a730360b2281dd16a81b903cf569df09108
 |   |   |       cbc1e61eabb2f53458f2a19efac057a67158e3
 |   |   |       
 |   |   +---6e
@@ -370,6 +423,10 @@ D:.
 |   |   |       
 |   |   +---70
 |   |   |       5c042fc4c8d80ef300a3780a35af884b086455
+|   |   |       f60f0d7729fdf308ec6bf4fb1521bf2906878d
+|   |   |       
+|   |   +---72
+|   |   |       1552d3298f8b029f6be5c853a2fb9f423721b1
 |   |   |       
 |   |   +---73
 |   |   |       962e7be0c06fe0515a68d7763c0d884f0879f5
@@ -381,11 +438,13 @@ D:.
 |   |   |       
 |   |   +---76
 |   |   |       109de46668c2be89475f429a344eb3a622a679
+|   |   |       be9498efb130daddd974b8d4c16c4a1402767e
 |   |   |       d6b32787cffa6603f3e78b753120a4f6537aa9
 |   |   |       
 |   |   +---77
 |   |   |       a91db753d8fca337d9b5478e62bdfd024f18d8
 |   |   |       d475ba030299396866abb0971156964de7b8c7
+|   |   |       de05458e6b12c6c85a2c26997dcdea340a99e5
 |   |   |       
 |   |   +---78
 |   |   |       0b6ae1a3bf0ad52f627d6988d870b51bd140aa
@@ -399,6 +458,9 @@ D:.
 |   |   |       6c8a19fe8d27f7f2889deb36867980687cd281
 |   |   |       9e915f88c811d1cc1428616177728de516e987
 |   |   |       e9aea66de9a6e4db9efa3f2a4913da4226a55f
+|   |   |       
+|   |   +---7c
+|   |   |       9137195e3c9feb561e01cf86d9144cce9d815c
 |   |   |       
 |   |   +---7e
 |   |   |       6f7c8ca0e8275e35fe2e9f991c2da9bf1cc93a
@@ -414,14 +476,22 @@ D:.
 |   |   |       345ee41eb11f6a3b4f8857954026ae43c3d9a8
 |   |   |       
 |   |   +---83
+|   |   |       89b3234fb054dc6e0e360622baa62ee71b8035
 |   |   |       af25db42d9ca889d7db6b57589d95462e6d79e
 |   |   |       
 |   |   +---84
 |   |   |       7040c9c36dce063bb4221e18b7c9fe6f10e041
 |   |   |       
+|   |   +---85
+|   |   |       e4b851f698cd106e7e1ccb3962d7ad6b39fe95
+|   |   |       
 |   |   +---86
 |   |   |       842464beb7777741f10e960f9ffc45e16f213d
 |   |   |       a291786daafa231da4f4973e7676c87b5d5936
+|   |   |       be16e4c98cb7f015400633e15f3d49e17f728b
+|   |   |       
+|   |   +---87
+|   |   |       d6ab428c96c5e3f3865075ce4392adf762486a
 |   |   |       
 |   |   +---88
 |   |   |       393047a9f92d9ab76123d63e22d728d428ec7f
@@ -432,6 +502,8 @@ D:.
 |   |   |       e279a205b00f1b1cdabcd96579da10dfa5729d
 |   |   |       
 |   |   +---8a
+|   |   |       0352a9923e7feba8a1f052b60d013dd3d03bee
+|   |   |       0a6b554ee553b8caeebaae2c6d20fcb1b620d1
 |   |   |       b7e09f19e3d33f3a51049dfe70f5eea4d8ddd8
 |   |   |       c429e356f1e0124b20dae275fcac9ea38eeb9f
 |   |   |       
@@ -461,6 +533,7 @@ D:.
 |   |   |       89437104e3a257ea9caca302cda536ef80281d
 |   |   |       
 |   |   +---92
+|   |   |       66dc8beea0b1f545f101fa9bdcfeae256845cc
 |   |   |       c3ea83ef31654ce171da0484d9e01eb0f20abf
 |   |   |       
 |   |   +---96
@@ -480,11 +553,17 @@ D:.
 |   |   |       ea73eeb31f82e9e76f9fb0c7034e36ce5e53e3
 |   |   |       
 |   |   +---9b
+|   |   |       4df66f78c8caada589eb120b55fefdb07f9820
 |   |   |       5e603fe219763b946ca470fd184244f78ecbf9
 |   |   |       9d0ca98670d73b300577a2703a68963fb94464
 |   |   |       
 |   |   +---9c
+|   |   |       ea3c61bf4e3cf24377bed48c648d62cc99a815
+|   |   |       f48de27e0fec0b6ac4ba07732db0f19754d187
 |   |   |       f4c8abbed406a42fd4c71645cc0f6ada3a4577
+|   |   |       
+|   |   +---9d
+|   |   |       af03c1d2f1cd816b30cd8d9cebe85fb8203e4f
 |   |   |       
 |   |   +---9f
 |   |   |       5f54ced3c814cecd02131ab1f5858f6e4800ec
@@ -500,6 +579,7 @@ D:.
 |   |   |       
 |   |   +---a3
 |   |   |       3583c5619475784474a416e18cb154dda6f8b0
+|   |   |       99906a9c1528db29e89afc51488af4036107fe
 |   |   |       
 |   |   +---a5
 |   |   |       617ba0e278e58d4450e60ef1dad56ee9ca578b
@@ -518,11 +598,18 @@ D:.
 |   |   +---ac
 |   |   |       42ff7385ce0a9d5a7bd9597bac8f56cc9a0b51
 |   |   |       
+|   |   +---ad
+|   |   |       2735004e2a77f1f459d99eba5c424126e6f275
+|   |   |       
 |   |   +---ae
 |   |   |       07840805274fe3ea4936999ddad25542fe2959
+|   |   |       2d7cb7adbe477f0446a04272c6995862dd434f
 |   |   |       
 |   |   +---af
 |   |   |       a9f37ba46cddac55589bc52f5f237253910450
+|   |   |       
+|   |   +---b0
+|   |   |       596cdb62dad242ff25be76c9a6d09174af4944
 |   |   |       
 |   |   +---b1
 |   |   |       ab1cb66f916b39a529de93d1a35f390beb8d5f
@@ -536,12 +623,19 @@ D:.
 |   |   |       017595332c1aadb2138b29ec89c72b48b8b8ce
 |   |   |       c7dffa9f4299aaff0937875aef704038794943
 |   |   |       
+|   |   +---b4
+|   |   |       e049af554e8d90cc81298bd063d424fbf4a080
+|   |   |       
 |   |   +---b6
 |   |   |       639525affc560c0342c8a26d14c664c1fa1442
 |   |   |       f46469213fc739a184580707910bb144db8f30
 |   |   |       
 |   |   +---b7
+|   |   |       22fba473a42e361643a56a808da0262bf1dc2c
 |   |   |       d3b9af71364e68abf2f5945a2c11fa00e166ab
+|   |   |       
+|   |   +---b8
+|   |   |       e4a98d70a56851c250c319b00b5d652ba31ec3
 |   |   |       
 |   |   +---b9
 |   |   |       fd228dc75a55d0be22fd2bf8b3a28e40a300ab
@@ -554,11 +648,13 @@ D:.
 |   |   |       4b567d372a5eaba7a4abbc98ec0ff04cf0f1f8
 |   |   |       
 |   |   +---bc
+|   |   |       5ee9c2c254544e6b9f6a7e961878b1c4325ecd
 |   |   |       bfdc638714a4e2da27d97af04051dd6150a8ba
 |   |   |       
 |   |   +---be
 |   |   |       6f1e91319b3318a4fb5f56108ec4810a0c4471
 |   |   |       92c7d8d8262cf247d20bd1d6c00c45613e95b6
+|   |   |       d991dfa55819f0159c377ce239cc898c86591a
 |   |   |       
 |   |   +---bf
 |   |   |       3e8370c56d5e98a914afad841791ba04f6d0b7
@@ -574,6 +670,7 @@ D:.
 |   |   |       
 |   |   +---c3
 |   |   |       0d9690fb98c0c7ab110507ab06333de57a61b1
+|   |   |       6e7fe5e4a32916161c7513840aef0b7669aacc
 |   |   |       
 |   |   +---c4
 |   |   |       aebdd96836c71889254752df87a942f4d17bad
@@ -583,6 +680,9 @@ D:.
 |   |   |       80b88cecd45b5a3b08386efb15788a49fcab64
 |   |   |       d041eeddaea8db385ca1a62595ca5edf7eb263
 |   |   |       e949e78738bef72dfc8977bee9f7f557024a43
+|   |   |       
+|   |   +---c7
+|   |   |       97e6723f2155e315be9ad1af19e7481b9ee1f9
 |   |   |       
 |   |   +---c8
 |   |   |       2860916b3934126c518e164e89d66e91132f06
@@ -598,6 +698,9 @@ D:.
 |   |   +---ca
 |   |   |       4d2853d64764163089094d4df62a2be5950829
 |   |   |       
+|   |   +---cb
+|   |   |       6d1ca5bade6a3aaf4e925359dc680773afe83e
+|   |   |       
 |   |   +---cd
 |   |   |       2962c38dffb5acdd6b4051757c2ba9ffe6749b
 |   |   |       9b18cdffe271b2f21eaaaadaa354875257d188
@@ -605,6 +708,7 @@ D:.
 |   |   |       
 |   |   +---ce
 |   |   |       216ccdfff098d7148e518a69c3a8308bf5575c
+|   |   |       7acf3dab3b28b8ed46fb457092552a571b07db
 |   |   |       e3868e3a6a97a03e59c66e0c292f2b551f04d8
 |   |   |       
 |   |   +---cf
@@ -638,6 +742,7 @@ D:.
 |   |   |       6e2a4cf9bcd389d86d3659daf03972b043fc28
 |   |   |       
 |   |   +---da
+|   |   |       1dd631b901ff9b48b762e09b948763c33040e7
 |   |   |       cf3a0c95888143c6412b31121c018e1efd6e1c
 |   |   |       d9e5a774c9ddd8ae24620579a6f1065a048180
 |   |   |       
@@ -654,6 +759,7 @@ D:.
 |   |   |       
 |   |   +---de
 |   |   |       8696c9da5a63ac164bb99d45db5f6a7d00f45f
+|   |   |       91b8319d5286c252c1668707fb9f7c7cd3e9db
 |   |   |       
 |   |   +---df
 |   |   |       a42bc8a23b1c7584eaec5c446e1bc21fc09ba8
@@ -667,6 +773,7 @@ D:.
 |   |   |       
 |   |   +---e3
 |   |   |       1b33308bc1cbded5d1d610c7443e204997067b
+|   |   |       edbdcf38d5da4888d49b70fc29d54348445aa8
 |   |   |       
 |   |   +---e4
 |   |   |       1d9551d93db54dfbe5b78d849bec772f5c510a
@@ -678,26 +785,35 @@ D:.
 |   |   |       
 |   |   +---e7
 |   |   |       9ea9c6bdfcada3e0f0cd1d4240392f7fbc2c26
+|   |   |       f91af65ef8b436f85b266b440068db3f903355
 |   |   |       
 |   |   +---e8
 |   |   |       18f1763fd708e0e15d56e9111ad51a0d2e3a5d
 |   |   |       3a3d19efbae6c2ce077b9aa3106846dc8783bb
 |   |   |       
 |   |   +---e9
+|   |   |       315ece272acc60207fca5b55e9ccc4a3b1fe2c
 |   |   |       650995d7dca713b6590cfd6a8d245835dbadf7
 |   |   |       940517f30735ff462777b66161ebed1ac7c389
 |   |   |       
 |   |   +---ea
+|   |   |       6c72a5aa046421a54a3a406ee6c4ed98c5e5c5
+|   |   |       a0fc7571bda74ba4383add7fdb4c0a7a76fd41
 |   |   |       bd94606fb5d2c009522860f6be72a089a6a520
 |   |   |       c7d6b308da9d9dbfea2c1db2ef71be62fb274b
+|   |   |       
+|   |   +---eb
+|   |   |       a1b8fee5631c84d07e7008c15ea5927c1b4185
 |   |   |       
 |   |   +---ed
 |   |   |       1847bfb0faff060588315145975255d08f7d16
 |   |   |       520d851f95e28c345d7b7c6ab464e3a2db82ce
+|   |   |       c6a1ccb58bffce95e8ae39cabce63e9a18bc10
 |   |   |       
 |   |   +---ef
 |   |   |       44d9757372367fe0bdb7013bb182fdaa854d7d
 |   |   |       4a7a80837b3990ebc6d3ee0d8250d11dcdab32
+|   |   |       7e6a75216da94634a0d9c799406e7da759fae0
 |   |   |       
 |   |   +---f0
 |   |   |       0c6ba8ed0c7f3119b553b41ccea9a10f4f04b2
@@ -723,7 +839,11 @@ D:.
 |   |   |       
 |   |   +---f8
 |   |   |       7af3710c147c659e24a5cf1a7742b20c6977bd
+|   |   |       b09a425db2bf9a271168e0cda6e52a8f885d6d
 |   |   |       ff087da60064a05a47d1e6db953324b55c5711
+|   |   |       
+|   |   +---f9
+|   |   |       10a9ec8fabc301e60366f47b3d0d9952e0c25d
 |   |   |       
 |   |   +---fa
 |   |   |       95c08fafa9ed35c2f4254c7d552a83e65e7a74
@@ -739,6 +859,7 @@ D:.
 |   |   |       
 |   |   +---fd
 |   |   |       85df564d0a600239770cd5b1afd47bd27fa501
+|   |   |       a23006d191345f6a961bcedae9451859c50ccb
 |   |   |       
 |   |   +---fe
 |   |   |       b4c4d14084f35b0787c1d4dafff95eab8d1184
@@ -784,29 +905,45 @@ D:.
 |   |   |                   |   
 |   |   |                   +---academico
 |   |   |                   |   +---carreras
-|   |   |                   |   |       Carrera.java
-|   |   |                   |   |       CarreraController.java
-|   |   |                   |   |       CarreraMapper.java
-|   |   |                   |   |       CarreraRepository.java
-|   |   |                   |   |       CarreraRepositoryImpl.java
-|   |   |                   |   |       CarreraService.java
-|   |   |                   |   |       ModalidadCarrera.java
-|   |   |                   |   |       
+|   |   |                   |   |   |   Carrera.java
+|   |   |                   |   |   |   CarreraController.java
+|   |   |                   |   |   |   CarreraMapper.java
+|   |   |                   |   |   |   CarreraRepository.java
+|   |   |                   |   |   |   CarreraRepositoryImpl.java
+|   |   |                   |   |   |   CarreraService.java
+|   |   |                   |   |   |   ModalidadCarrera.java
+|   |   |                   |   |   |   
+|   |   |                   |   |   \---dto
+|   |   |                   |   |           CarreraEstadoRequest.java
+|   |   |                   |   |           CarreraRequest.java
+|   |   |                   |   |           CarreraResponse.java
+|   |   |                   |   |           CarreraUpdateRequest.java
+|   |   |                   |   |           
 |   |   |                   |   +---ciclos
-|   |   |                   |   |       Ciclo.java
-|   |   |                   |   |       CicloController.java
-|   |   |                   |   |       CicloRepository.java
-|   |   |                   |   |       CicloRepositoryImpl.java
-|   |   |                   |   |       CicloService.java
-|   |   |                   |   |       
+|   |   |                   |   |   |   Ciclo.java
+|   |   |                   |   |   |   CicloController.java
+|   |   |                   |   |   |   CicloRepository.java
+|   |   |                   |   |   |   CicloRepositoryImpl.java
+|   |   |                   |   |   |   CicloService.java
+|   |   |                   |   |   |   
+|   |   |                   |   |   \---dto
+|   |   |                   |   |           CicloRequest.java
+|   |   |                   |   |           CicloResponse.java
+|   |   |                   |   |           
 |   |   |                   |   \---materias
-|   |   |                   |           Materia.java
-|   |   |                   |           MateriaController.java
-|   |   |                   |           MateriaMapper.java
-|   |   |                   |           MateriaRepository.java
-|   |   |                   |           MateriaRepositoryImpl.java
-|   |   |                   |           MateriaService.java
-|   |   |                   |           
+|   |   |                   |       |   Materia.java
+|   |   |                   |       |   MateriaController.java
+|   |   |                   |       |   MateriaMapper.java
+|   |   |                   |       |   MateriaRepository.java
+|   |   |                   |       |   MateriaRepositoryImpl.java
+|   |   |                   |       |   MateriaService.java
+|   |   |                   |       |   
+|   |   |                   |       \---dto
+|   |   |                   |               MateriaEstadoRequest.java
+|   |   |                   |               MateriaRequest.java
+|   |   |                   |               MateriaResponse.java
+|   |   |                   |               MateriaUpdateRequest.java
+|   |   |                   |               
 |   |   |                   +---config
 |   |   |                   |       AwsConfig.java
 |   |   |                   |       CorsGlobalConfig.java
@@ -816,17 +953,6 @@ D:.
 |   |   |                   |       
 |   |   |                   +---controller
 |   |   |                   +---dto
-|   |   |                   |       CarreraEstadoRequest.java
-|   |   |                   |       CarreraRequest.java
-|   |   |                   |       CarreraResponse.java
-|   |   |                   |       CarreraUpdateRequest.java
-|   |   |                   |       CicloRequest.java
-|   |   |                   |       CicloResponse.java
-|   |   |                   |       MateriaEstadoRequest.java
-|   |   |                   |       MateriaRequest.java
-|   |   |                   |       MateriaResponse.java
-|   |   |                   |       MateriaUpdateRequest.java
-|   |   |                   |       
 |   |   |                   +---model
 |   |   |                   +---repository
 |   |   |                   |   \---impl
@@ -871,6 +997,9 @@ D:.
 |               application-test.properties
 |               
 \---target
+    |   perumar-backend-0.0.1-SNAPSHOT.jar
+    |   perumar-backend-0.0.1-SNAPSHOT.jar.original
+    |   
     +---classes
     |   |   application.properties
     |   |   
@@ -878,21 +1007,128 @@ D:.
     |       \---edu
     |           \---perumar
     |               \---perumar_backend
-    |                   \---academico
-    |                       \---materias
-    |                               MateriaController.class
-    |                               
+    |                   |   PerumarBackendApplication.class
+    |                   |   
+    |                   +---academico
+    |                   |   +---carreras
+    |                   |   |   |   Carrera.class
+    |                   |   |   |   CarreraController.class
+    |                   |   |   |   CarreraMapper.class
+    |                   |   |   |   CarreraRepository.class
+    |                   |   |   |   CarreraRepositoryImpl.class
+    |                   |   |   |   CarreraService$DuplicateKeyException.class
+    |                   |   |   |   CarreraService.class
+    |                   |   |   |   ModalidadCarrera.class
+    |                   |   |   |   
+    |                   |   |   \---dto
+    |                   |   |           CarreraEstadoRequest.class
+    |                   |   |           CarreraRequest.class
+    |                   |   |           CarreraResponse.class
+    |                   |   |           CarreraUpdateRequest.class
+    |                   |   |           
+    |                   |   +---ciclos
+    |                   |   |   |   Ciclo.class
+    |                   |   |   |   CicloController.class
+    |                   |   |   |   CicloRepository.class
+    |                   |   |   |   CicloRepositoryImpl.class
+    |                   |   |   |   CicloService.class
+    |                   |   |   |   
+    |                   |   |   \---dto
+    |                   |   |           CicloRequest.class
+    |                   |   |           CicloResponse.class
+    |                   |   |           
+    |                   |   \---materias
+    |                   |       |   Materia.class
+    |                   |       |   MateriaController.class
+    |                   |       |   MateriaMapper.class
+    |                   |       |   MateriaRepository.class
+    |                   |       |   MateriaRepositoryImpl.class
+    |                   |       |   MateriaService$DuplicateKeyException.class
+    |                   |       |   MateriaService.class
+    |                   |       |   
+    |                   |       \---dto
+    |                   |               MateriaEstadoRequest.class
+    |                   |               MateriaRequest.class
+    |                   |               MateriaResponse.class
+    |                   |               MateriaUpdateRequest.class
+    |                   |               
+    |                   +---config
+    |                   |       AwsConfig.class
+    |                   |       CorsGlobalConfig.class
+    |                   |       DynamoDBConfig.class
+    |                   |       S3Config.class
+    |                   |       SecurityConfig$1.class
+    |                   |       SecurityConfig.class
+    |                   |       
+    |                   \---service
+    |                           S3SignedUrlService.class
+    |                           
+    +---failsafe-reports
+    |       2025-08-18T21-08-16_805.dumpstream
+    |       failsafe-summary.xml
+    |       pe.edu.perumar.perumar_backend.academico.ciclos.CicloControllerIT.txt
+    |       pe.edu.perumar.perumar_backend.academico.materias.MateriaControllerIT.txt
+    |       TEST-pe.edu.perumar.perumar_backend.academico.ciclos.CicloControllerIT.xml
+    |       TEST-pe.edu.perumar.perumar_backend.academico.materias.MateriaControllerIT.xml
+    |       
     +---generated-sources
     |   \---annotations
     +---generated-test-sources
     |   \---test-annotations
+    +---maven-archiver
+    |       pom.properties
+    |       
     +---maven-status
     |   \---maven-compiler-plugin
-    |       \---compile
-    |           \---default-compile
+    |       +---compile
+    |       |   \---default-compile
+    |       |           createdFiles.lst
+    |       |           inputFiles.lst
+    |       |           
+    |       \---testCompile
+    |           \---default-testCompile
     |                   createdFiles.lst
     |                   inputFiles.lst
     |                   
+    +---surefire-reports
+    |       2025-08-18T21-08-06_038.dumpstream
+    |       pe.edu.perumar.perumar_backend.academico.carreras.CarreraServiceTest.txt
+    |       pe.edu.perumar.perumar_backend.academico.ciclos.CicloServiceTest.txt
+    |       pe.edu.perumar.perumar_backend.academico.materias.MateriaServiceTest.txt
+    |       pe.edu.perumar.perumar_backend.PerumarBackendApplicationTests.txt
+    |       TEST-pe.edu.perumar.perumar_backend.academico.carreras.CarreraServiceTest.xml
+    |       TEST-pe.edu.perumar.perumar_backend.academico.ciclos.CicloServiceTest.xml
+    |       TEST-pe.edu.perumar.perumar_backend.academico.materias.MateriaServiceTest.xml
+    |       TEST-pe.edu.perumar.perumar_backend.PerumarBackendApplicationTests.xml
+    |       
     \---test-classes
-            application-test.properties
-            
+        |   application-test.properties
+        |   
+        \---pe
+            \---edu
+                \---perumar
+                    \---perumar_backend
+                        |   BaseIT.class
+                        |   PerumarBackendApplicationTests$RepoStubs.class
+                        |   PerumarBackendApplicationTests.class
+                        |   TestConfig$1.class
+                        |   TestConfig.class
+                        |   TestSecurityConfig.class
+                        |   
+                        +---academico
+                        |   +---carreras
+                        |   |       CarreraControllerIT.class
+                        |   |       CarreraServiceTest.class
+                        |   |       
+                        |   +---ciclos
+                        |   |       CicloControllerIT.class
+                        |   |       CicloServiceTest.class
+                        |   |       
+                        |   \---materias
+                        |           MateriaControllerIT.class
+                        |           MateriaServiceTest.class
+                        |           
+                        \---config
+                                TestProfileConfig.class
+                                TestSecurityConfig.class
+                                

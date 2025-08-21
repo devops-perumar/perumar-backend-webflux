@@ -10,4 +10,5 @@ public interface MateriaRepository {
   Mono<Boolean> existsByCodigo(String codigo);
   Mono<Materia> update(Materia m);
   Mono<Void> updateEstado(String codigo, String nuevoEstado);
+  Mono<Void> deleteByCodigo(String codigo);
 }

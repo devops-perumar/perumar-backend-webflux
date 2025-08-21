@@ -79,4 +79,9 @@ public Flux<MateriaResponse> listar(String estado) {
   public static class DuplicateKeyException extends RuntimeException {
     public DuplicateKeyException(String msg) { super(msg); }
   }
+
+  public Mono<Void> eliminar(String codigo) {
+      return repo.deleteByCodigo(codigo);
+  }
+
 }

@@ -64,4 +64,12 @@ public class MateriaRepositoryImpl implements MateriaRepository {
           return update(m).then();
         });
   }
+
+  @Override
+  public Mono<Void> deleteByCodigo(String codigo) {
+      return Mono.fromFuture(() -> 
+          table.deleteItem(r -> r.key(Key.builder().partitionValue(codigo).build()))
+      ).then();
+  }
+
 }

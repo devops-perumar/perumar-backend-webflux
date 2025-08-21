@@ -65,6 +65,13 @@ public class MateriaController {
         .thenReturn(ResponseEntity.noContent().build());
   }
 
+  @PreAuthorize("hasRole('DIRECTOR')")
+  @DeleteMapping("/{codigo}")
+  public Mono<ResponseEntity<Void>> eliminar(@PathVariable String codigo) {
+      return service.eliminar(codigo)
+              .then(Mono.just(ResponseEntity.noContent().build()));
+  }
+
   @ResponseStatus(HttpStatus.CONFLICT)
   @ExceptionHandler(DuplicateKeyException.class)
   public void onDuplicate() { /* 409 sin body */ }
