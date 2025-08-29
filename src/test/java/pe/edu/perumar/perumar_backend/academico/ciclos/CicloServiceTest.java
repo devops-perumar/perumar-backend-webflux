@@ -7,6 +7,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import pe.edu.perumar.perumar_backend.academico.ciclos.dto.CicloRequest;
+import pe.edu.perumar.perumar_backend.academico.ciclos.model.Ciclo;
+import pe.edu.perumar.perumar_backend.academico.ciclos.repository.CicloRepository;
+import pe.edu.perumar.perumar_backend.academico.ciclos.service.CicloService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;

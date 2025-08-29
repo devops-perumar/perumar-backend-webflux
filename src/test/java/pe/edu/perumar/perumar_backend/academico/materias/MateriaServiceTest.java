@@ -15,6 +15,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaEstadoRequest;
 import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaRequest;
 import pe.edu.perumar.perumar_backend.academico.materias.dto.MateriaUpdateRequest;
+import pe.edu.perumar.perumar_backend.academico.materias.model.Materia;
+import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepository;
+import pe.edu.perumar.perumar_backend.academico.materias.service.MateriaService;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 

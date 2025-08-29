@@ -8,13 +8,13 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
-import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
-import pe.edu.perumar.perumar_backend.academico.carreras.CarreraRepository;
-import pe.edu.perumar.perumar_backend.academico.ciclos.CicloRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.repository.CarreraRepository;
+import pe.edu.perumar.perumar_backend.academico.ciclos.repository.CicloRepository;
+import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepository;
 
 @SpringBootTest
 @ActiveProfiles("test")
-@Import(PerumarBackendApplicationTests.RepoStubs.class)
+@Import({PerumarBackendApplicationTests.RepoStubs.class, TestConfig.class, DynamoTestConfig.class})
 class PerumarBackendApplicationTests {
 
   @Test

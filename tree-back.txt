@@ -4,8 +4,10 @@ D:.
 |   .gitattributes
 |   .gitignore
 |   CONTRIBUTING.md
+|   dynamodb-standards.md
 |   HELP.md
 |   log-back.log
+|   log.log
 |   mvnw
 |   mvnw.cmd
 |   pom.xml
@@ -163,6 +165,7 @@ D:.
 |   |   |       defecd3fb957f6a983797b5702208168a5459d
 |   |   |       
 |   |   +---1e
+|   |   |       2a7d64592d541e93f41ba5a52dcbd8fd63ee3f
 |   |   |       72f05e8d423c37aa78a788f1afcb905a4d89cb
 |   |   |       
 |   |   +---20
@@ -184,6 +187,7 @@ D:.
 |   |   |       
 |   |   +---24
 |   |   |       2326e0314ac3f83c2a82d5c7f3d9fff559fd59
+|   |   |       70f1cfd359c8a022a0c1bce44fb1a39c0587bc
 |   |   |       9bdf3822221aa612d1da2605316cabd7b07e50
 |   |   |       c6e32025478d790de24de6c3e302f09f414b87
 |   |   |       
@@ -208,6 +212,7 @@ D:.
 |   |   |       
 |   |   +---2a
 |   |   |       62ef7ac70b5af870f091314964babcbad27d82
+|   |   |       66be7fa07510b6128adedbbc95268d5886fe45
 |   |   |       
 |   |   +---2b
 |   |   |       16a39a8868e1caec522b7b80db63b17e092748
@@ -262,6 +267,7 @@ D:.
 |   |   |       87a2c5e13a1771d46312da61280ee1bfadce0b
 |   |   |       b7004e5b4f0a2f52db1bad8380a5466b1365b8
 |   |   |       c343b6ee8cba42ca12549993182f2c14969217
+|   |   |       d7a24c32afdeadd726af2c5071f887cf5e34d2
 |   |   |       
 |   |   +---3b
 |   |   |       41682ac579fafb665abb4dfcdaa6aaaa712184
@@ -272,6 +278,7 @@ D:.
 |   |   |       
 |   |   +---3e
 |   |   |       6e805708d69c6289053a91f5717275e065982e
+|   |   |       a446f53a6bd135fd9cdcd3af0496e02e584c2e
 |   |   |       
 |   |   +---3f
 |   |   |       2f680fc988b1027c8bcfb58f5875f307c9b797
@@ -285,6 +292,7 @@ D:.
 |   |   |       bd1efc4747a138d929ebf1252edc0b23411e1c
 |   |   |       
 |   |   +---42
+|   |   |       0d57e4358e81bb6f3889392a3b06c6fe7d383b
 |   |   |       3bdef1095bd5c407a48cf4b6293f8d92c5cbd9
 |   |   |       50fb47cbd52a621b0bd83495dcf17073b5e5d9
 |   |   |       c8e7375bc21131feb7d6d6fb5ee101c07cc152
@@ -310,6 +318,9 @@ D:.
 |   |   |       
 |   |   +---4b
 |   |   |       5e091ff25abb7c8c759a22ed32b16b6febd3d9
+|   |   |       
+|   |   +---4c
+|   |   |       65f5e045f96f5b48f12a9cca50216aec8fa2d9
 |   |   |       
 |   |   +---4d
 |   |   |       1293d38594d99789e1e9ce7c8ac03ace430198
@@ -346,6 +357,7 @@ D:.
 |   |   |       52dc38ee804947818c73e1f9b7e5acf5374f50
 |   |   |       
 |   |   +---59
+|   |   |       66782cbc7e383a3ecaf0af27dfbeacf6ce040a
 |   |   |       e3ff8787357030fc46e593482a746c173ee5f3
 |   |   |       
 |   |   +---5a
@@ -370,6 +382,7 @@ D:.
 |   |   |       
 |   |   +---60
 |   |   |       1f360c39112c09e456953416d7889bc7e3dad5
+|   |   |       ecaa3447bc55d5f3c42f176dfa2a81c2dc3d91
 |   |   |       
 |   |   +---62
 |   |   |       0570c4c0929332abb1949ce2a4e2ac44d2e1ba
@@ -512,6 +525,7 @@ D:.
 |   |   |       e0c7f827eced849c7f0c5ceed6336f0f2ffa78
 |   |   |       
 |   |   +---8c
+|   |   |       0fbeb43db2325ff132fd46aa356c790425a62c
 |   |   |       80494a4649985525a1000690a5b737226c98e0
 |   |   |       
 |   |   +---8d
@@ -539,6 +553,7 @@ D:.
 |   |   +---96
 |   |   |       022742271c29b6d6d5a0f8fdbf75427bb48dfd
 |   |   |       032a8fd8c5441e8846601d0ea532a43c606201
+|   |   |       26420cb052e36960dfdf918c2c8c874f389c5a
 |   |   |       
 |   |   +---97
 |   |   |       0b77d132e4bfdaac99ea198bef287a52c45ee4
@@ -556,6 +571,7 @@ D:.
 |   |   |       4df66f78c8caada589eb120b55fefdb07f9820
 |   |   |       5e603fe219763b946ca470fd184244f78ecbf9
 |   |   |       9d0ca98670d73b300577a2703a68963fb94464
+|   |   |       c04e3d84f6e96acb9c41fd0136db3b69c9f9f6
 |   |   |       
 |   |   +---9c
 |   |   |       ea3c61bf4e3cf24377bed48c648d62cc99a815
@@ -587,6 +603,7 @@ D:.
 |   |   +---a7
 |   |   |       31c01642f996d74d9340195aef5454f2ed7059
 |   |   |       af8277a03bea5885eec2d72feaf2c959a05a76
+|   |   |       f2ea082bc58e98488dac2f31ca0659efcda28f
 |   |   |       
 |   |   +---a8
 |   |   |       e9c25af33cf856af27167b9e253de3e8625a28
@@ -594,6 +611,7 @@ D:.
 |   |   +---aa
 |   |   |       6213767f1513ade1f91b40c7117af83f77a490
 |   |   |       70406bae0e63e1eb44b6bf76d7ea579933dc48
+|   |   |       acba98ee393afe5c39729ba408891df4e446c1
 |   |   |       
 |   |   +---ac
 |   |   |       42ff7385ce0a9d5a7bd9597bac8f56cc9a0b51
@@ -646,6 +664,7 @@ D:.
 |   |   +---bb
 |   |   |       081ed64a51298a260775c05b2c22cec5eaecad
 |   |   |       4b567d372a5eaba7a4abbc98ec0ff04cf0f1f8
+|   |   |       991563db09bbe5d25336ebae9c8acc6e46d7a8
 |   |   |       
 |   |   +---bc
 |   |   |       5ee9c2c254544e6b9f6a7e961878b1c4325ecd
@@ -683,6 +702,7 @@ D:.
 |   |   |       
 |   |   +---c7
 |   |   |       97e6723f2155e315be9ad1af19e7481b9ee1f9
+|   |   |       de4387182e89b3c77932c4226f810ea74a278a
 |   |   |       
 |   |   +---c8
 |   |   |       2860916b3934126c518e164e89d66e91132f06
@@ -803,6 +823,7 @@ D:.
 |   |   |       c7d6b308da9d9dbfea2c1db2ef71be62fb274b
 |   |   |       
 |   |   +---eb
+|   |   |       016bf0e3c5e26e981406a4802196f608776378
 |   |   |       a1b8fee5631c84d07e7008c15ea5927c1b4185
 |   |   |       
 |   |   +---ed
@@ -905,61 +926,109 @@ D:.
 |   |   |                   |   
 |   |   |                   +---academico
 |   |   |                   |   +---carreras
-|   |   |                   |   |   |   Carrera.java
-|   |   |                   |   |   |   CarreraController.java
-|   |   |                   |   |   |   CarreraMapper.java
-|   |   |                   |   |   |   CarreraRepository.java
-|   |   |                   |   |   |   CarreraRepositoryImpl.java
-|   |   |                   |   |   |   CarreraService.java
-|   |   |                   |   |   |   ModalidadCarrera.java
-|   |   |                   |   |   |   
-|   |   |                   |   |   \---dto
-|   |   |                   |   |           CarreraEstadoRequest.java
-|   |   |                   |   |           CarreraRequest.java
-|   |   |                   |   |           CarreraResponse.java
-|   |   |                   |   |           CarreraUpdateRequest.java
+|   |   |                   |   |   +---controller
+|   |   |                   |   |   |       CarreraController.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---dto
+|   |   |                   |   |   |       CarreraEstadoRequest.java
+|   |   |                   |   |   |       CarreraRequest.java
+|   |   |                   |   |   |       CarreraResponse.java
+|   |   |                   |   |   |       CarreraUpdateRequest.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---mapper
+|   |   |                   |   |   |       CarreraMapper.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---model
+|   |   |                   |   |   |       Carrera.java
+|   |   |                   |   |   |       ModalidadCarrera.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---repository
+|   |   |                   |   |   |       CarreraRepository.java
+|   |   |                   |   |   |       CarreraRepositoryImpl.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   \---service
+|   |   |                   |   |           CarreraService.java
 |   |   |                   |   |           
 |   |   |                   |   +---ciclos
-|   |   |                   |   |   |   Ciclo.java
-|   |   |                   |   |   |   CicloController.java
-|   |   |                   |   |   |   CicloRepository.java
-|   |   |                   |   |   |   CicloRepositoryImpl.java
-|   |   |                   |   |   |   CicloService.java
-|   |   |                   |   |   |   
-|   |   |                   |   |   \---dto
-|   |   |                   |   |           CicloRequest.java
-|   |   |                   |   |           CicloResponse.java
+|   |   |                   |   |   +---controller
+|   |   |                   |   |   |       CicloController.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---dto
+|   |   |                   |   |   |       CicloRequest.java
+|   |   |                   |   |   |       CicloResponse.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---mapper
+|   |   |                   |   |   +---model
+|   |   |                   |   |   |       Ciclo.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   +---repository
+|   |   |                   |   |   |       CicloRepository.java
+|   |   |                   |   |   |       CicloRepositoryImpl.java
+|   |   |                   |   |   |       
+|   |   |                   |   |   \---service
+|   |   |                   |   |           CicloService.java
 |   |   |                   |   |           
 |   |   |                   |   \---materias
-|   |   |                   |       |   Materia.java
-|   |   |                   |       |   MateriaController.java
-|   |   |                   |       |   MateriaMapper.java
-|   |   |                   |       |   MateriaRepository.java
-|   |   |                   |       |   MateriaRepositoryImpl.java
-|   |   |                   |       |   MateriaService.java
-|   |   |                   |       |   
-|   |   |                   |       \---dto
-|   |   |                   |               MateriaEstadoRequest.java
-|   |   |                   |               MateriaRequest.java
-|   |   |                   |               MateriaResponse.java
-|   |   |                   |               MateriaUpdateRequest.java
+|   |   |                   |       +---controller
+|   |   |                   |       |       MateriaController.java
+|   |   |                   |       |       
+|   |   |                   |       +---dto
+|   |   |                   |       |       MateriaEstadoRequest.java
+|   |   |                   |       |       MateriaRequest.java
+|   |   |                   |       |       MateriaResponse.java
+|   |   |                   |       |       MateriaUpdateRequest.java
+|   |   |                   |       |       
+|   |   |                   |       +---mapper
+|   |   |                   |       |       MateriaMapper.java
+|   |   |                   |       |       
+|   |   |                   |       +---model
+|   |   |                   |       |       Materia.java
+|   |   |                   |       |       
+|   |   |                   |       +---repository
+|   |   |                   |       |       MateriaRepository.java
+|   |   |                   |       |       MateriaRepositoryImpl.java
+|   |   |                   |       |       
+|   |   |                   |       \---service
+|   |   |                   |               MateriaService.java
 |   |   |                   |               
+|   |   |                   +---acl
+|   |   |                   |       AccessControlService.java
+|   |   |                   |       AccessControlTestController.java
+|   |   |                   |       AccessDeniedException.java
+|   |   |                   |       AclDynamoRepository.java
+|   |   |                   |       AclDynamoRepositoryImpl.java
+|   |   |                   |       AclTestController.java
+|   |   |                   |       
 |   |   |                   +---config
 |   |   |                   |       AwsConfig.java
 |   |   |                   |       CorsGlobalConfig.java
 |   |   |                   |       DynamoDBConfig.java
+|   |   |                   |       GlobalExceptionHandler.java
 |   |   |                   |       S3Config.java
 |   |   |                   |       SecurityConfig.java
+|   |   |                   |       SecurityUtils.java
 |   |   |                   |       
-|   |   |                   +---controller
-|   |   |                   +---dto
-|   |   |                   +---model
-|   |   |                   +---repository
-|   |   |                   |   \---impl
-|   |   |                   \---service
-|   |   |                       |   S3SignedUrlService.java
-|   |   |                       |   
-|   |   |                       \---mapper
+|   |   |                   +---service
+|   |   |                   |   |   S3SignedUrlService.java
+|   |   |                   |   |   
+|   |   |                   |   \---mapper
+|   |   |                   \---ui
+|   |   |                       +---controller
+|   |   |                       |       UiConfigController.java
+|   |   |                       |       
+|   |   |                       +---model
+|   |   |                       |       UiMenuConfigEntity.java
+|   |   |                       |       UiMenuItem.java
+|   |   |                       |       UiMenuSection.java
+|   |   |                       |       
+|   |   |                       +---repository
+|   |   |                       |       UiConfigRepository.java
+|   |   |                       |       UiConfigRepositoryImpl.java
+|   |   |                       |       
+|   |   |                       \---service
+|   |   |                               UiConfigService.java
+|   |   |                               UiConfigServiceImpl.java
+|   |   |                               
 |   |   \---resources
 |   |           application.properties
 |   |           
@@ -970,6 +1039,7 @@ D:.
 |       |           \---perumar
 |       |               \---perumar_backend
 |       |                   |   BaseIT.java
+|       |                   |   DynamoTestConfig.java
 |       |                   |   PerumarBackendApplicationTests.java
 |       |                   |   TestConfig.java
 |       |                   |   TestSecurityConfig.java
@@ -997,9 +1067,6 @@ D:.
 |               application-test.properties
 |               
 \---target
-    |   perumar-backend-0.0.1-SNAPSHOT.jar
-    |   perumar-backend-0.0.1-SNAPSHOT.jar.original
-    |   
     +---classes
     |   |   application.properties
     |   |   
@@ -1011,73 +1078,114 @@ D:.
     |                   |   
     |                   +---academico
     |                   |   +---carreras
-    |                   |   |   |   Carrera.class
-    |                   |   |   |   CarreraController.class
-    |                   |   |   |   CarreraMapper.class
-    |                   |   |   |   CarreraRepository.class
-    |                   |   |   |   CarreraRepositoryImpl.class
-    |                   |   |   |   CarreraService$DuplicateKeyException.class
-    |                   |   |   |   CarreraService.class
-    |                   |   |   |   ModalidadCarrera.class
-    |                   |   |   |   
-    |                   |   |   \---dto
-    |                   |   |           CarreraEstadoRequest.class
-    |                   |   |           CarreraRequest.class
-    |                   |   |           CarreraResponse.class
-    |                   |   |           CarreraUpdateRequest.class
+    |                   |   |   +---controller
+    |                   |   |   |       CarreraController.class
+    |                   |   |   |       
+    |                   |   |   +---dto
+    |                   |   |   |       CarreraEstadoRequest.class
+    |                   |   |   |       CarreraRequest.class
+    |                   |   |   |       CarreraResponse.class
+    |                   |   |   |       CarreraUpdateRequest.class
+    |                   |   |   |       
+    |                   |   |   +---mapper
+    |                   |   |   |       CarreraMapper.class
+    |                   |   |   |       
+    |                   |   |   +---model
+    |                   |   |   |       Carrera.class
+    |                   |   |   |       ModalidadCarrera.class
+    |                   |   |   |       
+    |                   |   |   +---repository
+    |                   |   |   |       CarreraRepository.class
+    |                   |   |   |       CarreraRepositoryImpl.class
+    |                   |   |   |       
+    |                   |   |   \---service
+    |                   |   |           CarreraService$DuplicateKeyException.class
+    |                   |   |           CarreraService.class
     |                   |   |           
     |                   |   +---ciclos
-    |                   |   |   |   Ciclo.class
-    |                   |   |   |   CicloController.class
-    |                   |   |   |   CicloRepository.class
-    |                   |   |   |   CicloRepositoryImpl.class
-    |                   |   |   |   CicloService.class
-    |                   |   |   |   
-    |                   |   |   \---dto
-    |                   |   |           CicloRequest.class
-    |                   |   |           CicloResponse.class
+    |                   |   |   +---controller
+    |                   |   |   |       CicloController.class
+    |                   |   |   |       
+    |                   |   |   +---dto
+    |                   |   |   |       CicloRequest.class
+    |                   |   |   |       CicloResponse.class
+    |                   |   |   |       
+    |                   |   |   +---model
+    |                   |   |   |       Ciclo.class
+    |                   |   |   |       
+    |                   |   |   +---repository
+    |                   |   |   |       CicloRepository.class
+    |                   |   |   |       CicloRepositoryImpl.class
+    |                   |   |   |       
+    |                   |   |   \---service
+    |                   |   |           CicloService.class
     |                   |   |           
     |                   |   \---materias
-    |                   |       |   Materia.class
-    |                   |       |   MateriaController.class
-    |                   |       |   MateriaMapper.class
-    |                   |       |   MateriaRepository.class
-    |                   |       |   MateriaRepositoryImpl.class
-    |                   |       |   MateriaService$DuplicateKeyException.class
-    |                   |       |   MateriaService.class
-    |                   |       |   
-    |                   |       \---dto
-    |                   |               MateriaEstadoRequest.class
-    |                   |               MateriaRequest.class
-    |                   |               MateriaResponse.class
-    |                   |               MateriaUpdateRequest.class
+    |                   |       +---controller
+    |                   |       |       MateriaController.class
+    |                   |       |       
+    |                   |       +---dto
+    |                   |       |       MateriaEstadoRequest.class
+    |                   |       |       MateriaRequest.class
+    |                   |       |       MateriaResponse.class
+    |                   |       |       MateriaUpdateRequest.class
+    |                   |       |       
+    |                   |       +---mapper
+    |                   |       |       MateriaMapper.class
+    |                   |       |       
+    |                   |       +---model
+    |                   |       |       Materia.class
+    |                   |       |       
+    |                   |       +---repository
+    |                   |       |       MateriaRepository.class
+    |                   |       |       MateriaRepositoryImpl.class
+    |                   |       |       
+    |                   |       \---service
+    |                   |               MateriaService$DuplicateKeyException.class
+    |                   |               MateriaService.class
     |                   |               
+    |                   +---acl
+    |                   |       AccessControlService.class
+    |                   |       AccessControlTestController.class
+    |                   |       AccessDeniedException.class
+    |                   |       AclDynamoRepository.class
+    |                   |       AclDynamoRepositoryImpl.class
+    |                   |       AclTestController.class
+    |                   |       
     |                   +---config
     |                   |       AwsConfig.class
     |                   |       CorsGlobalConfig.class
     |                   |       DynamoDBConfig.class
+    |                   |       GlobalExceptionHandler.class
     |                   |       S3Config.class
     |                   |       SecurityConfig$1.class
     |                   |       SecurityConfig.class
+    |                   |       SecurityUtils.class
     |                   |       
-    |                   \---service
-    |                           S3SignedUrlService.class
-    |                           
-    +---failsafe-reports
-    |       2025-08-18T21-08-16_805.dumpstream
-    |       failsafe-summary.xml
-    |       pe.edu.perumar.perumar_backend.academico.ciclos.CicloControllerIT.txt
-    |       pe.edu.perumar.perumar_backend.academico.materias.MateriaControllerIT.txt
-    |       TEST-pe.edu.perumar.perumar_backend.academico.ciclos.CicloControllerIT.xml
-    |       TEST-pe.edu.perumar.perumar_backend.academico.materias.MateriaControllerIT.xml
-    |       
+    |                   +---service
+    |                   |       S3SignedUrlService.class
+    |                   |       
+    |                   \---ui
+    |                       +---controller
+    |                       |       UiConfigController.class
+    |                       |       
+    |                       +---model
+    |                       |       UiMenuConfigEntity.class
+    |                       |       UiMenuItem.class
+    |                       |       UiMenuSection.class
+    |                       |       
+    |                       +---repository
+    |                       |       UiConfigRepository.class
+    |                       |       UiConfigRepositoryImpl.class
+    |                       |       
+    |                       \---service
+    |                               UiConfigService.class
+    |                               UiConfigServiceImpl.class
+    |                               
     +---generated-sources
     |   \---annotations
     +---generated-test-sources
     |   \---test-annotations
-    +---maven-archiver
-    |       pom.properties
-    |       
     +---maven-status
     |   \---maven-compiler-plugin
     |       +---compile
@@ -1091,7 +1199,7 @@ D:.
     |                   inputFiles.lst
     |                   
     +---surefire-reports
-    |       2025-08-18T21-08-06_038.dumpstream
+    |       2025-08-26T22-22-08_057.dumpstream
     |       pe.edu.perumar.perumar_backend.academico.carreras.CarreraServiceTest.txt
     |       pe.edu.perumar.perumar_backend.academico.ciclos.CicloServiceTest.txt
     |       pe.edu.perumar.perumar_backend.academico.materias.MateriaServiceTest.txt
@@ -1109,6 +1217,7 @@ D:.
                 \---perumar
                     \---perumar_backend
                         |   BaseIT.class
+                        |   DynamoTestConfig.class
                         |   PerumarBackendApplicationTests$RepoStubs.class
                         |   PerumarBackendApplicationTests.class
                         |   TestConfig$1.class

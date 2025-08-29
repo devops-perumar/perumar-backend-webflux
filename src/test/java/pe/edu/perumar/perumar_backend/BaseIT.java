@@ -10,6 +10,7 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("test")
 @Import({
   pe.edu.perumar.perumar_backend.config.TestProfileConfig.class,   // mocks de repos + stubs AWS
-  pe.edu.perumar.perumar_backend.config.TestSecurityConfig.class   // seguridad permitAll en test
+  pe.edu.perumar.perumar_backend.config.TestSecurityConfig.class,  // seguridad permitAll en test
+  pe.edu.perumar.perumar_backend.DynamoTestConfig.class            // mock de DynamoDbClient
 })
 public abstract class BaseIT { }

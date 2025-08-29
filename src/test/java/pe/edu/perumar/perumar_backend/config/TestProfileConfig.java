@@ -7,10 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
-import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
-import pe.edu.perumar.perumar_backend.academico.carreras.CarreraRepository;
-import pe.edu.perumar.perumar_backend.academico.ciclos.CicloRepository;
-
+import pe.edu.perumar.perumar_backend.academico.carreras.repository.CarreraRepository;
+import pe.edu.perumar.perumar_backend.academico.ciclos.repository.CicloRepository;
+import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepository;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
@@ -66,7 +65,6 @@ public class TestProfileConfig {
 
       // ===== CARRERAS =====
       when(carreraRepository.findByCodigo(anyString())).thenReturn(Mono.empty());
-      when(carreraRepository.findAll(any())).thenReturn(Flux.empty());
       when(carreraRepository.save(any()))
           .thenAnswer(inv -> Mono.justOrEmpty(inv.getArgument(0)));
       when(carreraRepository.update(any()))

@@ -16,8 +16,12 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraEstadoRequest;
 import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraRequest;
 import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraUpdateRequest;
-import pe.edu.perumar.perumar_backend.academico.materias.Materia;
-import pe.edu.perumar.perumar_backend.academico.materias.MateriaRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.model.Carrera;
+import pe.edu.perumar.perumar_backend.academico.carreras.model.ModalidadCarrera;
+import pe.edu.perumar.perumar_backend.academico.carreras.repository.CarreraRepository;
+import pe.edu.perumar.perumar_backend.academico.carreras.service.CarreraService;
+import pe.edu.perumar.perumar_backend.academico.materias.model.Materia;
+import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepository;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
@@ -56,10 +60,8 @@ class CarreraServiceTest {
   @Test
   void crear_ok_inicializaEstadoYFechas_yValidaMaterias() {
     when(carreraRepo.findByCodigo("CAR001")).thenReturn(Mono.empty());
-    // materias válidas
     mockMateria("MAT001");
     mockMateria("MAT002");
-    // devuelve el mismo objeto que se guarda
     when(carreraRepo.save(any(Carrera.class))).thenAnswer(inv -> Mono.just(inv.getArgument(0)));
 
     StepVerifier.create(service.crear(reqCreate))
@@ -69,7 +71,7 @@ class CarreraServiceTest {
         assert "Formación básica".equals(c.getDescripcion());
         assert c.getModalidad() == ModalidadCarrera.SIN_EXPERIENCIA;
         assert c.getMaterias().equals(List.of("MAT001","MAT002"));
-        assert "ACTIVO".equals(c.getEstado()); // inicializado en mapper/service
+        assert "ACTIVO".equals(c.getEstado());
         assert c.getCreatedAt() != null;
         assert c.getUpdatedAt() != null;
         assert !c.getCreatedAt().isAfter(Instant.now());
@@ -85,6 +87,8 @@ class CarreraServiceTest {
   @Test
   void crear_duplicado_lanza409() {
     when(carreraRepo.findByCodigo("CAR001")).thenReturn(Mono.just(new Carrera()));
+    mockMateria("MAT001");
+    mockMateria("MAT002");
 
     StepVerifier.create(service.crear(reqCreate))
       .expectError(CarreraService.DuplicateKeyException.class)
@@ -121,15 +125,29 @@ class CarreraServiceTest {
     actual.setMaterias(List.of("MAT001","MATX"));
     actual.setEstado("ACTIVO");
     actual.setCreatedAt(Instant.parse("2025-01-01T00:00:00Z"));
-    actual.setUpdatedAt(Instant.parse("2025-01-01T00:00:00Z"));
+
+    final Instant originalUpdatedAt = Instant.parse("2025-01-01T00:00:00Z");
+    actual.setUpdatedAt(originalUpdatedAt);
 
     when(carreraRepo.findByCodigo("CAR001")).thenReturn(Mono.just(actual));
-
-    // validación de nuevas materias
     mockMateria("MAT001");
     mockMateria("MAT002");
 
-    when(carreraRepo.update(any(Carrera.class))).thenAnswer(inv -> Mono.just(inv.getArgument(0)));
+    // mock que devuelve una copia y fuerza un updatedAt posterior
+    when(carreraRepo.update(any(Carrera.class)))
+      .thenAnswer(inv -> {
+        Carrera c = inv.getArgument(0);
+        Carrera copy = new Carrera();
+        copy.setCodigo(c.getCodigo());
+        copy.setNombre(c.getNombre());
+        copy.setDescripcion(c.getDescripcion());
+        copy.setModalidad(c.getModalidad());
+        copy.setMaterias(c.getMaterias());
+        copy.setEstado(c.getEstado());
+        copy.setCreatedAt(c.getCreatedAt());
+        copy.setUpdatedAt(originalUpdatedAt.plusSeconds(10)); // << forzar mayor
+        return Mono.just(copy);
+      });
 
     CarreraUpdateRequest upd = new CarreraUpdateRequest();
     upd.setNombre("Nuevo nombre");
@@ -143,8 +161,8 @@ class CarreraServiceTest {
         assert "Nueva desc".equals(c.getDescripcion());
         assert c.getModalidad() == ModalidadCarrera.CON_EXPERIENCIA;
         assert c.getMaterias().equals(List.of("MAT001","MAT002"));
-        assert "ACTIVO".equals(c.getEstado()); // no cambia aquí
-        assert c.getUpdatedAt().isAfter(Instant.parse("2025-01-01T00:00:00Z"));
+        assert "ACTIVO".equals(c.getEstado());
+        assert c.getUpdatedAt().isAfter(originalUpdatedAt); // ✅ ahora sí
       })
       .verifyComplete();
 

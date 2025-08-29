@@ -1,7 +1,7 @@
 package pe.edu.perumar.perumar_backend.academico.carreras.dto;
 
 import jakarta.validation.constraints.*;
-import pe.edu.perumar.perumar_backend.academico.carreras.ModalidadCarrera;
+import pe.edu.perumar.perumar_backend.academico.carreras.model.ModalidadCarrera;
 
 import java.util.List;
 
@@ -22,7 +22,10 @@ public class CarreraRequest {
     private ModalidadCarrera modalidad; // CON_EXPERIENCIA | SIN_EXPERIENCIA
 
     @NotNull(message = "materias requeridas (puede ser vacía)")
-    private List<@Pattern(regexp = "^[A-Za-z0-9_-]{3,12}$", message = "codigo de materia inválido") String> materias;
+    private List<
+        @Pattern(regexp = "^[A-Za-z0-9_-]{3,12}$", message = "codigo de materia inválido")
+        String
+    > materias;
 
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }

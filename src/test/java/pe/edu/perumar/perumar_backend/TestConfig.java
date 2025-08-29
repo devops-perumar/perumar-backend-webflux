@@ -2,8 +2,9 @@ package pe.edu.perumar.perumar_backend;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import pe.edu.perumar.perumar_backend.academico.ciclos.Ciclo;
-import pe.edu.perumar.perumar_backend.academico.ciclos.CicloRepository;
+
+import pe.edu.perumar.perumar_backend.academico.ciclos.model.Ciclo;
+import pe.edu.perumar.perumar_backend.academico.ciclos.repository.CicloRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

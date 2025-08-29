@@ -6,7 +6,7 @@ Este documento resume las **reglas y estándares de contribución** que todo des
 ---
 
 ## 📂 Estructura de Repositorios
-- **Backend**: `perumar-backend-webflux` (Java Spring WebFlux)  
+- **Backend**: `perumar-backend` (Java Spring WebFlux)  
 - **Frontend**: `perumar-frontend-react` (React Vite + Bootstrap)  
 
 Cada repositorio mantiene su propio ciclo de versionado y despliegue.  
