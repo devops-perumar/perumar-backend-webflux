@@ -1,7 +1,5 @@
 package pe.edu.perumar.perumar_backend.ui.repository;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import pe.edu.perumar.perumar_backend.ui.model.UiMenuConfigEntity;
@@ -13,8 +11,6 @@ import java.util.Optional;
 
 @Repository
 public class UiConfigRepositoryImpl implements UiConfigRepository {
-
-    private static final Logger log = LoggerFactory.getLogger(UiConfigRepositoryImpl.class);
 
     private final DynamoDbEnhancedAsyncClient enhancedClient;
     private final DynamoDbAsyncTable<UiMenuConfigEntity> table;
