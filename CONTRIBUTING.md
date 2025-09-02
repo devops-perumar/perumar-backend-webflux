@@ -79,3 +79,15 @@ chore(ci): añadir pipeline básico en GitHub Actions
 - Asegúrate de que los tests pasen antes de abrir PR.  
 - Documenta cualquier cambio en **README.md** o en la wiki del proyecto.  
 - Sigue la estructura modular definida (feature-based).  
+
+---
+
+### Breadcrumbs (UI)
+
+- Componente: `src/app/navigation/Breadcrumbs.tsx`.
+- Fuente de verdad: `src/routes/breadcrumbs.ts` (cada ruta define `{ label, perm? }`).
+- ACL: Los ítems intermedios solo son link si `useAcl.can(perm)` es `true`. El último ítem NUNCA es link.
+- Integración: Se renderiza globalmente en `src/app/layout/Layout.tsx`, debajo del navbar.
+- Accesibilidad: `aria-label="breadcrumb"` y `aria-current="page"` para el último ítem.
+- Fallback: Si una ruta no está mapeada, se capitalizan los segmentos (`/foo/bar` → `Home > Foo > Bar`).
+- Tests: `src/app/navigation/__tests__/Breadcrumbs.*.test.tsx`. Ejecutar `pnpm test` o `npx vitest run src/app/navigation/__tests__/Breadcrumbs.*`.
