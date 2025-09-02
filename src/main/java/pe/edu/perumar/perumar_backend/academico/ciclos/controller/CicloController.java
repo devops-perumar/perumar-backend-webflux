@@ -78,7 +78,7 @@ public class CicloController {
         return ReactiveSecurityContextHolder.getContext()
             .map(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "update", "BACKEND");
+                accessControlService.requireAccess(role, "/api/v1/ciclos", "edit", "BACKEND");
                 return req;
             })
             .flatMap(r -> service.actualizar(id, r, tieneMatriculas, esDirector))
@@ -90,7 +90,7 @@ public class CicloController {
         return ReactiveSecurityContextHolder.getContext()
             .map(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "update", "BACKEND");
+                accessControlService.requireAccess(role, "/api/v1/ciclos", "edit_estado", "BACKEND");
                 return id;
             })
             .flatMap(codigo -> service.cambiarEstado(codigo, estado))

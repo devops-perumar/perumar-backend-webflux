@@ -48,12 +48,11 @@ public class CarreraController {
   @GetMapping
   public Flux<CarreraResponse> listar(@RequestParam(value = "estado", required = false) String estado) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
+        .flatMapMany(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
             accessControlService.requireAccess(role, "/api/v1/carreras", "read", "BACKEND");
-            return estado;
-        })
-        .flatMapMany(service::listar);
+            return service.listar(estado); // <- Flux<CarreraResponse>
+        });
   }
 
   @GetMapping("/{codigo}")
@@ -75,7 +74,7 @@ public class CarreraController {
     return ReactiveSecurityContextHolder.getContext()
         .map(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "update", "BACKEND");
+            accessControlService.requireAccess(role, "/api/v1/carreras", "edit", "BACKEND");
             return codigo;
         })
         .flatMap(id -> service.actualizar(id, req))
@@ -90,7 +89,7 @@ public class CarreraController {
     return ReactiveSecurityContextHolder.getContext()
         .map(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "update_estado", "BACKEND");
+            accessControlService.requireAccess(role, "/api/v1/carreras", "edit_estado", "BACKEND");
             return codigo;
         })
         .flatMap(id -> service.cambiarEstado(id, req))

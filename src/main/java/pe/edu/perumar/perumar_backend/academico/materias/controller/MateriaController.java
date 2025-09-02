@@ -46,14 +46,16 @@ public class MateriaController {
   }
 
   @GetMapping
-  public Flux<MateriaResponse> listar(@RequestParam(value = "estado", required = false) String estado) {
+  public Flux<MateriaResponse> listar(
+      @RequestParam(value = "estado", required = false) String estado
+  ) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
-            String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/materias", "read", "BACKEND");
-            return estado;
-        })
-        .flatMapMany(service::listar);
+        .flatMapMany(ctx -> {
+          String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
+          accessControlService.requireAccess(role, "/api/v1/materias", "read", "BACKEND");
+          // devolvemos DIRECTAMENTE el Flux del servicio
+          return service.listar(estado); // <- Flux<MateriaResponse>
+        });
   }
 
   @GetMapping("/{codigo}")
@@ -75,7 +77,7 @@ public class MateriaController {
     return ReactiveSecurityContextHolder.getContext()
         .map(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/materias", "update", "BACKEND");
+            accessControlService.requireAccess(role, "/api/v1/materias", "edit", "BACKEND");
             return codigo;
         })
         .flatMap(id -> service.actualizar(id, req))
@@ -90,7 +92,7 @@ public class MateriaController {
     return ReactiveSecurityContextHolder.getContext()
         .map(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/materias", "update_estado", "BACKEND");
+            accessControlService.requireAccess(role, "/api/v1/materias", "edit_estado", "BACKEND");
             return codigo;
         })
         .flatMap(id -> service.cambiarEstado(id, req))
