@@ -91,3 +91,91 @@ chore(ci): añadir pipeline básico en GitHub Actions
 - Accesibilidad: `aria-label="breadcrumb"` y `aria-current="page"` para el último ítem.
 - Fallback: Si una ruta no está mapeada, se capitalizan los segmentos (`/foo/bar` → `Home > Foo > Bar`).
 - Tests: `src/app/navigation/__tests__/Breadcrumbs.*.test.tsx`. Ejecutar `pnpm test` o `npx vitest run src/app/navigation/__tests__/Breadcrumbs.*`.
+
+---
+
+## ⚙️ Configuración de Tablas DynamoDB
+
+El sistema PERÚ MAR utiliza **tablas DynamoDB** para manejar permisos, auditoría y configuración dinámica de la UI.  
+
+### 1. Tabla `perumar_access_control`
+
+Controla los permisos de **roles** sobre recursos/acciones.  
+Formato de ítem:
+
+```json
+{
+  "role": { "S": "DIRECTOR" },
+  "resource_action_scope": { "S": "/api/v1/materias#read#BACKEND" },
+  "allow": { "BOOL": true },
+  "updated_at": { "S": "2025-08-21T03:06:17.868985Z" },
+  "user_audit": {
+    "M": {
+      "created_by": { "S": "admin@perumar.com" },
+      "updated_by": { "S": "admin@perumar.com" }
+    }
+  }
+}
+```
+
+- `resource_action_scope` → formato `<endpoint>#<action>#<channel>`.  
+- Acciones típicas: `read`, `list`, `create`, `update`, `delete`.  
+- Canales: `BACKEND` o `FRONTEND`.  
+- El backend valida contra esta tabla en cada request (`AccessControlService`).  
+
+### 2. Tabla `perumar_ui_config`
+
+Define los menús y dashboards por **rol**.  
+Formato de ítem:
+
+```json
+{
+  "role": { "S": "DIRECTOR" },
+  "sections": [
+    {
+      "label": "Académico",
+      "items": [
+        { "label": "Materias", "path": "/academico/materias", "icon": "📘", "perm": "materias.ver" },
+        { "label": "Carreras", "path": "/academico/carreras", "icon": "📚", "perm": "carreras.ver" }
+      ]
+    },
+    {
+      "label": "Matrícula",
+      "items": [
+        { "label": "Alumnos", "path": "/matricula/alumnos", "icon": "🧑", "perm": "alumnos.ver" }
+      ]
+    }
+  ]
+}
+```
+
+- El **frontend** (`useUiConfig`) carga esta config y renderiza Navbar, Dashboard y Breadcrumbs dinámicamente.  
+- Ítems incluyen `label`, `path`, `icon` y `perm` (permiso vinculado en `perumar_access_control`).  
+
+### 3. Tabla `perumar_audit_menu_click`
+
+Registra cada **click en menú** del frontend (auditoría).  
+Formato de ítem:
+
+```json
+{
+  "pk": { "S": "user#director-dev" },
+  "sk": { "S": "click#2025-09-01T05:30:12Z" },
+  "role": { "S": "DIRECTOR" },
+  "path": { "S": "/academico/materias" },
+  "label": { "S": "Materias" },
+  "ts": { "S": "2025-09-01T05:30:12Z" }
+}
+```
+
+- **PK**: `user#<username>`  
+- **SK**: `click#<timestamp>`  
+- Permite auditoría y métricas de uso por módulo.  
+- El frontend dispara el log al backend → backend persiste en DynamoDB.  
+
+---
+
+🔒 **Nota**:  
+- Toda escritura debe incluir `user_audit` con `created_by` / `updated_by`.  
+- Mantén consistencia de `role` (`ADMIN`, `DIRECTOR`, `COORDINADOR`) según los grupos Cognito.  
+- Verifica permisos con `/api/v1/acl/me` antes de exponer nuevas rutas en la UI.  
