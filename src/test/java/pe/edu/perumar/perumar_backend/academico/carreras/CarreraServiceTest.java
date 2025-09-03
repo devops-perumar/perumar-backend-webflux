@@ -184,4 +184,19 @@ class CarreraServiceTest {
 
     verify(carreraRepo).updateEstado("CAR001", "INACTIVO");
   }
+
+  @Test
+  void cambiarEstado_error_propagado() {
+    when(carreraRepo.updateEstado(eq("CAR001"), eq("INACTIVO")))
+        .thenReturn(Mono.error(new RuntimeException("db error")));
+
+    CarreraEstadoRequest er = new CarreraEstadoRequest();
+    er.setEstado("INACTIVO");
+
+    StepVerifier.create(service.cambiarEstado("CAR001", er))
+        .expectErrorMessage("db error")
+        .verify();
+
+    verify(carreraRepo).updateEstado("CAR001", "INACTIVO");
+  }
 }
