@@ -6,51 +6,74 @@ import org.springframework.stereotype.Repository;
 import pe.edu.perumar.perumar_backend.academico.ciclos.model.Ciclo;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import software.amazon.awssdk.enhanced.dynamodb.*;
+import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
+import java.time.Instant;
 import java.time.LocalDate;
 
 @Repository
 @Profile("!test")
 public class CicloRepositoryImpl implements CicloRepository {
+  private final DynamoDbAsyncTable<Ciclo> table;
+
+  public CicloRepositoryImpl(DynamoDbEnhancedAsyncClient enhancedClient) {
+    this.table = enhancedClient.table("perumar_ciclos", TableSchema.fromBean(Ciclo.class));
+  }
 
   @Override
   public Mono<Ciclo> save(Ciclo c) {
-    // TODO: persistir en DynamoDB (tabla perumar_ciclos)
-    return Mono.just(c);
+    if (c.getCreatedAt() == null) c.setCreatedAt(Instant.now());
+    c.setUpdatedAt(Instant.now());
+    return Mono.fromFuture(table.putItem(c)).thenReturn(c);
   }
 
   @Override
   public Mono<Ciclo> update(Ciclo c) {
-    // TODO: update en DynamoDB + set updatedAt
-    return Mono.just(c);
+    c.setUpdatedAt(Instant.now());
+    return Mono.fromFuture(table.updateItem(c));
   }
 
   @Override
   public Mono<Ciclo> findById(String id) {
-    // TODO: getItem por PK=id
-    return Mono.empty();
+    return Mono.fromFuture(table.getItem(r -> r.key(Key.builder().partitionValue(id).build())));
   }
 
   @Override
   public Flux<Ciclo> findByEstado(String estado) {
-    // TODO: usar GSI estado-index (estado → fechaInicio) si lo creas
-    return Flux.empty();
+    if (estado == null || estado.isBlank()) {
+      return Flux.from(table.scan().items());
+    }
+    return Flux.from(
+        table.index("estado-index")
+            .query(r -> r.queryConditional(
+                QueryConditional.keyEqualTo(Key.builder().partitionValue(estado).build())))
+            .items());
   }
 
   @Override
   public Flux<Ciclo> findByCodigoCarrera(String codigoCarrera) {
-    // TODO: usar GSI carrera-index (codigoCarrera → fechaInicio)
-    return Flux.empty();
+    if (codigoCarrera == null || codigoCarrera.isBlank()) {
+      return Flux.empty();
+    }
+    return Flux.from(
+        table.index("carrera-index")
+            .query(r -> r.queryConditional(
+                QueryConditional.keyEqualTo(Key.builder().partitionValue(codigoCarrera).build())))
+            .items());
   }
 
   @Override
   public Flux<Ciclo> findOverlaps(String codigoCarrera, LocalDate ini, LocalDate fin) {
-    // TODO: query por codigoCarrera y filtrar por rango que se superpone
-    return Flux.empty();
+    return findByCodigoCarrera(codigoCarrera)
+        .filter(c -> c.getFechaInicio() != null && c.getFechaFin() != null)
+        .filter(c -> !ini.isAfter(c.getFechaFin()) && !fin.isBefore(c.getFechaInicio()));
   }
 
   @Override
   public Mono<Integer> nextCorrelativo(String codigoCarrera, int year) {
-    // TODO: contar ciclos del año para esa carrera y devolver (count+1)
-    return Mono.just(1);
+    return findByCodigoCarrera(codigoCarrera)
+        .filter(c -> c.getFechaInicio() != null && c.getFechaInicio().getYear() == year)
+        .count()
+        .map(cnt -> cnt.intValue() + 1);
   }
 }
