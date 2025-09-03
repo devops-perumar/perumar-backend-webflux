@@ -64,6 +64,7 @@ public class CarreraRepositoryImpl implements CarreraRepository {
         .flatMap(c -> {
           if (c == null) return Mono.empty();
           c.setEstado(nuevoEstado);
+          c.setUpdatedAt(Instant.now());
           return update(c).then();
         });
   }
