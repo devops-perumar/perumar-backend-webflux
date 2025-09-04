@@ -78,7 +78,6 @@ public class CarreraController {
     );
   }
 
-
   @DeleteMapping("/{codigo}")
   public Mono<ResponseEntity<Void>> eliminar(@PathVariable String codigo) {
     return accessGuard.requireMono(

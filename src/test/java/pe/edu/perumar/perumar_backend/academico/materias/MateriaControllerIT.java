@@ -2,7 +2,6 @@ package pe.edu.perumar.perumar_backend.academico.materias;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -45,8 +44,8 @@ class MateriaControllerIT extends BaseIT {
 
   @BeforeEach
   void setup() {
-    doNothing().when(accessControlService)
-               .requireAccess(anyString(), anyString(), anyString(), anyString());
+    when(accessControlService.requireAccess(anyString(), anyString(), anyString(), anyString()))
+        .thenReturn(Mono.empty());
 
     m1 = new Materia();
     m1.setCodigo("MAT001");

@@ -41,9 +41,7 @@ public class MateriaController {
   }
 
   @GetMapping
-  public Flux<MateriaResponse> listar(
-      @RequestParam(value = "estado", required = false) String estado
-  ) {
+  public Flux<MateriaResponse> listar(@RequestParam(value = "estado", required = false) String estado) {
     return accessGuard.requireFlux(
         "/api/v1/materias", "read",
         () -> service.listar(estado)
@@ -79,7 +77,6 @@ public class MateriaController {
         () -> service.cambiarEstado(codigo, req).thenReturn(ResponseEntity.noContent().build())
     );
   }
-
 
   @DeleteMapping("/{codigo}")
   public Mono<ResponseEntity<Void>> eliminar(@PathVariable String codigo) {
