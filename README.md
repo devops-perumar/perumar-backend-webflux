@@ -54,8 +54,11 @@ src/main/java/pe/edu/perumar/
   ```bash
   eb deploy
   ```
-- **Configuración:**  
-  Variables AWS (`DynamoDB`, `S3`, `Cognito`) en `application.properties` o parámetros de entorno en Elastic Beanstalk.  
+- **Configuración:**
+  Variables AWS (`DynamoDB`, `S3`, `Cognito`) en `application.properties` o parámetros de entorno en Elastic Beanstalk.
+
+- **CORS:**
+  Orígenes permitidos configurables mediante la propiedad `cors.allowed-origins` o la variable de entorno `CORS_ALLOWED_ORIGINS` (valores separados por coma). Por defecto se permite `http://localhost:5173` para desarrollo local.
 
 ---
 
