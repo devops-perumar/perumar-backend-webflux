@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSecondaryPartitionKey;
+
+@DynamoDbBean
 public class Ciclo {
 
     private String id; // uuid
@@ -39,9 +44,11 @@ public class Ciclo {
     }
 
     // Getters y Setters
+    @DynamoDbPartitionKey
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
+    @DynamoDbSecondaryPartitionKey(indexNames = "carrera-index")
     public String getCodigoCarrera() { return codigoCarrera; }
     public void setCodigoCarrera(String codigoCarrera) { this.codigoCarrera = codigoCarrera; }
 
@@ -63,6 +70,7 @@ public class Ciclo {
     public Map<String, String> getUbicacion() { return ubicacion; }
     public void setUbicacion(Map<String, String> ubicacion) { this.ubicacion = ubicacion; }
 
+    @DynamoDbSecondaryPartitionKey(indexNames = "estado-index")
     public String getEstado() { return estado; }
     public void setEstado(String estado) { this.estado = estado; }
 
