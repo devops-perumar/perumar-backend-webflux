@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
+import pe.edu.perumar.perumar_backend.DynamoTestConfig;
 import pe.edu.perumar.perumar_backend.config.TestConfig;
 import pe.edu.perumar.perumar_backend.config.TestSecurityConfig;
 
@@ -13,6 +14,7 @@ import pe.edu.perumar.perumar_backend.config.TestSecurityConfig;
 @ActiveProfiles("test")
 @Import({
   TestConfig.class,         // mocks de repos + stubs AWS
-  TestSecurityConfig.class  // seguridad permitAll en test
+  TestSecurityConfig.class, // seguridad permitAll en test
+  DynamoTestConfig.class    // clientes DynamoDB simulados
 })
 public abstract class BaseIT { }

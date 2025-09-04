@@ -5,11 +5,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
+import pe.edu.perumar.perumar_backend.DynamoTestConfig;
 import pe.edu.perumar.perumar_backend.config.TestConfig;
 
 @SpringBootTest
 @ActiveProfiles("test")
-@Import(TestConfig.class)
+@Import({TestConfig.class, DynamoTestConfig.class})
 class PerumarBackendApplicationTests {
 
   @Test
