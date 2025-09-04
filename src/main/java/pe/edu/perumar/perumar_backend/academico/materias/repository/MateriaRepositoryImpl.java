@@ -63,6 +63,7 @@ public class MateriaRepositoryImpl implements MateriaRepository {
         .flatMap(m -> {
           if (m == null) return Mono.empty();
           m.setEstado(nuevoEstado);
+          m.setUpdatedAt(Instant.now());
           return update(m).then();
         });
   }

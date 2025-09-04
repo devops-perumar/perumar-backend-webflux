@@ -117,4 +117,18 @@ class MateriaServiceTest {
 
     verify(repo).updateEstado("MAT001", "INACTIVO");
   }
+
+  @Test
+  void cambiarEstado_error_propagado() {
+    when(repo.updateEstado(eq("MAT001"), eq("INACTIVO")))
+        .thenReturn(Mono.error(new RuntimeException("db error")));
+    MateriaEstadoRequest er = new MateriaEstadoRequest();
+    er.setEstado("INACTIVO");
+
+    StepVerifier.create(service.cambiarEstado("MAT001", er))
+        .expectErrorMessage("db error")
+        .verify();
+
+    verify(repo).updateEstado("MAT001", "INACTIVO");
+  }
 }
