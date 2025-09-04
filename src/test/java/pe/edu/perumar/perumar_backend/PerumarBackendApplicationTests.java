@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
 import pe.edu.perumar.perumar_backend.academico.carreras.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.academico.ciclos.repository.CicloRepository;
 import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepository;
 
 @SpringBootTest
 @ActiveProfiles("test")
+// TestConfig supplies an in-memory CicloRepository implementation.
 @Import({PerumarBackendApplicationTests.RepoStubs.class, TestConfig.class, DynamoTestConfig.class})
 class PerumarBackendApplicationTests {
 
@@ -24,6 +24,5 @@ class PerumarBackendApplicationTests {
   static class RepoStubs {
     @Bean MateriaRepository materiaRepository() { return Mockito.mock(MateriaRepository.class); }
     @Bean CarreraRepository carreraRepository() { return Mockito.mock(CarreraRepository.class); }
-    @Bean CicloRepository   cicloRepository()   { return Mockito.mock(CicloRepository.class);   }
   }
 }
