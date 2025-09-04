@@ -13,8 +13,6 @@ import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepos
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
-import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
-import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedAsyncClient;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.s3.S3AsyncClient;
 
@@ -36,14 +34,6 @@ public class TestConfig {
   CicloRepository cicloRepository() { return Mockito.mock(CicloRepository.class); }
 
   // ---- Stubs AWS mínimos ----
-  @Bean @Primary
-  DynamoDbAsyncClient dynamoDbAsyncClient() { return Mockito.mock(DynamoDbAsyncClient.class); }
-
-  @Bean @Primary
-  DynamoDbEnhancedAsyncClient dynamoDbEnhancedAsyncClient(DynamoDbAsyncClient c) {
-    return DynamoDbEnhancedAsyncClient.builder().dynamoDbClient(c).build();
-  }
-
   @Bean @Primary
   DynamoDbClient dynamoDbClient() { return Mockito.mock(DynamoDbClient.class); }
 
