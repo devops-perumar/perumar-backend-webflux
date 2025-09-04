@@ -31,6 +31,7 @@ public class AccessGuard {
 
     public <T> Mono<T> requireMono(String resource, String action, String scope, Supplier<Mono<T>> next) {
         return ReactiveSecurityContextHolder.getContext()
+                .switchIfEmpty(Mono.error(new AccessDeniedException("Missing SecurityContext")))
                 .flatMap(ctx -> {
                     String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
                     accessControlService.requireAccess(role, resource, action, scope);
@@ -44,6 +45,7 @@ public class AccessGuard {
 
     public <T> Flux<T> requireFlux(String resource, String action, String scope, Supplier<Flux<T>> next) {
         return ReactiveSecurityContextHolder.getContext()
+                .switchIfEmpty(Mono.error(new AccessDeniedException("Missing SecurityContext")))
                 .flatMapMany(ctx -> {
                     String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
                     accessControlService.requireAccess(role, resource, action, scope);
