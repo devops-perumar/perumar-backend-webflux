@@ -33,8 +33,11 @@ public class AccessGuard {
         return ReactiveSecurityContextHolder.getContext()
                 .flatMap(ctx -> {
                     String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                    accessControlService.requireAccess(role, resource, action, scope);
-                    return next.get();
+                    return accessControlService
+                            .requireAccess(role, resource, action, scope)
+                            .onErrorMap(e -> e instanceof AccessDeniedException ? e
+                                    : new AccessDeniedException(e.getMessage()))
+                            .then(next.get());
                 });
     }
 
@@ -46,8 +49,11 @@ public class AccessGuard {
         return ReactiveSecurityContextHolder.getContext()
                 .flatMapMany(ctx -> {
                     String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                    accessControlService.requireAccess(role, resource, action, scope);
-                    return next.get();
+                    return accessControlService
+                            .requireAccess(role, resource, action, scope)
+                            .onErrorMap(e -> e instanceof AccessDeniedException ? e
+                                    : new AccessDeniedException(e.getMessage()))
+                            .thenMany(next.get());
                 });
     }
 }
