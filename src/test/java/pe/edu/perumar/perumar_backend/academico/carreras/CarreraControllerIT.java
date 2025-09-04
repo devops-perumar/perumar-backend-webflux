@@ -22,7 +22,6 @@ import pe.edu.perumar.perumar_backend.academico.carreras.dto.CarreraRequest;
 import pe.edu.perumar.perumar_backend.academico.carreras.model.Carrera;
 import pe.edu.perumar.perumar_backend.academico.carreras.model.ModalidadCarrera;
 import pe.edu.perumar.perumar_backend.academico.carreras.repository.CarreraRepository;
-import pe.edu.perumar.perumar_backend.academico.carreras.service.CarreraService;
 import pe.edu.perumar.perumar_backend.academico.ciclos.repository.CicloRepository;
 import pe.edu.perumar.perumar_backend.academico.materias.model.Materia;
 import pe.edu.perumar.perumar_backend.academico.materias.repository.MateriaRepository;
@@ -37,7 +36,6 @@ class CarreraControllerIT extends BaseIT {
   @MockitoBean CicloRepository cicloRepository;
 
   
-  @MockitoBean CarreraService service; 
   Carrera car1, car2;
 
   @BeforeEach
@@ -146,38 +144,6 @@ class CarreraControllerIT extends BaseIT {
           .jsonPath("$.estado").isEqualTo("ACTIVO")
           .jsonPath("$.materias[1]").isEqualTo("MAT002");
   }
-
-@Test
-void crear_ok_basico() {
-    // 👇 mockear directamente el service, no el repository
-    when(service.crear(any(CarreraRequest.class)))
-        .thenAnswer(inv -> {
-            CarreraRequest r = inv.getArgument(0);
-            Carrera c = new Carrera();
-            c.setCodigo(r.getCodigo());
-            c.setNombre(r.getNombre());
-            c.setDescripcion(r.getDescripcion());
-            c.setModalidad(r.getModalidad());
-            c.setMaterias(r.getMaterias());
-            c.setEstado("ACTIVO"); // simular lógica del service
-            return Mono.just(c);
-        });
-
-    CarreraRequest req = new CarreraRequest();
-    req.setCodigo("CAR_NEW");
-    req.setNombre("Patrón Embarcaciones Menores");
-    req.setDescripcion("Formación básica");
-    req.setModalidad(ModalidadCarrera.SIN_EXPERIENCIA);
-    req.setMaterias(List.of("MAT001", "MAT002"));
-
-    webTestClient.post()
-        .uri("/api/v1/carreras")
-        .contentType(MediaType.APPLICATION_JSON)
-        .bodyValue(req)
-        .exchange()
-        .expectStatus().isCreated(); // ✅ ahora debería pasar
-}
-
 
   @Test
   void crear_duplicado_409() {
