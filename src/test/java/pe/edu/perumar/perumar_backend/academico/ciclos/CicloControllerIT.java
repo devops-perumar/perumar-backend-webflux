@@ -15,7 +15,6 @@ import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
-import org.springframework.http.MediaType;
 
 import pe.edu.perumar.perumar_backend.acl.AccessControlService;
 import pe.edu.perumar.perumar_backend.BaseIT;
@@ -89,14 +88,11 @@ class CicloControllerIT extends BaseIT {
 
   @Test
   void cambiarEstado_inactivo_204() {
-    String body = """
-      {"estado":"INACTIVO"}
-    """;
-
     webTestClient.patch()
-        .uri("/api/v1/ciclos/{id}/estado", c1.getId())
-        .contentType(MediaType.APPLICATION_JSON)
-        .bodyValue(body)
+        .uri(uriBuilder ->
+            uriBuilder.path("/api/v1/ciclos/{id}/estado")
+                .queryParam("estado", "INACTIVO")
+                .build(c1.getId()))
         .exchange()
         .expectStatus().isNoContent();
 
