@@ -3,6 +3,7 @@ package pe.edu.perumar.perumar_backend.academico.carreras;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Instant;
 import java.util.List;
@@ -66,15 +67,15 @@ class CarreraServiceTest {
 
     StepVerifier.create(service.crear(reqCreate))
       .assertNext(c -> {
-        assert "CAR001".equals(c.getCodigo());
-        assert "Patrón Embarcaciones Menores".equals(c.getNombre());
-        assert "Formación básica".equals(c.getDescripcion());
-        assert c.getModalidad() == ModalidadCarrera.SIN_EXPERIENCIA;
-        assert c.getMaterias().equals(List.of("MAT001","MAT002"));
-        assert "ACTIVO".equals(c.getEstado());
-        assert c.getCreatedAt() != null;
-        assert c.getUpdatedAt() != null;
-        assert !c.getCreatedAt().isAfter(Instant.now());
+        assertEquals("CAR001", c.getCodigo());
+        assertEquals("Patrón Embarcaciones Menores", c.getNombre());
+        assertEquals("Formación básica", c.getDescripcion());
+        assertEquals(ModalidadCarrera.SIN_EXPERIENCIA, c.getModalidad());
+        assertEquals(List.of("MAT001","MAT002"), c.getMaterias());
+        assertEquals("ACTIVO", c.getEstado());
+        assertNotNull(c.getCreatedAt());
+        assertNotNull(c.getUpdatedAt());
+        assertFalse(c.getCreatedAt().isAfter(Instant.now()));
       })
       .verifyComplete();
 
@@ -157,12 +158,12 @@ class CarreraServiceTest {
 
     StepVerifier.create(service.actualizar("CAR001", upd))
       .assertNext(c -> {
-        assert "Nuevo nombre".equals(c.getNombre());
-        assert "Nueva desc".equals(c.getDescripcion());
-        assert c.getModalidad() == ModalidadCarrera.CON_EXPERIENCIA;
-        assert c.getMaterias().equals(List.of("MAT001","MAT002"));
-        assert "ACTIVO".equals(c.getEstado());
-        assert c.getUpdatedAt().isAfter(originalUpdatedAt); // ✅ ahora sí
+        assertEquals("Nuevo nombre", c.getNombre());
+        assertEquals("Nueva desc", c.getDescripcion());
+        assertEquals(ModalidadCarrera.CON_EXPERIENCIA, c.getModalidad());
+        assertEquals(List.of("MAT001","MAT002"), c.getMaterias());
+        assertEquals("ACTIVO", c.getEstado());
+        assertTrue(c.getUpdatedAt().isAfter(originalUpdatedAt)); // ✅ ahora sí
       })
       .verifyComplete();
 

@@ -3,6 +3,7 @@ package pe.edu.perumar.perumar_backend.academico.materias;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Instant;
 
@@ -49,14 +50,14 @@ class MateriaServiceTest {
     StepVerifier.create(service.crear(reqCreate))
       .assertNext(m -> {
         // valores esperados
-        assert "MAT001".equals(m.getCodigo());
-        assert "Matemáticas I".equals(m.getNombre());
-        assert "Base".equals(m.getDescripcion());
-        assert "ACTIVO".equals(m.getEstado());
-        assert m.getCreatedAt() != null;
-        assert m.getUpdatedAt() != null;
+        assertEquals("MAT001", m.getCodigo());
+        assertEquals("Matemáticas I", m.getNombre());
+        assertEquals("Base", m.getDescripcion());
+        assertEquals("ACTIVO", m.getEstado());
+        assertNotNull(m.getCreatedAt());
+        assertNotNull(m.getUpdatedAt());
         // createdAt y updatedAt muy cercanos
-        assert !m.getCreatedAt().isAfter(Instant.now());
+        assertFalse(m.getCreatedAt().isAfter(Instant.now()));
       })
       .verifyComplete();
 
@@ -108,10 +109,10 @@ class MateriaServiceTest {
 
     StepVerifier.create(service.actualizar("MAT001", upd))
       .assertNext(m -> {
-        assert "Nuevo nombre".equals(m.getNombre());
-        assert "Nueva desc".equals(m.getDescripcion());
-        assert "ACTIVO".equals(m.getEstado()); // no cambia aquí
-        assert m.getUpdatedAt().isAfter(Instant.parse("2025-01-01T00:00:00Z"));
+        assertEquals("Nuevo nombre", m.getNombre());
+        assertEquals("Nueva desc", m.getDescripcion());
+        assertEquals("ACTIVO", m.getEstado()); // no cambia aquí
+        assertTrue(m.getUpdatedAt().isAfter(Instant.parse("2025-01-01T00:00:00Z")));
       })
       .verifyComplete();
 
