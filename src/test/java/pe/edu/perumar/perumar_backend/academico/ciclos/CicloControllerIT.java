@@ -14,10 +14,8 @@ import java.util.UUID;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.web.reactive.server.WebTestClient;
 
 import pe.edu.perumar.perumar_backend.acl.AccessControlService;
 import pe.edu.perumar.perumar_backend.BaseIT;
@@ -29,8 +27,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 class CicloControllerIT extends BaseIT {
-
-  @Autowired WebTestClient webTestClient;
 
   @MockitoBean AccessControlService accessControlService;
   @MockitoBean CicloRepository cicloRepository;
