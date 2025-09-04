@@ -173,6 +173,28 @@ class CarreraServiceTest {
   }
 
   @Test
+  void actualizar_materiaInexistente_lanza400() {
+    Carrera actual = new Carrera();
+    actual.setCodigo("CAR001");
+    when(carreraRepo.findByCodigo("CAR001")).thenReturn(Mono.just(actual));
+
+    mockMateria("MAT001");
+    when(materiaRepo.findByCodigo("MAT002")).thenReturn(Mono.empty());
+
+    CarreraUpdateRequest upd = new CarreraUpdateRequest();
+    upd.setMaterias(List.of("MAT001", "MAT002"));
+
+    StepVerifier.create(service.actualizar("CAR001", upd))
+        .expectError(IllegalArgumentException.class)
+        .verify();
+
+    verify(carreraRepo).findByCodigo("CAR001");
+    verify(materiaRepo).findByCodigo("MAT001");
+    verify(materiaRepo).findByCodigo("MAT002");
+    verify(carreraRepo, never()).update(any());
+  }
+
+  @Test
   void cambiarEstado_ok_llamaRepoUpdateEstado() {
     when(carreraRepo.updateEstado(eq("CAR001"), eq("INACTIVO"))).thenReturn(Mono.empty());
 
@@ -198,5 +220,18 @@ class CarreraServiceTest {
         .verify();
 
     verify(carreraRepo).updateEstado("CAR001", "INACTIVO");
+  }
+
+  @Test
+  void cambiarEstado_carreraNoExiste_completaSinError() {
+    when(carreraRepo.updateEstado(eq("CAR404"), eq("INACTIVO"))).thenReturn(Mono.empty());
+
+    CarreraEstadoRequest er = new CarreraEstadoRequest();
+    er.setEstado("INACTIVO");
+
+    StepVerifier.create(service.cambiarEstado("CAR404", er))
+        .verifyComplete();
+
+    verify(carreraRepo).updateEstado("CAR404", "INACTIVO");
   }
 }

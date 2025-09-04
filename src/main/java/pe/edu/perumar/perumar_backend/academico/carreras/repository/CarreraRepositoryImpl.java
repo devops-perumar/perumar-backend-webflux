@@ -71,8 +71,9 @@ public class CarreraRepositoryImpl implements CarreraRepository {
 
   @Override
   public Mono<Void> deleteByCodigo(String codigo) {
-    return Mono.fromFuture(() -> 
-        table.deleteItem(r -> r.key(Key.builder().partitionValue(codigo).build()))
-    ).then();
+    return Mono.fromFuture(
+            table.deleteItem(r -> r.key(Key.builder().partitionValue(codigo).build()))
+        )
+        .then();
   }
 }

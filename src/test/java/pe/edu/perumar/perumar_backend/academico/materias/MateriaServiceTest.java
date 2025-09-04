@@ -77,6 +77,19 @@ class MateriaServiceTest {
   }
 
   @Test
+  void crear_codigoVacio_lanzaError() {
+    // código vacío provoca error inmediato sin tocar repo
+    reqCreate.setCodigo(" ");
+
+    StepVerifier.create(service.crear(reqCreate))
+        .expectError(IllegalArgumentException.class)
+        .verify();
+
+    verify(repo, never()).findByCodigo(any());
+    verify(repo, never()).save(any());
+  }
+
+  @Test
   void actualizar_ok_modificaNombreYDescripcion_noCambiaEstado() {
     Materia actual = new Materia();
     actual.setCodigo("MAT001");
@@ -104,6 +117,17 @@ class MateriaServiceTest {
 
     verify(repo).findByCodigo("MAT001");
     verify(repo).update(any(Materia.class));
+  }
+
+  @Test
+  void actualizar_noExiste_retornaVacio() {
+    when(repo.findByCodigo("MAT001")).thenReturn(Mono.empty());
+
+    StepVerifier.create(service.actualizar("MAT001", new MateriaUpdateRequest()))
+        .verifyComplete();
+
+    verify(repo).findByCodigo("MAT001");
+    verify(repo, never()).update(any());
   }
 
   @Test
