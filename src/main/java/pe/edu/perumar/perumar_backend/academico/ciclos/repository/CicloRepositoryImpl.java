@@ -41,13 +41,14 @@ public class CicloRepositoryImpl implements CicloRepository {
   @Override
   public Flux<Ciclo> findByEstado(String estado) {
     if (estado == null || estado.isBlank()) {
-      return Flux.from(table.scan().items());
+      return Flux.from(table.scan())
+          .flatMap(page -> Flux.fromIterable(page.items()));
     }
     return Flux.from(
-        table.index("estado-index")
-            .query(r -> r.queryConditional(
-                QueryConditional.keyEqualTo(Key.builder().partitionValue(estado).build())))
-            .items());
+            table.index("estado-index")
+                .query(r -> r.queryConditional(
+                    QueryConditional.keyEqualTo(Key.builder().partitionValue(estado).build()))))
+        .flatMap(page -> Flux.fromIterable(page.items()));
   }
 
   @Override
@@ -56,10 +57,10 @@ public class CicloRepositoryImpl implements CicloRepository {
       return Flux.empty();
     }
     return Flux.from(
-        table.index("carrera-index")
-            .query(r -> r.queryConditional(
-                QueryConditional.keyEqualTo(Key.builder().partitionValue(codigoCarrera).build())))
-            .items());
+            table.index("carrera-index")
+                .query(r -> r.queryConditional(
+                    QueryConditional.keyEqualTo(Key.builder().partitionValue(codigoCarrera).build()))))
+        .flatMap(page -> Flux.fromIterable(page.items()));
   }
 
   @Override
