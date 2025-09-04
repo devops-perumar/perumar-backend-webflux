@@ -20,7 +20,7 @@ jobs:
           key: m2-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: m2-
       - name: Build & Test
-        run: mvn -B -DskipTests=true clean verify
+        run: mvn -B -DskipTests=false clean verify
         env:
           SPRING_PROFILES_ACTIVE: test
       - name: Artifact
