@@ -4,7 +4,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.never;
@@ -49,8 +48,8 @@ class CarreraControllerIT extends BaseIT {
   @BeforeEach
   void setup() {
     // Permitir todos los accesos
-    doNothing().when(accessControlService)
-               .requireAccess(anyString(), anyString(), anyString(), anyString());
+    when(accessControlService.requireAccess(anyString(), anyString(), anyString(), anyString()))
+        .thenReturn(Mono.empty());
 
     // Mock materias válidas
     Materia m1 = new Materia(); m1.setCodigo("MAT001"); m1.setNombre("Navegación I"); m1.setEstado("ACTIVO");

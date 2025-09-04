@@ -35,10 +35,10 @@ public class CarreraController {
   @PostMapping
   public Mono<ResponseEntity<CarreraResponse>> crear(@Valid @RequestBody CarreraRequest req) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
+        .flatMap(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "create", "BACKEND");
-            return req;
+            return accessControlService.requireAccess(role, "/api/v1/carreras", "create", "BACKEND")
+                .thenReturn(req);
         })
         .flatMap(service::crear)
         .map(CarreraMapper::toResponse)
@@ -50,18 +50,18 @@ public class CarreraController {
     return ReactiveSecurityContextHolder.getContext()
         .flatMapMany(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "read", "BACKEND");
-            return service.listar(estado); // <- Flux<CarreraResponse>
+            return accessControlService.requireAccess(role, "/api/v1/carreras", "read", "BACKEND")
+                .thenMany(service.listar(estado));
         });
   }
 
   @GetMapping("/{codigo}")
   public Mono<CarreraResponse> obtener(@PathVariable String codigo) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
+        .flatMap(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "read", "BACKEND");
-            return codigo;
+            return accessControlService.requireAccess(role, "/api/v1/carreras", "read", "BACKEND")
+                .thenReturn(codigo);
         })
         .flatMap(service::obtener)
         .map(CarreraMapper::toResponse);
@@ -72,10 +72,10 @@ public class CarreraController {
       @PathVariable String codigo,
       @Valid @RequestBody CarreraUpdateRequest req) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
+        .flatMap(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "edit", "BACKEND");
-            return codigo;
+            return accessControlService.requireAccess(role, "/api/v1/carreras", "edit", "BACKEND")
+                .thenReturn(codigo);
         })
         .flatMap(id -> service.actualizar(id, req))
         .map(CarreraMapper::toResponse)
@@ -87,10 +87,10 @@ public class CarreraController {
       @PathVariable String codigo,
       @Valid @RequestBody CarreraEstadoRequest req) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
+        .flatMap(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "edit_estado", "BACKEND");
-            return codigo;
+            return accessControlService.requireAccess(role, "/api/v1/carreras", "edit_estado", "BACKEND")
+                .thenReturn(codigo);
         })
         .flatMap(id -> service.cambiarEstado(id, req))
         .thenReturn(ResponseEntity.noContent().build());
@@ -100,10 +100,10 @@ public class CarreraController {
   @DeleteMapping("/{codigo}")
   public Mono<ResponseEntity<Void>> eliminar(@PathVariable String codigo) {
     return ReactiveSecurityContextHolder.getContext()
-        .map(ctx -> {
+        .flatMap(ctx -> {
             String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-            accessControlService.requireAccess(role, "/api/v1/carreras", "delete", "BACKEND");
-            return codigo;
+            return accessControlService.requireAccess(role, "/api/v1/carreras", "delete", "BACKEND")
+                .thenReturn(codigo);
         })
         .flatMap(service::eliminar)
         .thenReturn(ResponseEntity.noContent().build());

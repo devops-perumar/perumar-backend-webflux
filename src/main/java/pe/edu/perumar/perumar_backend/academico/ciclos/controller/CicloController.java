@@ -29,10 +29,10 @@ public class CicloController {
     @PostMapping
     public Mono<ResponseEntity<CicloResponse>> crear(@Valid @RequestBody CicloRequest req) {
         return ReactiveSecurityContextHolder.getContext()
-            .map(ctx -> {
+            .flatMap(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "create", "BACKEND");
-                return req;
+                return accessControlService.requireAccess(role, "/api/v1/ciclos", "create", "BACKEND")
+                    .thenReturn(req);
             })
             .flatMap(service::crear)
             .map(body -> ResponseEntity.status(HttpStatus.CREATED).body(body));
@@ -41,10 +41,10 @@ public class CicloController {
     @GetMapping("/{id}")
     public Mono<CicloResponse> obtener(@PathVariable String id) {
         return ReactiveSecurityContextHolder.getContext()
-            .map(ctx -> {
+            .flatMap(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "read", "BACKEND");
-                return id;
+                return accessControlService.requireAccess(role, "/api/v1/ciclos", "read", "BACKEND")
+                    .thenReturn(id);
             })
             .flatMap(service::obtener);
     }
@@ -54,18 +54,14 @@ public class CicloController {
             @RequestParam(required = false) String estado,
             @RequestParam(required = false) String codigoCarrera) {
         return ReactiveSecurityContextHolder.getContext()
-            .map(ctx -> {
+            .flatMapMany(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "read", "BACKEND");
-                return new String[]{estado, codigoCarrera};
-            })
-            .flatMapMany(params -> {
-                String estadoParam = params[0];
-                String codigoCarreraParam = params[1];
-
-                if (codigoCarreraParam != null) return service.listarPorCarrera(codigoCarreraParam);
-                if (estadoParam != null) return service.listarPorEstado(estadoParam);
-                return service.listarPorEstado("ACTIVO"); // default
+                return accessControlService.requireAccess(role, "/api/v1/ciclos", "read", "BACKEND")
+                    .thenMany(Flux.defer(() -> {
+                        if (codigoCarrera != null) return service.listarPorCarrera(codigoCarrera);
+                        if (estado != null) return service.listarPorEstado(estado);
+                        return service.listarPorEstado("ACTIVO"); // default
+                    }));
             });
     }
 
@@ -76,10 +72,10 @@ public class CicloController {
             @RequestHeader(name = "X-Tiene-Matriculas", defaultValue = "false") boolean tieneMatriculas,
             @RequestHeader(name = "X-Es-Director", defaultValue = "false") boolean esDirector) {
         return ReactiveSecurityContextHolder.getContext()
-            .map(ctx -> {
+            .flatMap(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "edit", "BACKEND");
-                return req;
+                return accessControlService.requireAccess(role, "/api/v1/ciclos", "edit", "BACKEND")
+                    .thenReturn(req);
             })
             .flatMap(r -> service.actualizar(id, r, tieneMatriculas, esDirector))
             .map(ResponseEntity::ok);
@@ -88,10 +84,10 @@ public class CicloController {
     @PatchMapping("/{id}/estado")
     public Mono<ResponseEntity<Void>> cambiarEstado(@PathVariable String id, @RequestParam String estado) {
         return ReactiveSecurityContextHolder.getContext()
-            .map(ctx -> {
+            .flatMap(ctx -> {
                 String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                accessControlService.requireAccess(role, "/api/v1/ciclos", "edit_estado", "BACKEND");
-                return id;
+                return accessControlService.requireAccess(role, "/api/v1/ciclos", "edit_estado", "BACKEND")
+                    .thenReturn(id);
             })
             .flatMap(codigo -> service.cambiarEstado(codigo, estado))
             .thenReturn(ResponseEntity.noContent().build());

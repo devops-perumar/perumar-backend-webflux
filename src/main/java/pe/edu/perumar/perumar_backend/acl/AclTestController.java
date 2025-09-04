@@ -3,6 +3,7 @@ package pe.edu.perumar.perumar_backend.acl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 @RestController
 public class AclTestController {
@@ -14,7 +15,7 @@ public class AclTestController {
     }
 
     @GetMapping("/acl/test")
-    public boolean testAcl(
+    public Mono<Boolean> testAcl(
             @RequestParam String role,
             @RequestParam String resource,
             @RequestParam String action,
