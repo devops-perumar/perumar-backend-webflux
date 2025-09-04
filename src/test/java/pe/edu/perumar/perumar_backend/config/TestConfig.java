@@ -15,6 +15,7 @@ import reactor.core.publisher.Flux;
 
 import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedAsyncClient;
+import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.s3.S3AsyncClient;
 
 import static org.mockito.ArgumentMatchers.*;
@@ -22,7 +23,7 @@ import static org.mockito.Mockito.*;
 
 @TestConfiguration
 @Profile("test")
-public class TestProfileConfig {
+public class TestConfig {
 
   // ---- Mocks Repos ----
   @Bean @Primary
@@ -42,6 +43,9 @@ public class TestProfileConfig {
   DynamoDbEnhancedAsyncClient dynamoDbEnhancedAsyncClient(DynamoDbAsyncClient c) {
     return DynamoDbEnhancedAsyncClient.builder().dynamoDbClient(c).build();
   }
+
+  @Bean @Primary
+  DynamoDbClient dynamoDbClient() { return Mockito.mock(DynamoDbClient.class); }
 
   @Bean @Primary
   S3AsyncClient s3AsyncClient() { return Mockito.mock(S3AsyncClient.class); }
