@@ -34,8 +34,11 @@ public class AccessGuard {
                 .switchIfEmpty(Mono.error(new AccessDeniedException("Missing SecurityContext")))
                 .flatMap(ctx -> {
                     String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                    accessControlService.requireAccess(role, resource, action, scope);
-                    return next.get();
+                    return accessControlService
+                            .requireAccess(role, resource, action, scope)
+                            .onErrorMap(e -> e instanceof AccessDeniedException ? e
+                                    : new AccessDeniedException(e.getMessage()))
+                            .then(next.get());
                 });
     }
 
@@ -48,8 +51,11 @@ public class AccessGuard {
                 .switchIfEmpty(Mono.error(new AccessDeniedException("Missing SecurityContext")))
                 .flatMapMany(ctx -> {
                     String role = SecurityUtils.extractUserRole(ctx.getAuthentication());
-                    accessControlService.requireAccess(role, resource, action, scope);
-                    return next.get();
+                    return accessControlService
+                            .requireAccess(role, resource, action, scope)
+                            .onErrorMap(e -> e instanceof AccessDeniedException ? e
+                                    : new AccessDeniedException(e.getMessage()))
+                            .thenMany(next.get());
                 });
     }
 }
