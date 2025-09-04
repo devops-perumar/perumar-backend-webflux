@@ -34,7 +34,10 @@ public class MateriaRepositoryImpl implements MateriaRepository {
 
   @Override
   public Mono<Materia> findByCodigo(String codigo) {
-    return Mono.fromFuture(table.getItem(r -> r.key(Key.builder().partitionValue(codigo).build())));
+    return Mono.fromFuture(
+            table.getItem(r -> r.key(Key.builder().partitionValue(codigo).build()))
+        )
+        .flatMap(Mono::justOrEmpty);
   }
 
   @Override
@@ -49,7 +52,7 @@ public class MateriaRepositoryImpl implements MateriaRepository {
 
   @Override
   public Mono<Boolean> existsByCodigo(String codigo) {
-    return findByCodigo(codigo).map(Objects::nonNull);
+    return findByCodigo(codigo).hasElement();
   }
 
   @Override
@@ -61,7 +64,6 @@ public class MateriaRepositoryImpl implements MateriaRepository {
   public Mono<Void> updateEstado(String codigo, String nuevoEstado) {
     return findByCodigo(codigo)
         .flatMap(m -> {
-          if (m == null) return Mono.empty();
           m.setEstado(nuevoEstado);
           m.setUpdatedAt(Instant.now());
           return update(m).then();

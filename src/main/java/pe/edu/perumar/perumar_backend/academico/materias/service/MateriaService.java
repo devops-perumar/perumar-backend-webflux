@@ -49,7 +49,8 @@ public class MateriaService {
   }
 
   public Mono<Materia> obtener(String codigo) {
-    return repo.findByCodigo(codigo);
+    return repo.findByCodigo(codigo)
+               .switchIfEmpty(Mono.empty());
   }
 
 public Flux<MateriaResponse> listar(String estado) {
@@ -70,12 +71,14 @@ public Flux<MateriaResponse> listar(String estado) {
           }
           actual.setUpdatedAt(Instant.now());
           return repo.update(actual);
-        });
+        })
+        .switchIfEmpty(Mono.empty());
   }
 
   public Mono<Void> cambiarEstado(String codigo, MateriaEstadoRequest req) {
     // PATCH solo cambia estado
-    return repo.updateEstado(codigo, req.getEstado());
+    return repo.updateEstado(codigo, req.getEstado())
+               .switchIfEmpty(Mono.empty());
   }
 
   // Excepción pequeña para 409
@@ -84,7 +87,8 @@ public Flux<MateriaResponse> listar(String estado) {
   }
 
   public Mono<Void> eliminar(String codigo) {
-      return repo.deleteByCodigo(codigo);
+      return repo.deleteByCodigo(codigo)
+                 .switchIfEmpty(Mono.empty());
   }
 
 }

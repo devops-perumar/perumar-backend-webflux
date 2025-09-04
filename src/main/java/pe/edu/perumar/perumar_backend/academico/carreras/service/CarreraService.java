@@ -62,7 +62,8 @@ public class CarreraService {
   }
 
   public Mono<Carrera> obtener(String codigo) {
-    return repo.findByCodigo(codigo);
+    return repo.findByCodigo(codigo)
+               .switchIfEmpty(Mono.empty());
   }
 
   public Flux<CarreraResponse> listar(String estado) {
@@ -100,11 +101,13 @@ public class CarreraService {
             actual.setUpdatedAt(Instant.now());
             return repo.update(actual);
           }));
-        });
+        })
+        .switchIfEmpty(Mono.empty());
     }
 
   public Mono<Void> cambiarEstado(String codigo, CarreraEstadoRequest req) {
-    return repo.updateEstado(codigo, req.getEstado());
+    return repo.updateEstado(codigo, req.getEstado())
+               .switchIfEmpty(Mono.empty());
   }
 
   public static class DuplicateKeyException extends RuntimeException {
@@ -112,7 +115,8 @@ public class CarreraService {
   }
 
   public Mono<Void> eliminar(String codigo) {
-    return repo.deleteByCodigo(codigo);
+    return repo.deleteByCodigo(codigo)
+               .switchIfEmpty(Mono.empty());
   }
 
 }

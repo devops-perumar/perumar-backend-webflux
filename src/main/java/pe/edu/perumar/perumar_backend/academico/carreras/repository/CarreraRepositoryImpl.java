@@ -34,8 +34,9 @@ public class CarreraRepositoryImpl implements CarreraRepository {
   @Override
   public Mono<Carrera> findByCodigo(String codigo) {
     return Mono.fromFuture(
-        table.getItem(r -> r.key(Key.builder().partitionValue(codigo).build()))
-    );
+            table.getItem(r -> r.key(Key.builder().partitionValue(codigo).build()))
+        )
+        .flatMap(Mono::justOrEmpty);
   }
 
   @Override
@@ -50,7 +51,7 @@ public class CarreraRepositoryImpl implements CarreraRepository {
 
   @Override
   public Mono<Boolean> existsByCodigo(String codigo) {
-    return findByCodigo(codigo).map(Objects::nonNull);
+    return findByCodigo(codigo).hasElement();
   }
 
   @Override
@@ -62,7 +63,6 @@ public class CarreraRepositoryImpl implements CarreraRepository {
   public Mono<Void> updateEstado(String codigo, String nuevoEstado) {
     return findByCodigo(codigo)
         .flatMap(c -> {
-          if (c == null) return Mono.empty();
           c.setEstado(nuevoEstado);
           c.setUpdatedAt(Instant.now());
           return update(c).then();
