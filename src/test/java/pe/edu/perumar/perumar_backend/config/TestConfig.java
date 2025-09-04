@@ -59,17 +59,21 @@ public class TestConfig {
 
       // ===== CARRERAS =====
       when(carreraRepository.findByCodigo(anyString())).thenReturn(Mono.empty());
+      when(carreraRepository.findByEstado(anyString())).thenReturn(Flux.empty());
+      when(carreraRepository.existsByCodigo(anyString())).thenReturn(Mono.just(false));
       when(carreraRepository.save(any()))
           .thenAnswer(inv -> Mono.justOrEmpty(inv.getArgument(0)));
       when(carreraRepository.update(any()))
           .thenAnswer(inv -> Mono.justOrEmpty(inv.getArgument(0)));
-      // Si tu repo define existsByCodigo/updateEstado, puedes habilitarlos:
-      // when(carreraRepository.existsByCodigo(anyString())).thenReturn(Mono.just(false));
-      // doReturn(Mono.empty()).when(carreraRepository).updateEstado(anyString(), anyString());
+      doReturn(Mono.empty()).when(carreraRepository).updateEstado(anyString(), anyString());
+      doReturn(Mono.empty()).when(carreraRepository).deleteByCodigo(anyString());
 
       // ===== CICLOS =====
       when(cicloRepository.findById(anyString())).thenReturn(Mono.empty());
-      // (Si NO hay findAll() en la interfaz, no lo mocks)
+      when(cicloRepository.findByEstado(anyString())).thenReturn(Flux.empty());
+      when(cicloRepository.findByCodigoCarrera(anyString())).thenReturn(Flux.empty());
+      when(cicloRepository.findOverlaps(anyString(), any(), any())).thenReturn(Flux.empty());
+      when(cicloRepository.nextCorrelativo(anyString(), anyInt())).thenReturn(Mono.just(1));
       when(cicloRepository.save(any()))
           .thenAnswer(inv -> Mono.justOrEmpty(inv.getArgument(0)));
       when(cicloRepository.update(any()))
