@@ -21,7 +21,7 @@ jobs:
           restore-keys: m2-
       - name: Build & Test
         #run: mvn -B -DskipTests=false clean verify
-        run: mvn -B -DskipTests=true
+        run: mvn -B -DskipTests=true clean verify
         env:
           SPRING_PROFILES_ACTIVE: test
       - name: Artifact
